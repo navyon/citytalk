@@ -3,21 +3,45 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              android:background="#ffffff">
+              android:background="@android:color/holo_blue_light">
+    <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:id="@+id/space3" android:layout_gravity="center"/>
     <Button
             android:layout_width="fill_parent"
             android:layout_height="103dp"
-            android:text="Take a Picture"
-            android:id="@+id/button1"/>
+            android:text="Take a Photo"
+            android:id="@+id/btnTakePhoto" android:textSize="30dp"
+            android:textColor="@android:color/holo_blue_light"/>
+    <Space
+            android:layout_width="fill_parent"
+            android:layout_height="20px"
+            android:id="@+id/space2"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:id="@+id/textView" android:layout_gravity="center" android:singleLine="true"
+            android:textSize="30dp" android:textIsSelectable="false" android:textColor="@android:color/holo_blue_light"/>
+    <Space
+            android:layout_width="fill_parent"
+            android:layout_height="20px"
+            android:id="@+id/space1"/>
     <Button
             android:layout_width="fill_parent"
             android:layout_height="98dp"
-            android:text="Upload a Picture"
-            android:id="@+id/button2"/>
+            android:text="Upload a Photo"
+            android:id="@+id/btn_UploadPhoto" android:textSize="30dp"
+            android:textColor="@android:color/holo_blue_light"/>
+    <Space
+            android:layout_width="20px"
+            android:layout_height="38dp"
+            android:id="@+id/space" android:layout_gravity="center" android:layout_weight="0.18"/>
     <Button
             android:layout_width="fill_parent"
             android:layout_height="40dp"
             android:text="Continue to description"
-            android:id="@+id/button" android:background="#d5d9e1"/>
+            android:id="@+id/btn_Continue" />
 </LinearLayout>
 
