@@ -7,13 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 
-/**
- * Created with IntelliJ IDEA.
- * User: admin
- * Date: 11/3/13
- * Time: 4:57 PM
- * To change this template use File | Settings | File Templates.
- */
+
 public class SplashActivity extends Activity
 {
     // Set the display time, in milliseconds (or extract it out as a configurable parameter)
@@ -24,6 +18,8 @@ public class SplashActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
+
+       // Thread mythread = new Thread();
     }
 
     @Override
