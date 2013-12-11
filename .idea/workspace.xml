@@ -25,6 +25,12 @@
       </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/res/layout/main.xml">
+        <config>
+          <device>Nexus 4</device>
+          <theme>@android:style/Theme.NoTitleBar</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/res/layout/message.xml">
         <config>
           <theme>@android:style/Theme.NoTitleBar</theme>
@@ -34,8 +40,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d674c171-4c66-4f4e-8553-8514dda36b1e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/finalscreen.xml" afterPath="$PROJECT_DIR$/res/layout/finalscreen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CityTalk.iml" afterPath="$PROJECT_DIR$/CityTalk.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/message.xml" afterPath="$PROJECT_DIR$/res/layout/message.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CityTalk.iws" />
@@ -193,15 +201,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-          <provider editor-type-id="text-editor">
-            <state line="43" column="31" selection-start="1887" selection-end="1887" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="915">
-              <folding />
-            </state>
-          </provider>
           <provider selected="true" editor-type-id="android-designer">
             <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="47" column="39" selection-start="1993" selection-end="1993" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="975">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -221,22 +229,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="message.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
-          <provider editor-type-id="text-editor">
-            <state line="12" column="26" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="630">
-              <folding />
-            </state>
-          </provider>
           <provider selected="true" editor-type-id="android-designer">
             <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="19" column="43" selection-start="966" selection-end="966" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="810">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MessageActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="5" selection-start="1921" selection-end="1921" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="945">
+            <state line="50" column="5" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="945">
               <folding />
             </state>
           </provider>
@@ -253,37 +261,37 @@
       </file>
       <file leaf-file-name="previewtxt.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
         </entry>
       </file>
       <file leaf-file-name="splash.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
         </entry>
       </file>
       <file leaf-file-name="finalscreen.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/finalscreen.xml">
-          <provider editor-type-id="text-editor">
-            <state line="30" column="39" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="1050">
-              <folding />
-            </state>
-          </provider>
           <provider selected="true" editor-type-id="android-designer">
             <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="30" column="39" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1050">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -318,10 +326,10 @@
         <option value="$PROJECT_DIR$/src/com/example/CityTalk/FinalActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/CityTalk/Preview.java" />
         <option value="$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/message.xml" />
         <option value="$PROJECT_DIR$/res/layout/previewtxt.xml" />
         <option value="$PROJECT_DIR$/res/layout/finalscreen.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/res/layout/message.xml" />
       </list>
     </option>
   </component>
@@ -764,8 +772,8 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.86252046" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29386437" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32723358" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1474704" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16146395" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.31911263" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -840,13 +848,13 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="12" column="26" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="630">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java">
@@ -864,43 +872,43 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/finalscreen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="39" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="31" selection-start="1753" selection-end="1753" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="810">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MyActivity.java">
@@ -911,13 +919,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="19" column="13" selection-start="918" selection-end="918" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="630">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java">
@@ -935,13 +943,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/ConfirmActivity.java">
@@ -952,23 +960,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/finalscreen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="39" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="83" selection-start="1753" selection-end="1753" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MyActivity.java">
@@ -979,13 +987,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="19" column="13" selection-start="918" selection-end="918" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="714">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java">
@@ -1003,13 +1011,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/ConfirmActivity.java">
@@ -1020,13 +1028,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/finalscreen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="39" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1139">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CityTalk.iml">
@@ -1035,13 +1043,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="83" selection-start="1753" selection-end="1753" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="918">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MyActivity.java">
@@ -1052,13 +1060,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="19" column="13" selection-start="918" selection-end="918" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="714">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java">
@@ -1083,13 +1091,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="19" column="13" selection-start="918" selection-end="918" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="714">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CityTalk.iml">
@@ -1098,13 +1106,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="37" column="72" selection-start="1680" selection-end="1680" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="918">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java">
@@ -1173,7 +1181,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="5" selection-start="1921" selection-end="1921" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="945">
+        <state line="50" column="5" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="945">
           <folding />
         </state>
       </provider>
@@ -1197,54 +1205,54 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
-      <provider editor-type-id="text-editor">
-        <state line="12" column="26" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/finalscreen.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="30" column="39" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="1050">
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="text-editor">
-        <state line="43" column="31" selection-start="1887" selection-end="1887" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="915">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="47" column="39" selection-start="1993" selection-end="1993" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="19" column="43" selection-start="966" selection-end="966" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="810">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
