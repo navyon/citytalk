@@ -18,7 +18,7 @@ import android.widget.ImageView;
 
 import java.io.ByteArrayOutputStream;
 
-
+ // The Message Activity
 public class MessageActivity extends Activity {
        @Override
     protected void onCreate(Bundle savedInstanceState) {
