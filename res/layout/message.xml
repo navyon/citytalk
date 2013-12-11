@@ -10,7 +10,7 @@
     <EditText
             android:layout_width="fill_parent"
             android:layout_height="252dp"
-            android:text="Type Uw Bericht Hier"
+            android:text="This is working fine, fill in the text!"
             android:id="@+id/txtView_msg" android:layout_gravity="center_horizontal|top" android:background="#010101"
             android:textColor="#ffffff" android:textStyle="bold" android:singleLine="false" android:maxLines="4"
             android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
