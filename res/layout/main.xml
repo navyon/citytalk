@@ -3,27 +3,31 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              android:background="@android:color/holo_blue_light">
+              android:background="@android:color/white">
     <Space
             android:layout_width="20px"
             android:layout_height="20px"
             android:id="@+id/space3" android:layout_gravity="center"/>
     <Button
             android:layout_width="fill_parent"
-            android:layout_height="103dp"
-            android:text="Add Image"
+            android:layout_height="100dp"
+            android:text="Voeg een afbeelding toe"
             android:id="@+id/btn_crop" android:textSize="30dp"
-            android:textColor="@android:color/holo_blue_light"/>
+            android:textColor="@android:color/white"
+        android:background="#342a3c"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
     <Space
             android:layout_width="fill_parent"
             android:layout_height="20px"
             android:id="@+id/space2"/>
     <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:text="OR"
-            android:id="@+id/textView" android:layout_gravity="center" android:singleLine="true"
-            android:textSize="30dp" android:textIsSelectable="false" android:textColor="@android:color/black"/>
+            android:id="@+id/textView" android:layout_gravity="center|top" android:singleLine="true"
+            android:textSize="90dp" android:textIsSelectable="false" android:textColor="#342a3c"
+        android:autoText="false" />
     <Space
             android:layout_width="fill_parent"
             android:layout_height="20px"
@@ -32,14 +36,17 @@
             android:id="@+id/iv_photo"
             android:layout_marginTop="10dp"
             android:layout_gravity="center_horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="200dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
     <Button
             android:layout_width="fill_parent"
             android:layout_height="98dp"
             android:text="Skip"
             android:id="@+id/btn_Skip" android:textSize="30dp"
-            android:textColor="@android:color/holo_blue_light"/>
+            android:textColor="@android:color/white"
+        android:background="#342a3c"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
     <Space
             android:layout_width="20px"
             android:layout_height="38dp"
