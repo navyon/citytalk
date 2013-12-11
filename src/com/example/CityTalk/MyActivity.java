@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -63,17 +64,14 @@ public class MyActivity extends Activity {
 
                     try {
                         intent.putExtra("return-data", true);
-
                         startActivityForResult(intent, PICK_FROM_CAMERA);
                     } catch (ActivityNotFoundException e) {
                         e.printStackTrace();
                     }
                 } else { //pick from file
                     Intent intent = new Intent();
-
                     intent.setType("image/*");
                     intent.setAction(Intent.ACTION_GET_CONTENT);
-
                     startActivityForResult(Intent.createChooser(intent, "Complete action using"), PICK_FROM_FILE);
                 }
             }
@@ -82,11 +80,7 @@ public class MyActivity extends Activity {
         final AlertDialog dialog = builder.create();
 
         Button button 	= (Button) findViewById(R.id.btn_crop);
-
         mImageView		= (ImageView) findViewById(R.id.iv_photo);
-
-
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,10 +113,12 @@ public class MyActivity extends Activity {
                     Bitmap photo = extras.getParcelable("data");
 
                     mImageView.setImageBitmap(photo);
-                    Intent intent = new Intent(this,MessageActivity.class);
-                    /*EditText editText = (EditText) findViewById(R.id.edit_message);
-                    String message = editText.getText().toString();
-                    intent.putExtra(EXTRA_MESSAGE, message);*/
+                    Intent intent = new Intent(MyActivity.this, MessageActivity.class);
+
+                    // The photo is bundled and sent to the message activity
+                    ByteArrayOutputStream bs = new ByteArrayOutputStream();
+                    photo.compress(Bitmap.CompressFormat.PNG,50,bs);
+                    intent.putExtra("theimage",bs.toByteArray());
                     startActivity(intent);
                 }
 
