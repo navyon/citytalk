@@ -24,10 +24,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d674c171-4c66-4f4e-8553-8514dda36b1e" name="Default" comment="Changed text">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CityTalk.iml" afterPath="$PROJECT_DIR$/CityTalk.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="d674c171-4c66-4f4e-8553-8514dda36b1e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CityTalk.iws" />
@@ -219,7 +216,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="2" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.84" vertical-offset="0" max-vertical-offset="630">
+            <state line="24" column="7" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.72" vertical-offset="0" max-vertical-offset="630">
               <folding />
             </state>
           </provider>
@@ -275,6 +272,11 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Daan" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -711,7 +713,11 @@
       <created>1386770409460</created>
       <updated>1386770409460</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit test">
+      <created>1386770497322</created>
+      <updated>1386770497322</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -792,7 +798,8 @@
     </option>
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <MESSAGE value="Changed text" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed text" />
+    <MESSAGE value="Commit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1141,7 +1148,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="2" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.84" vertical-offset="0" max-vertical-offset="630">
+        <state line="24" column="7" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.72" vertical-offset="0" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
