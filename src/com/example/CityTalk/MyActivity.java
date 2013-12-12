@@ -80,7 +80,6 @@ public class MyActivity extends Activity {
         final AlertDialog dialog = builder.create();
 
         Button button 	= (Button) findViewById(R.id.btn_crop);
-        mImageView		= (ImageView) findViewById(R.id.iv_photo);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
