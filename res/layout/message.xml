@@ -8,30 +8,42 @@
 
             />
     <EditText
-            android:layout_width="fill_parent"
+            android:layout_width="336dp"
             android:layout_height="252dp"
-            android:text="This is working fine, fill in the text!"
+            android:text="Voer hier direct jouw bericht in Het werkt top"
             android:id="@+id/txtView_msg" android:layout_gravity="center_horizontal|top" android:background="#010101"
-            android:textColor="#ffffff" android:textStyle="bold" android:singleLine="false" android:maxLines="4"
+            android:textColor="#f5f5f5" android:textStyle="bold" android:singleLine="false" android:maxLines="4"
             android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
             android:imeOptions="actionSend|flagNoEnterAction"
             android:selectAllOnFocus="true"
-            android:layout_row="0" android:layout_column="0"/>
+            android:layout_row="1" android:layout_column="0"
+            android:lineSpacingExtra="-4dp"
+        android:clickable="true"
+        android:textSize="50dp"
+        android:padding="10dp" />
+
+    <Space
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/space2"
+        android:layout_row="0"
+        android:layout_column="0" />
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="De tekst ziet er exact zo uit op de Haagste Toren!"
-            android:id="@+id/textView" android:layout_row="1" android:layout_column="0"
+            android:id="@+id/textView" android:layout_row="2" android:layout_column="0"
             android:textColor="@android:color/black" android:textSize="20dp" android:textIsSelectable="true"/>
     <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Bekijk je preview!"
-            android:id="@+id/btnpreview" android:layout_row="3" android:layout_column="0"/>
+            android:id="@+id/btnpreview" android:layout_row="4" android:layout_column="0"/>
     <Space
             android:layout_width="20px"
             android:layout_height="80px"
-            android:id="@+id/space" android:layout_row="2" android:layout_column="0"/>
+            android:id="@+id/space" android:layout_row="3" android:layout_column="0"/>
 
 
 </GridLayout>
