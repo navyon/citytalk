@@ -21,9 +21,10 @@
             android:textStyle="bold"
             android:autoText="false"
             android:singleLine="false"
+            android:lineSpacingExtra="-20dp"
             android:layout_gravity="right"
             android:gravity="center_vertical|center_horizontal"
-            android:paddingBottom="10dp"
+            android:paddingBottom="20dp"
             android:textSize="70dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
@@ -34,10 +35,10 @@
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:id="@+id/textView"
-            android:background="#342a3c"
+            android:background="@android:color/white"
             android:inputType="none"
             android:textAlignment="center"
-            android:textColor="#ffffff"
+            android:textColor="#342a3c"
             android:textStyle="bold"
             android:autoText="false"
             android:singleLine="false"
@@ -52,40 +53,47 @@
 
 
         <Button
-                android:layout_width="180dp"
+                android:layout_width="wrap_content"
                 android:layout_height="180dp"
                 android:text="Tekst"
                 android:id="@+id/btn_Skip" android:textSize="30dp"
                 android:textColor="@android:color/white"
             android:background="#342a3c"
+            android:drawableTop="@drawable/text_icon"
             android:layout_gravity="bottom|right"
-            android:layout_below="@+id/textView"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
             android:gravity="center_horizontal|bottom"
-            android:paddingBottom="20dp" />
+            android:paddingTop="40dp"
+            android:paddingBottom="20dp"
+            android:layout_alignBottom="@+id/btn_crop"
+            android:layout_toRightOf="@+id/space"
+            android:layout_below="@+id/textView"
+            android:layout_alignRight="@+id/textView"
+            android:layout_alignEnd="@+id/textView" />
 
         <Button
-                android:layout_width="180dp"
+                android:layout_width="wrap_content"
                 android:layout_height="180dp"
-                android:text="Foto"
                 android:id="@+id/btn_crop" android:textSize="30dp"
                 android:textColor="@android:color/white"
             android:background="#342a3c"
-            android:layout_below="@+id/textView"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_margin="5dp"
+            android:drawableTop="@drawable/camera_icon"
+            android:text="Foto"
             android:gravity="center_horizontal|bottom"
-            android:paddingBottom="20dp" />
+            android:paddingTop="40dp"
+            android:paddingBottom="20dp"
+            android:layout_below="@+id/textView"
+            android:layout_toLeftOf="@+id/space"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:id="@+id/space"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 
