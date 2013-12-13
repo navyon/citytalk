@@ -13,28 +13,20 @@
             android:id="@+id/space" android:layout_row="4" android:layout_column="0"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-    <Button
-            android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:text="Stuur Het op"
-            android:id="@+id/btnSubmitmsgtxt" android:layout_row="5" android:layout_column="0"
 
-        style="@style/BvDH_button"
-        android:background="@color/BvDH_paars"
-        android:textColor="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:gravity="center" />
     <ImageView
-            android:layout_width="345dp"
-            android:layout_height="258dp"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
             android:id="@+id/imageViewPreview" android:layout_row="0" android:layout_column="0"
         android:layout_gravity="center_horizontal"
         android:background="@android:color/black"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="false"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
     <Button
             android:layout_width="161dp"
@@ -72,6 +64,20 @@
         android:layout_alignParentEnd="true"
         android:layout_toRightOf="@+id/space"
         android:textSize="18dp" />
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:text="Stuur Het op"
+            android:id="@+id/btnSubmitmsgtxt" android:layout_row="5" android:layout_column="0"
+
+        style="@style/BvDH_button"
+        android:background="@color/BvDH_paars"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center" />
 
 
 </RelativeLayout>

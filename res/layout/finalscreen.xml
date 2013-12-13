@@ -15,7 +15,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/checkBox"
-        android:fontFamily="Roboto" />
+        android:fontFamily="Roboto"
+        style="@style/simpleText_new" />
 
     <EditText
             android:layout_width="280dp"
@@ -34,15 +35,18 @@
         android:layout_marginTop="54dp"
         android:layout_below="@+id/checkBox"
         android:layout_toRightOf="@+id/editText" />
-    <Space
-            android:layout_width="20px"
-            android:layout_height="200px"
-            android:layout_row="8" android:layout_column="0"
-        android:id="@+id/space2" />
-    <Space
-            android:layout_width="20px"
-            android:layout_height="20px"
-            android:layout_row="9" android:layout_column="0"/>
+
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ik heb alle rechten voor mijn beeld."
+            android:id="@+id/checkBox" android:layout_row="1" android:layout_column="0"
+            android:textColor="@android:color/black"
+        android:layout_marginTop="127dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <Button
             android:layout_width="fill_parent"
             android:layout_height="80dp"
@@ -53,28 +57,6 @@
         android:layout_alignParentStart="true"
         style="@style/BvDH_button"
         android:gravity="center" />
-    <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ik heb alle rechten voor mijn beeld."
-            android:id="@+id/checkBox" android:layout_row="1" android:layout_column="0"
-            android:textColor="@android:color/black"
-        android:layout_below="@+id/space2"
-        android:layout_toRightOf="@+id/space2" />
-    <Space
-            android:layout_width="20px"
-            android:layout_height="40px"
-            android:layout_row="2" android:layout_column="0"
-        android:id="@+id/space3" />
-
-    <Space
-            android:layout_width="20px"
-            android:layout_height="200px"
-            android:id="@+id/space" android:layout_row="4" android:layout_column="0"/>
-    <Space
-            android:layout_width="20px"
-            android:layout_height="100px"
-            android:layout_row="11" android:layout_column="0"/>
 
     <EditText
         android:layout_width="wrap_content"
