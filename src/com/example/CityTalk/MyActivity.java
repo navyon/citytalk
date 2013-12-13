@@ -106,12 +106,13 @@ public class MyActivity extends Activity {
                 break;
 
             case CROP_FROM_CAMERA:
+
                 Bundle extras = data.getExtras();
 
                 if (extras != null) {
                     Bitmap photo = extras.getParcelable("data");
 
-                    mImageView.setImageBitmap(photo);
+                   // mImageView.setImageBitmap(photo);
                     Intent intent = new Intent(MyActivity.this, MessageActivity.class);
 
                     // The photo is bundled and sent to the message activity

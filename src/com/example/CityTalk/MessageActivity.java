@@ -25,7 +25,7 @@ public class MessageActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.message);
            final EditText txtview = (EditText) findViewById(R.id.txtView_msg);
-           txtview.setFocusableInTouchMode(true);
+
             final Button btnpreview = (Button) findViewById(R.id.btnpreview);
 
 

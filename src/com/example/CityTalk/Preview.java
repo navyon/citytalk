@@ -22,17 +22,18 @@ public class Preview extends Activity {
         final ImageView imagev = (ImageView)findViewById(R.id.imageViewPreview);
         if(getIntent().hasExtra("theimage"));
         Bitmap b = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
+         if(b!=null)
         imagev.setImageBitmap(b);
+
 
         findViewById(R.id.btnSubmitmsgtxt).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(Preview.this, ConfirmActivity.class);
-                // The Image from the previous Activity is decoded and stored as a bitMap, so it can be sent on to the Next Activity
-                startActivity(intent);
+                Preview.this.startActivity(intent);
 
             }});
 
 
     }
 
-    }
+   }

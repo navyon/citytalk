@@ -36,7 +36,7 @@
             android:textColor="@color/BvDH_paars"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:textStyle="normal" />
+            android:textStyle="normal" android:layout_width="wrap_content"/>
 
 
         <Button
