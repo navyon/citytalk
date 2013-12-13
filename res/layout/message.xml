@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent" android:background="@android:color/white">
 
@@ -19,7 +19,10 @@
             android:lineSpacingExtra="-4dp"
         android:clickable="true"
         android:textSize="50dp"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <Space
         android:layout_width="10dp"
@@ -29,17 +32,14 @@
         android:layout_column="0" />
 
     <TextView
-            android:layout_width="327dp"
-            android:layout_height="wrap_content"
-            android:text="Maximaal 4 regels. De tekst zal er precies zo uit komen te zien op het Beeld van Den Haag!"
+        android:text="Maximaal 4 regels. De tekst zal er precies zo uit komen te zien op het Beeld van Den Haag!"
             android:id="@+id/textView" android:layout_row="2" android:layout_column="0"
-            android:textColor="@color/BvDH_paars" android:textSize="20dp" android:textIsSelectable="true"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        style="@style/simpleText"
-        android:fontFamily="roboto"
-        android:gravity="left"
-        android:layout_gravity="center_horizontal" /> "
+        android:textIsSelectable="true"
+        style="@style/simpleText_new"
+        android:layout_below="@+id/txtView_msg"
+        android:layout_toRightOf="@+id/space"
+        android:layout_alignRight="@+id/txtView_msg"
+        android:layout_alignEnd="@+id/txtView_msg" /> "
         android:focusableInTouchMode="false" />
     <Button
             android:layout_width="match_parent"
@@ -48,11 +48,14 @@
             android:id="@+id/btnpreview" android:layout_row="4" android:layout_column="0"
         style="@style/BvDH_button"
         android:layout_gravity="bottom"
-        android:gravity="center_vertical|center_horizontal" />
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <Space
             android:layout_width="20px"
             android:layout_height="80px"
             android:id="@+id/space" android:layout_row="3" android:layout_column="0"/>
 
 
-</GridLayout>
+</RelativeLayout>
