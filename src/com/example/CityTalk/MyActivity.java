@@ -40,6 +40,7 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.main);
+        Button button 	= (Button) findViewById(R.id.btn_crop);
 
         findViewById(R.id.btn_Skip).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -79,7 +80,7 @@ public class MyActivity extends Activity {
 
         final AlertDialog dialog = builder.create();
 
-        Button button 	= (Button) findViewById(R.id.btn_crop);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,16 +110,18 @@ public class MyActivity extends Activity {
 
                 Bundle extras = data.getExtras();
 
-                if (extras != null) {
+                if (extras!= null) {
                     Bitmap photo = extras.getParcelable("data");
 
                    // mImageView.setImageBitmap(photo);
                     Intent intent = new Intent(MyActivity.this, MessageActivity.class);
 
                     // The photo is bundled and sent to the message activity
+                    if(photo!=null)     {
                     ByteArrayOutputStream bs = new ByteArrayOutputStream();
                     photo.compress(Bitmap.CompressFormat.PNG,50,bs);
                     intent.putExtra("theimage",bs.toByteArray());
+                    }
                     startActivity(intent);
                 }
 

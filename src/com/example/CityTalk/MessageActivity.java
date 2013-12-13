@@ -20,29 +20,30 @@ import java.io.ByteArrayOutputStream;
 
  // The Message Activity
 public class MessageActivity extends Activity {
+     Intent intent;
+     Bitmap b;
        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.message);
            final EditText txtview = (EditText) findViewById(R.id.txtView_msg);
-
             final Button btnpreview = (Button) findViewById(R.id.btnpreview);
+           // The Image from the previous Activity is decoded and stored as a bitMap, so it can be sent on to the Next
+           if(getIntent().hasExtra("theimage"));
+            b = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
 
 
 
 
            findViewById(R.id.btnpreview).setOnClickListener(new View.OnClickListener() {
                public void onClick(View v) {
-                   Intent intent = new Intent(MessageActivity.this, Preview.class);
-                   // The Image from the previous Activity is decoded and stored as a bitMap, so it can be sent on to the Next Activity
-
-                   if(getIntent().hasExtra("theimage"));
-                   Bitmap b = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
+                   intent = new Intent(MessageActivity.this, Preview.class);
                    // The photo is bundled and sent to the message activity
                    if(b!=null) {
-                   ByteArrayOutputStream bs = new ByteArrayOutputStream();
-                   b.compress(Bitmap.CompressFormat.PNG,50,bs);
-                   intent.putExtra("theimage",bs.toByteArray());
+                       ByteArrayOutputStream bs = new ByteArrayOutputStream();
+                       b.compress(Bitmap.CompressFormat.PNG,50,bs);
+                       intent.putExtra("theimage",bs.toByteArray());
+
                    }
                    startActivity(intent);
                }});
