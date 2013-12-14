@@ -135,6 +135,13 @@ public class Preview extends Activity {
             }
         });
 
+        findViewById(R.id.btnchangePreviewText).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                finish();
+
+            }
+        });
 
 
 
