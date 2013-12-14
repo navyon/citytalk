@@ -35,11 +35,13 @@
         android:text="Maximaal 4 regels. De tekst zal er precies zo uit komen te zien op het Beeld van Den Haag!"
             android:id="@+id/textView" android:layout_row="2" android:layout_column="0"
         android:textIsSelectable="true"
-        style="@style/simpleText_new"
         android:layout_below="@+id/txtView_msg"
         android:layout_toRightOf="@+id/space"
         android:layout_alignRight="@+id/txtView_msg"
-        android:layout_alignEnd="@+id/txtView_msg" /> "
+        android:layout_alignEnd="@+id/txtView_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/simpleText" /> "
         android:focusableInTouchMode="false" />
     <Button
             android:layout_width="match_parent"

@@ -46,6 +46,7 @@ public class Preview extends Activity {
         if(b!=null)
         imagev.setImageBitmap(b);
 
+
         final String [] items			= new String [] {"Take from camera", "Select from gallery"};
         ArrayAdapter<String> adapter	= new ArrayAdapter<String> (this, android.R.layout.select_dialog_item,items);
         AlertDialog.Builder builder		= new AlertDialog.Builder(this);
@@ -159,10 +160,10 @@ public class Preview extends Activity {
         } else {
             intent.setData(mImageCaptureUri);
 
-            intent.putExtra("outputX", 200);
-            intent.putExtra("outputY", 200);
-            intent.putExtra("aspectX", 1);
-            intent.putExtra("aspectY", 1);
+            intent.putExtra("outputX", 300);
+            intent.putExtra("outputY", 225);
+            intent.putExtra("aspectX", 4);
+            intent.putExtra("aspectY", 3);
             intent.putExtra("scale", true);
             intent.putExtra("return-data", true);
 
