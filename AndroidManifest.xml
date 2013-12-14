@@ -10,14 +10,14 @@
         <activity
                 android:name=".ConfirmActivity"
                 android:label="@string/app_name"
-                android:windowSoftInputMode="stateVisible"
+                android:windowSoftInputMode="stateHidden"
                 >
         </activity>
 
         <activity
                 android:name=".Preview"
                 android:label="@string/app_name"
-                android:windowSoftInputMode="stateVisible"
+                android:windowSoftInputMode="stateHidden"
                 >
         </activity>
         <activity

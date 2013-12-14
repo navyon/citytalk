@@ -40,11 +40,12 @@ public class Preview extends Activity {
         setContentView(R.layout.previewtxt);
         imagev = (ImageView)findViewById(R.id.imageViewPreview);
 
-        if(getIntent().hasExtra("theimage"));
+        if(getIntent().hasExtra("theimage")){
         Bitmap b = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
 
         if(b!=null)
         imagev.setImageBitmap(b);
+        }
 
         final String [] items			= new String [] {"Take from camera", "Select from gallery"};
         ArrayAdapter<String> adapter	= new ArrayAdapter<String> (this, android.R.layout.select_dialog_item,items);

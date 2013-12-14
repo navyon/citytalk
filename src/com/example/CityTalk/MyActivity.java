@@ -38,15 +38,11 @@ public class MyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.main);
         Button button 	= (Button) findViewById(R.id.btn_crop);
+        Button btnskip 	= (Button) findViewById(R.id.btn_Skip);
 
-        findViewById(R.id.btn_Skip).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MyActivity.this, MessageActivity.class);
-                startActivity(intent);
-            }});
+
 
         final String [] items			= new String [] {"Take from camera", "Select from gallery"};
         ArrayAdapter<String> adapter	= new ArrayAdapter<String> (this, android.R.layout.select_dialog_item,items);
@@ -87,7 +83,17 @@ public class MyActivity extends Activity {
                 dialog.show();
             }
         });
+
+        btnskip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MyActivity.this, MessageActivity.class);
+                startActivity(intent);
+            }});
+
+
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -109,19 +115,15 @@ public class MyActivity extends Activity {
             case CROP_FROM_CAMERA:
 
                 Bundle extras = data.getExtras();
-
+                Intent intent = new Intent(MyActivity.this, MessageActivity.class);
                 if (extras!= null) {
                     Bitmap photo = extras.getParcelable("data");
 
-                   // mImageView.setImageBitmap(photo);
-                    Intent intent = new Intent(MyActivity.this, MessageActivity.class);
-
                     // The photo is bundled and sent to the message activity
-                    if(photo!=null)     {
                     ByteArrayOutputStream bs = new ByteArrayOutputStream();
-                    photo.compress(Bitmap.CompressFormat.PNG,50,bs);
+                    photo.compress(Bitmap.CompressFormat.PNG, 50, bs);
                     intent.putExtra("theimage",bs.toByteArray());
-                    }
+
                     startActivity(intent);
                 }
 
