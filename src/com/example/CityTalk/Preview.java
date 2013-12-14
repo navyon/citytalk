@@ -36,48 +36,18 @@ public class Preview extends Activity {
     boolean hasphoto = false;
     boolean hasmessage = false;
     String msg =null;
+    Button btnChangePreviewPhoto;
+    Button btnChangePreviewMessage;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.previewtxt);
         imagev = (ImageView)findViewById(R.id.imageViewPreview);
-        Button btnChangePreviewPhoto =(Button) findViewById(R.id.btnChangePreviewPhoto);
-        Button btnChangePreviewMessage =(Button) findViewById(R.id.btnchangePreviewText);
-        if(getIntent().hasExtra("msg")){
-            msg = getIntent().getStringExtra("msg");
-            hasmessage =true;
-        }
-        if(!hasmessage)
-        {
-            String btnaddmsgtxtt=  getString(R.string.PreviewbtnAddTxt);
-            btnChangePreviewMessage.setText(btnaddmsgtxtt);
-
-        }
-        else
-        {
-            String btnChangetxt=  getString(R.string.PreviewbtnChangeTxt);
-            btnChangePreviewMessage.setText(btnChangetxt);
-
-        }
-
-        if(getIntent().hasExtra("theimage")){
-        Bitmap b = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
-
-        if(b!=null)
-        imagev.setImageBitmap(b);
-        hasphoto =true;
-        }
-        // checks whether user added a photo, then changes button text accordingly
-        if(!hasphoto)
-        {
-            String btnaddphototxt=  getString(R.string.PreviewbtnAddPhoto);
-            btnChangePreviewPhoto.setText(btnaddphototxt);
-
-        }
-        else{
-            String btnaddphototxt=  getString(R.string.PreviewbtnChangePhoto);
-            btnChangePreviewPhoto.setText(btnaddphototxt);
-        }
+        btnChangePreviewPhoto =(Button) findViewById(R.id.btnChangePreviewPhoto);
+        btnChangePreviewMessage =(Button) findViewById(R.id.btnchangePreviewText);
+        // These Methods check whether photos or a message was added
+        CheckMessageExists();
+        CheckPhotoExist();
 
 
         final String [] items			= new String [] {"Take from camera", "Select from gallery"};
@@ -111,6 +81,7 @@ public class Preview extends Activity {
         } );
 
 
+
         final AlertDialog dialog = builder.create();
 
 
@@ -131,7 +102,7 @@ public class Preview extends Activity {
             public void onClick(View v) {
 
                dialog.show();
-
+               CheckPhotoExist();
             }
         });
 
@@ -140,12 +111,60 @@ public class Preview extends Activity {
 
                 finish();
 
+
             }
         });
 
 
 
+
      }
+    void CheckMessageExists()
+    {
+        if(getIntent().hasExtra("msg")){
+            msg = getIntent().getStringExtra("msg");
+            hasmessage =true;
+        }
+        if(!hasmessage)
+        {
+            String btnaddmsgtxtt=  getString(R.string.PreviewbtnAddTxt);
+            btnChangePreviewMessage.setText(btnaddmsgtxtt);
+
+        }
+        else
+        {
+            String btnChangetxt=  getString(R.string.PreviewbtnChangeTxt);
+            btnChangePreviewMessage.setText(btnChangetxt);
+
+        }
+
+
+
+    }
+    // This Method checks if a photo was added and updates the UI
+    void CheckPhotoExist()
+    {
+        if(getIntent().hasExtra("theimage")){
+            Bitmap b = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
+
+            if(b!=null)
+                imagev.setImageBitmap(b);
+                hasphoto =true;
+        }
+        // checks whether user added a photo, then changes button text accordingly
+        if(!hasphoto)
+        {
+            String btnaddphototxt=  getString(R.string.PreviewbtnAddPhoto);
+            btnChangePreviewPhoto.setText(btnaddphototxt);
+
+        }
+        else{
+            String btnaddchangetxt=  getString(R.string.PreviewbtnChangePhoto);
+            btnChangePreviewPhoto.setText(btnaddchangetxt);
+        }
+
+
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != RESULT_OK) return;
@@ -171,14 +190,22 @@ public class Preview extends Activity {
                     Bitmap photo = extras.getParcelable("data");
                      if(photo!=null)
                         imagev.setImageBitmap(photo);
+                    // The photo is bundled and sent to the message activity
+                    Intent intent = getIntent();
+                    ByteArrayOutputStream bs = new ByteArrayOutputStream();
+                    photo.compress(Bitmap.CompressFormat.PNG, 50, bs);
+                    intent.putExtra("theimage",bs.toByteArray());
 
                 }
-
+                CheckPhotoExist();
                 File f = new File(mImageCaptureUri.getPath());
 
                 if (f.exists()) f.delete();
 
                 break;
+
+
+
 
         }
     }
