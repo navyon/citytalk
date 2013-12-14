@@ -33,20 +33,28 @@ public class Preview extends Activity {
     private static final int PICK_FROM_CAMERA = 1;
     private static final int CROP_FROM_CAMERA = 2;
     private static final int PICK_FROM_FILE = 3;
-
+    boolean hasphoto = false;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.previewtxt);
         imagev = (ImageView)findViewById(R.id.imageViewPreview);
+        Button btnChangePreviewPhoto =(Button) findViewById(R.id.btnChangePreviewPhoto);
 
         if(getIntent().hasExtra("theimage")){
         Bitmap b = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
 
         if(b!=null)
         imagev.setImageBitmap(b);
+        hasphoto =true;
         }
+        // checks whether user added a photo, then changes button text accordingly
+        if(!hasphoto)
+        {
+            String btnaddphototxt=  getString(R.string.PreviewbtnAddPhoto);
+            btnChangePreviewPhoto.setText(btnaddphototxt);
 
+        }
 
         final String [] items			= new String [] {"Take from camera", "Select from gallery"};
         ArrayAdapter<String> adapter	= new ArrayAdapter<String> (this, android.R.layout.select_dialog_item,items);
