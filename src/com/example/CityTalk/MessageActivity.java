@@ -23,13 +23,15 @@ import java.io.ByteArrayOutputStream;
 public class MessageActivity extends Activity {
      Intent intent;
       EditText  txtView_msg;
-
+      String msg = null;
        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.message);
            txtView_msg = (EditText) findViewById(R.id.txtView_msg);
            final Button btnpreview = (Button) findViewById(R.id.btnpreview);
+
+
 
            // The Image from the previous Activity is decoded and stored as a bitMap, so it can be sent on to the Next
            intent = new Intent(MessageActivity.this, Preview.class);
@@ -46,7 +48,16 @@ public class MessageActivity extends Activity {
            findViewById(R.id.btnpreview).setOnClickListener(new View.OnClickListener() {
                public void onClick(View v) {
 
+                   String  defaultmsg = "Voer hier direct jouw bericht in.";
+                   msg = txtView_msg.getText().toString();
+                   if(!defaultmsg.equalsIgnoreCase(msg))
+                   {
 
+
+                     intent.putExtra("msg",msg);
+
+
+                   }
                    startActivity(intent);
                }
            });

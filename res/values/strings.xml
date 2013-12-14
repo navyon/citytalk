@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CityTalk</string>
+    <string name="PreviewbtnChangeTxt">Wijzig Tekst</string>
+    <string name="PreviewbtnChangePhoto">Wijzig Photo</string>
     <string name="PreviewbtnAddPhoto">Photo toevoegen</string>
+    <string name="PreviewbtnAddTxt">Tekst toevoegen</string>
 </resources>

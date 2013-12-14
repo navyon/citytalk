@@ -34,12 +34,31 @@ public class Preview extends Activity {
     private static final int CROP_FROM_CAMERA = 2;
     private static final int PICK_FROM_FILE = 3;
     boolean hasphoto = false;
+    boolean hasmessage = false;
+    String msg =null;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.previewtxt);
         imagev = (ImageView)findViewById(R.id.imageViewPreview);
         Button btnChangePreviewPhoto =(Button) findViewById(R.id.btnChangePreviewPhoto);
+        Button btnChangePreviewMessage =(Button) findViewById(R.id.btnchangePreviewText);
+        if(getIntent().hasExtra("msg")){
+            msg = getIntent().getStringExtra("msg");
+            hasmessage =true;
+        }
+        if(!hasmessage)
+        {
+            String btnaddmsgtxtt=  getString(R.string.PreviewbtnAddTxt);
+            btnChangePreviewMessage.setText(btnaddmsgtxtt);
+
+        }
+        else
+        {
+            String btnChangetxt=  getString(R.string.PreviewbtnChangeTxt);
+            btnChangePreviewMessage.setText(btnChangetxt);
+
+        }
 
         if(getIntent().hasExtra("theimage")){
         Bitmap b = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
@@ -55,6 +74,11 @@ public class Preview extends Activity {
             btnChangePreviewPhoto.setText(btnaddphototxt);
 
         }
+        else{
+            String btnaddphototxt=  getString(R.string.PreviewbtnChangePhoto);
+            btnChangePreviewPhoto.setText(btnaddphototxt);
+        }
+
 
         final String [] items			= new String [] {"Take from camera", "Select from gallery"};
         ArrayAdapter<String> adapter	= new ArrayAdapter<String> (this, android.R.layout.select_dialog_item,items);
