@@ -11,7 +11,7 @@ public class ConfirmActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.finalscreen);
+        setContentView(R.layout.confirm_screen);
 
     }
  }
