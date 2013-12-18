@@ -4,7 +4,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    android:scaleType="fitCenter">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -12,9 +13,10 @@
         android:id="@+id/logo"
         android:src="@drawable/bvdh_logo"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="100dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp" />
 
     <TextView
         style="@style/textCapsCentre"
@@ -22,8 +24,10 @@
         android:layout_height="wrap_content"
         android:text="WELKOM BIJ\nBEELD VAN DEN HAAG"
         android:id="@+id/welkom_text"
-        android:layout_below="@+id/logo"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignTop="@+id/logo"
+        android:layout_toRightOf="@+id/logo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         style="@style/textCentre"
@@ -31,9 +35,12 @@
         android:layout_height="wrap_content"
         android:text="Hier kunt u uw bericht naar het grote scherm op de Haagse Toren sturen. Upload een mooie foto, of stuur enkel een bericht in."
         android:id="@+id/editText"
-        android:layout_below="@id/welkom_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"/>
+        android:layout_below="@+id/welkom_text"
+        android:layout_alignRight="@+id/welkom_text"
+        android:layout_alignEnd="@+id/welkom_text"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@+id/welkom_text"
+        android:layout_alignStart="@+id/welkom_text" />
 
 
 </RelativeLayout>
