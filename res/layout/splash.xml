@@ -1,11 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent">
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background">
 
-    <ImageView android:src="@drawable/splash"
-               android:layout_width="fill_parent"
-               android:layout_height="fill_parent"
-            />
-</LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/bvdh_logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WELKOM BIJ\nBEELD VAN DEN HAAG"
+        android:id="@+id/welkom_text"
+        style="@style/textCapsCentre"
+        android:capitalize="characters"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"/>
+
+    <TextView
+        style="@style/textCentre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hier kunt u uw bericht naar het grote scherm op de Haagse Toren sturen. Upload een mooie foto, of stuur enkel een bericht in."
+        android:id="@+id/editText"
+        android:capitalize="characters"
+        android:layout_below="@+id/welkom_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"/>
+
+
+</RelativeLayout>

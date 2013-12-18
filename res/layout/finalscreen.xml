@@ -2,76 +2,68 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent" android:background="@android:color/white">
+              android:layout_height="fill_parent" android:background="@drawable/background">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Je bericht word getoond op de Haagse Toren zodra deze goedgekeurd is."
-            android:id="@+id/textView" android:layout_row="3" android:layout_column="0"
-            android:textColor="@android:color/black"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/bvdh_logo"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/checkBox"
-        android:fontFamily="Roboto"
-        style="@style/simpleText" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="100dp" />
 
-    <EditText
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText" android:layout_row="6" android:layout_column="0"
-            android:text="Like ons op Facebook!"
-        android:layout_alignTop="@+id/imageButton"
-        android:layout_alignLeft="@+id/checkBox"
-        android:layout_alignStart="@+id/checkBox"
-        android:clickable="false" />
-    <ImageButton
-            android:layout_width="113dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton" android:layout_row="7" android:layout_column="0" android:clickable="true"
-        android:longClickable="true"
-        android:layout_marginTop="54dp"
-        android:layout_below="@+id/checkBox"
-        android:layout_toRightOf="@+id/editText" />
-
-    <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ik heb alle rechten voor mijn beeld."
-            android:id="@+id/checkBox" android:layout_row="1" android:layout_column="0"
-            android:textColor="@android:color/black"
-        android:layout_marginTop="127dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-            android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:text="Stuur het op!"
-            android:id="@+id/btnpreview" android:layout_row="10" android:layout_column="0"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        style="@style/BvDH_button"
-        android:gravity="center" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/email"
-        android:layout_above="@+id/btnpreview"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
-        android:layout_marginBottom="98dp"
-        android:text="Vul hier je e-mailadres in"
-        android:layout_alignRight="@+id/imageButton"
-        android:layout_alignEnd="@+id/imageButton"
-        android:selectAllOnFocus="true" />
+        android:id="@+id/editText"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Vul hier uw e-mailadres in"
+        android:fontFamily="sans-serif-light"
+        android:selectAllOnFocus="true"
+        android:textSize="18sp" />
+
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hierbij verklaar ik dat ik alle rechten  heb voor mijn beeld"
+            android:id="@+id/checkBox"
+            android:textColor="@android:color/white"
+        android:button="@drawable/btn_check_holo_dark"
+        android:textSize="12sp"
+        android:gravity="center_vertical|left"
+        android:checked="false"
+        android:fontFamily="sans-serif-light"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:text="Plaats uw inzending"
+            android:id="@+id/btnpreview"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        style="@style/BvDH_button"
+        android:gravity="center" />
 
 
 </RelativeLayout>
