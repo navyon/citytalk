@@ -20,7 +20,7 @@
         style="@style/textCapsCentre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WELKOM BIJ\nBEELD VAN DEN HAAG"
+        android:text="welkom bij beeld van den haag"
         android:id="@+id/welkom_text"
         android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true" />

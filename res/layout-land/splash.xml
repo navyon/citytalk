@@ -12,17 +12,15 @@
         android:layout_height="wrap_content"
         android:id="@+id/logo"
         android:src="@drawable/bvdh_logo"
-        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="60dp" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         style="@style/textCapsCentre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WELKOM BIJ\nBEELD VAN DEN HAAG"
+        android:text="welkom bij beeld van den haag"
         android:id="@+id/welkom_text"
         android:layout_alignTop="@+id/logo"
         android:layout_toRightOf="@+id/logo"
@@ -35,12 +33,11 @@
         android:layout_height="wrap_content"
         android:text="Hier kunt u uw bericht naar het grote scherm op de Haagse Toren sturen. Upload een mooie foto, of stuur enkel een bericht in."
         android:id="@+id/editText"
-        android:layout_below="@+id/welkom_text"
+        android:layout_centerVertical="true"
         android:layout_alignRight="@+id/welkom_text"
         android:layout_alignEnd="@+id/welkom_text"
-        android:layout_marginTop="20dp"
-        android:layout_alignLeft="@+id/welkom_text"
-        android:layout_alignStart="@+id/welkom_text" />
+        android:layout_marginRight="26dp"
+        android:layout_toRightOf="@+id/logo" />
 
 
 </RelativeLayout>
