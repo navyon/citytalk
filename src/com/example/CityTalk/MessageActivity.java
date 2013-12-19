@@ -16,6 +16,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 
@@ -52,13 +53,15 @@ public class MessageActivity extends Activity {
                    msg = txtView_msg.getText().toString();
                    if(!defaultmsg.equalsIgnoreCase(msg))
                    {
-
-
-                     intent.putExtra("msg",msg);
-
+                       intent.putExtra("msg",msg);
+                       startActivity(intent);
+                   }
+                   else
+                   {
+                       Toast.makeText(getApplicationContext(),"Please add your Message", Toast.LENGTH_SHORT).show();
 
                    }
-                   startActivity(intent);
+
                }
            });
            // This on key listener gets the number of lines if larger than 4 it ignore the Enter Key Press

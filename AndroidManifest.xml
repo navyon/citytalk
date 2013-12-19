@@ -7,6 +7,15 @@
               android:targetSdkVersion="17"
               android:maxSdkVersion="17" />
     <application android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar">
+
+        <activity
+                android:name=".FinalActivity"
+                android:label="@string/app_name"
+                android:windowSoftInputMode="stateHidden"
+                >
+        </activity>
+
+
         <activity
                 android:name=".ConfirmActivity"
                 android:label="@string/app_name"

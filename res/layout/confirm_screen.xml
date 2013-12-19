@@ -58,7 +58,7 @@
             android:layout_width="fill_parent"
             android:layout_height="70dp"
             android:text="Plaats uw inzending"
-            android:id="@+id/btnpreview"
+            android:id="@+id/btnfinalsubmit"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
