@@ -1,43 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
-=======
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
       <GlobalState />
     </option>
   </component>
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
   <component name="AndroidLayouts">
     <shared>
       <config />
     </shared>
-<<<<<<< HEAD
-=======
-    <layouts>
-      <layout url="file://$PROJECT_DIR$/res/layout/main.xml">
-        <config>
-          <device>Xperia Z1</device>
-          <theme>@android:style/Theme.NoTitleBar</theme>
-        </config>
-      </layout>
-    </layouts>
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
-  </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="2b39b4eb-31ad-458f-a734-2061124ab45a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CityTalk.iml" afterPath="$PROJECT_DIR$/CityTalk.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-=======
-    <list default="true" id="ecd0835c-0e5c-4ef8-981e-bd96556ed4b9" name="Default" comment="first screen layout update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/camera_icon.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/camera_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/message.xml" afterPath="$PROJECT_DIR$/res/layout/message.xml" />
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
+      <change type="DELETED" beforePath="E:\Dev\citytalk\res\drawable-xhdpi\background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\Dev\citytalk\res\drawable-xhdpi\background_light.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/CityTalk/ConfirmActivity.java" afterPath="$PROJECT_DIR$/src/com/example/CityTalk/ConfirmActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/confirm_screen.xml" afterPath="$PROJECT_DIR$/res/layout/confirm_screen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/splash.xml" afterPath="$PROJECT_DIR$/res/layout/splash.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CityTalk.iws" />
@@ -102,63 +81,114 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-          <provider editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
-=======
-            <state line="25" column="42" selection-start="1022" selection-end="1022" vertical-scroll-proportion="-5.2777777" vertical-offset="90" max-vertical-offset="1605">
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
+      <file leaf-file-name="TypedArray.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/content/res/TypedArray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="228" column="0" selection-start="8090" selection-end="8090" vertical-scroll-proportion="0.0" vertical-offset="3876" max-vertical-offset="12682">
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
+        </entry>
+      </file>
+      <file leaf-file-name="SpannableStringBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/text/SpannableStringBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="862" column="0" selection-start="30432" selection-end="30432" vertical-scroll-proportion="0.0" vertical-offset="14654" max-vertical-offset="23035">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditText.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/widget/EditText.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="0" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1938">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="splash.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="0" selection-start="940" selection-end="940" vertical-scroll-proportion="-3.66" vertical-offset="327" max-vertical-offset="799">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
             <state />
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="previewtxt.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+      <file leaf-file-name="TextView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/widget/TextView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1319" column="0" selection-start="50390" selection-end="50390" vertical-scroll-proportion="0.0" vertical-offset="22423" max-vertical-offset="150212">
               <folding />
             </state>
           </provider>
-=======
-      <file leaf-file-name="MessageActivity.java" pinned="false" current="true" current-in-tab="true">
+        </entry>
+      </file>
+      <file leaf-file-name="MessageActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.57983196" vertical-offset="0" max-vertical-offset="705">
+            <state line="46" column="139" selection-start="1462" selection-end="1576" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1258">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MyActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="52" selection-start="7196" selection-end="7196" vertical-scroll-proportion="0.0" vertical-offset="1314" max-vertical-offset="2595">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
+      <file leaf-file-name="landingpage.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/landingpage.xml">
           <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
               <folding />
             </state>
           </provider>
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
           <provider selected="true" editor-type-id="android-designer">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="confirm_screen.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/confirm_screen.xml">
+          <provider editor-type-id="text-editor">
+            <state line="41" column="24" selection-start="1636" selection-end="1665" vertical-scroll-proportion="0.0" vertical-offset="534" max-vertical-offset="1258">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfirmActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/ConfirmActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="57" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.5842391" vertical-offset="329" max-vertical-offset="1037">
+              <folding>
+                <element signature="e#918#1666#0" expanded="true" />
+                <element signature="e#1655#1656#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="String.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="19" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="34255">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -166,27 +196,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/res/layout/previewtxt.xml" />
-=======
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/res/layout/finalscreen.xml" />
+        <option value="$PROJECT_DIR$/res/layout/previewtxt.xml" />
         <option value="$PROJECT_DIR$/res/layout/message.xml" />
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/layout-land/splash.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/CityTalk/MyActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/CityTalk/Preview.java" />
+        <option value="$PROJECT_DIR$/res/layout/confirm_screen.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/CityTalk/FinalActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/splash.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/CityTalk/ConfirmActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-<<<<<<< HEAD
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
-=======
-    <option name="x" value="21" />
-    <option name="y" value="22" />
-    <option name="width" value="1653" />
-    <option name="height" value="1024" />
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -201,6 +232,20 @@
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes />
+  </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -208,62 +253,50 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-<<<<<<< HEAD
     <property name="recentsLimit" value="5" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="AndroidTargetDevices" value="0380700043a0b297" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/facebook-android-sdk-master/facebook-android-sdk-master" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="options.lastSelected" value="preferences.sourceCode.XML" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Android Application.Unnamed">
+    <configuration default="false" name="Preview" type="AndroidRunConfigurationType" factoryName="Android Application" temporary="true">
+      <module name="CityTalk" />
+      <option name="ACTIVITY_CLASS" value="com.example.CityTalk.Preview" />
+      <option name="MODE" value="specific_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="Android" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-=======
-    <property name="FullScreen" value="false" />
-    <property name="DEBUGGABLE_DEVICE" value="BH9036VQ06" />
-    <property name="DEBUGGABLE_PROCESS" value="com.example.CityTalk" />
-    <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="520" />
-  </component>
-  <component name="RunManager" selected="Android Application.Unnamed">
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list />
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="CityTalk" />
+      <module name="" />
       <option name="TESTING_TYPE" value="0" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
       <option name="METHOD_NAME" value="" />
@@ -282,14 +315,6 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="GriffonRunConfigurationType" factoryName="Griffon">
-      <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -298,7 +323,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-<<<<<<< HEAD
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -310,20 +334,6 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-=======
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -389,15 +399,13 @@
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="CityTalk" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
+      <option name="ACTIVITY_CLASS" value="com.example.CityTalk.SplashActivity" />
+      <option name="MODE" value="specific_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
-<<<<<<< HEAD
-=======
-      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
+      <option name="PREFERRED_AVD" value="Android" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
       <option name="WIPE_USER_DATA" value="false" />
@@ -410,11 +418,10 @@
     </configuration>
     <configuration default="false" name="Unnamed" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="CityTalk" />
-      <option name="ACTIVITY_CLASS" value="" />
+      <option name="ACTIVITY_CLASS" value="com.example.CityTalk.SplashActivity" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
       <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
@@ -426,32 +433,26 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
-<<<<<<< HEAD
-    <list size="0" />
-=======
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Android Application.Unnamed" />
+      <item index="1" class="java.lang.String" itemvalue="Android Application.Preview" />
     </list>
-    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-    </configuration>
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Android Application.Preview" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-<<<<<<< HEAD
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="2b39b4eb-31ad-458f-a734-2061124ab45a" name="Default" comment="" />
-      <created>1386862252562</created>
-      <updated>1386862252562</updated>
-=======
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="mySSHConnectionTimeout" value="30000" />
@@ -470,71 +471,42 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ecd0835c-0e5c-4ef8-981e-bd96556ed4b9" name="Default" comment="" />
-      <created>1386865211906</created>
-      <updated>1386865211906</updated>
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
+      <changelist id="2b39b4eb-31ad-458f-a734-2061124ab45a" name="Default" comment="" />
+      <created>1386862252562</created>
+      <updated>1386862252562</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
-=======
-    <frame x="21" y="22" width="1653" height="1024" extended-state="0" />
-    <editor active="false" />
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34040996" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3678161" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2981701" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25588697" sideWeight="0.76061493" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38147566" sideWeight="0.3477306" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53846157" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38147566" sideWeight="0.6522694" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32938644" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36598492" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-=======
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -549,24 +521,18 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-<<<<<<< HEAD
-=======
-    <MESSAGE value="first screen layout update&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="first screen layout update&#10;" />
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/crop_selector.xml">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
-=======
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="32" column="8" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="1575">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
@@ -574,36 +540,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="32" column="8" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="1575">
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-=======
-    <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
+        <state line="32" column="38" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1547">
           <folding />
         </state>
       </provider>
@@ -611,14 +550,38 @@
         <state />
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-=======
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/SplashActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="8" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="1575">
+        <state line="12" column="78" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="202" column="69" selection-start="7309" selection-end="7309" vertical-scroll-proportion="0.0" vertical-offset="3230" max-vertical-offset="3230" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="45" selection-start="2122" selection-end="2122" vertical-scroll-proportion="0.0" vertical-offset="952" max-vertical-offset="1598" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="37" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/Preview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="232" column="39" selection-start="7234" selection-end="7552" vertical-scroll-proportion="0.0" vertical-offset="3944" max-vertical-offset="4964" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="26" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1394">
           <folding />
         </state>
       </provider>
@@ -626,50 +589,24 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="49" column="50" selection-start="2166" selection-end="2166" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1560">
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
-=======
-    <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1470" />
+        <state line="12" column="57" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <folding>
+            <element signature="e#379#397#0" expanded="true" />
+            <element signature="e#542#560#0" expanded="true" />
+            <element signature="e#755#773#0" expanded="true" />
+            <element signature="e#959#977#0" expanded="true" />
+            <element signature="e#1169#1187#0" expanded="true" />
+            <element signature="e#1365#1383#0" expanded="true" />
+            <element signature="e#1685#1703#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/crop_selector.xml">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
@@ -677,24 +614,331 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/adt-bundle-mac-x86_64-20131030/sdk/sources/android-17/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4392" column="43" selection-start="169214" selection-end="169214" vertical-scroll-proportion="-1.4848485" vertical-offset="65078" max-vertical-offset="272670">
+    <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
+      <provider editor-type-id="text-editor">
+        <state line="34" column="38" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1564">
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/SplashActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="78" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="172" column="92" selection-start="5897" selection-end="5897" vertical-scroll-proportion="0.0" vertical-offset="2924" max-vertical-offset="3349" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="45" selection-start="2122" selection-end="2122" vertical-scroll-proportion="0.0" vertical-offset="952" max-vertical-offset="1598" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="37" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/Preview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="232" column="39" selection-start="7234" selection-end="7552" vertical-scroll-proportion="0.0" vertical-offset="3944" max-vertical-offset="4964" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="26" selection-start="398" selection-end="431" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1156">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="text-editor">
-        <state line="25" column="42" selection-start="1022" selection-end="1022" vertical-scroll-proportion="-5.2777777" vertical-offset="90" max-vertical-offset="1605">
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
           <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-<<<<<<< HEAD
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1496">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/app/Instrumentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1507" column="0" selection-start="58297" selection-end="58297" vertical-scroll-proportion="0.0" vertical-offset="24431" max-vertical-offset="28832" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/content/Intent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="595" column="13" selection-start="29132" selection-end="29187" vertical-scroll-proportion="0.0" vertical-offset="9277" max-vertical-offset="116501" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/app/ActivityThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1986" column="67" selection-start="82811" selection-end="82811" vertical-scroll-proportion="0.33333334" vertical-offset="31394" max-vertical-offset="83521" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/crop_selector.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/app/AlertDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="929" column="27" selection-start="40114" selection-end="40114" vertical-scroll-proportion="0.0" vertical-offset="14496" max-vertical-offset="15181" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="37" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-land/splash.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/Preview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="229" column="112" selection-start="7267" selection-end="7267" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="4369" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/SplashActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="78" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/FinalActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="58" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="32" selection-start="657" selection-end="657" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="935">
+          <folding>
+            <element signature="e#379#397#0" expanded="true" />
+            <element signature="e#542#560#0" expanded="true" />
+            <element signature="e#755#773#0" expanded="true" />
+            <element signature="e#959#977#0" expanded="true" />
+            <element signature="e#1169#1187#0" expanded="true" />
+            <element signature="e#1365#1383#0" expanded="true" />
+            <element signature="e#1685#1703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
+      <provider editor-type-id="text-editor">
+        <state line="32" column="38" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1547">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="text-editor">
+        <state line="9" column="54" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1326">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/message.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="22" selection-start="369" selection-end="402" vertical-scroll-proportion="-2.84" vertical-offset="11" max-vertical-offset="1394">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="34" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="3111" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3615" column="0" selection-start="140858" selection-end="140858" vertical-scroll-proportion="0.0" vertical-offset="59721" max-vertical-offset="309026">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/view/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="396" column="0" selection-start="16553" selection-end="16553" vertical-scroll-proportion="0.0" vertical-offset="6222" max-vertical-offset="20689">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4467" column="0" selection-start="188949" selection-end="188949" vertical-scroll-proportion="0.0" vertical-offset="73950" max-vertical-offset="88213">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/widget/TextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1319" column="0" selection-start="50390" selection-end="50390" vertical-scroll-proportion="0.0" vertical-offset="20009" max-vertical-offset="146574">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/text/SpannableStringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="862" column="0" selection-start="30432" selection-end="30432" vertical-scroll-proportion="0.0" vertical-offset="14202" max-vertical-offset="22661">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/content/res/TypedArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="228" column="0" selection-start="8090" selection-end="8090" vertical-scroll-proportion="0.0" vertical-offset="3349" max-vertical-offset="12274">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="940" selection-end="940" vertical-scroll-proportion="-3.66" vertical-offset="327" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/widget/EditText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="0" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="19" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="34255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="139" selection-start="1462" selection-end="1576" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/landingpage.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/confirm_screen.xml">
+      <provider editor-type-id="text-editor">
+        <state line="41" column="24" selection-start="1636" selection-end="1665" vertical-scroll-proportion="0.0" vertical-offset="534" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/ConfirmActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="57" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.5842391" vertical-offset="329" max-vertical-offset="1037">
+          <folding>
+            <element signature="e#918#1666#0" expanded="true" />
+            <element signature="e#1655#1656#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
@@ -772,23 +1016,5 @@
       </state>
     </states>
   </component>
-=======
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="52" selection-start="7196" selection-end="7196" vertical-scroll-proportion="0.0" vertical-offset="1314" max-vertical-offset="2595">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/CityTalk/MessageActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.57983196" vertical-offset="0" max-vertical-offset="705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-  </component>
->>>>>>> 05c517903fb38860f0e2e70082bdf77306b1ef89
 </project>
 
