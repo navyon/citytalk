@@ -35,10 +35,11 @@ public class ConfirmActivity extends Activity {
             public void onClick(View v) {
 
                 edittx_email = (EditText) findViewById(R.id.editText_email);
+                edittx_email.setTextColor(Color.BLACK);
                 String email = edittx_email.getText().toString();
                 if(checkEmail(email))
                 {
-                    edittx_email.setTextColor(Color.BLACK);
+
                     Intent intent = new Intent(ConfirmActivity.this, FinalActivity.class);
                     startActivity(intent);
                 }

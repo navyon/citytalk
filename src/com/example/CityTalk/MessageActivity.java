@@ -40,6 +40,18 @@ public class MessageActivity extends Activity {
                    String msg = (String) txtView_msg.getText().toString();
 
                    if (!msg.isEmpty()) {
+                       // The Image from the previous Activity is decoded and stored as a bitMap, so it can be sent on to the Next
+                       intent = new Intent(MessageActivity.this, Preview.class);
+                       if(getIntent().hasExtra("theimage")){
+                           Bitmap b  = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
+                           if(b!=null) {
+                               ByteArrayOutputStream bs = new ByteArrayOutputStream();
+                               b.compress(Bitmap.CompressFormat.PNG,50,bs);
+                               intent.putExtra("theimage",bs.toByteArray());
+
+                           }
+                       }
+
                        intent.putExtra("msg", msg);
                        startActivity(intent);
 
@@ -52,17 +64,7 @@ public class MessageActivity extends Activity {
            });
 
 
-           // The Image from the previous Activity is decoded and stored as a bitMap, so it can be sent on to the Next
-           intent = new Intent(MessageActivity.this, Preview.class);
-           if(getIntent().hasExtra("theimage")){
-           Bitmap b  = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
-           if(b!=null) {
-               ByteArrayOutputStream bs = new ByteArrayOutputStream();
-               b.compress(Bitmap.CompressFormat.PNG,50,bs);
-               intent.putExtra("theimage",bs.toByteArray());
 
-             }
-           }
 
 
 

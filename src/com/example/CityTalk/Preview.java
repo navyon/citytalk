@@ -49,7 +49,12 @@ public class Preview extends Activity {
         CheckMessageExists();
         CheckPhotoExist();
 
+        final Bitmap imgbit = imagev.getDrawingCache();
+        if(imgbit!=null)
+        {
+            imagev.setImageBitmap(imgbit);
 
+        }
         final String [] items			= new String [] {"Take from camera", "Select from gallery"};
         ArrayAdapter<String> adapter	= new ArrayAdapter<String> (this, android.R.layout.select_dialog_item,items);
         AlertDialog.Builder builder		= new AlertDialog.Builder(this);
@@ -109,6 +114,8 @@ public class Preview extends Activity {
         findViewById(R.id.btnchangePreviewText).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
+                imagev.setDrawingCacheEnabled(true);
+                CheckPhotoExist();
                 finish();
 
 
@@ -151,6 +158,7 @@ public class Preview extends Activity {
                 imagev.setImageBitmap(b);
                 hasphoto =true;
         }
+
         // checks whether user added a photo, then changes button text accordingly
         if(!hasphoto)
         {
