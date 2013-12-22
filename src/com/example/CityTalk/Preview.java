@@ -15,10 +15,9 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Toast;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -26,10 +25,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Preview extends Activity {
+public class Preview  extends Activity implements Animation.AnimationListener {
     private Uri mImageCaptureUri;
-    private ImageView mImageView;
+    private TextView txtview;
     public ImageView imagev;
+
     private static final int PICK_FROM_CAMERA = 1;
     private static final int CROP_FROM_CAMERA = 2;
     private static final int PICK_FROM_FILE = 3;
@@ -38,22 +38,38 @@ public class Preview extends Activity {
     String msg =null;
     Button btnChangePreviewPhoto;
     Button btnChangePreviewMessage;
+    // Animation
+    Animation animSideDown;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.previewtxt);
-        imagev = (ImageView)findViewById(R.id.imageViewPreview);
+        //imagev = (ImageView)findViewById(R.id.imageViewPreview);
+        txtview = (TextView)findViewById(R.id.imageViewPreview);
         btnChangePreviewPhoto =(Button) findViewById(R.id.btnChangePreviewPhoto);
         btnChangePreviewMessage =(Button) findViewById(R.id.btnchangePreviewText);
+
+        // load the animation
+        animSideDown = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.slide_down);
+
+        // set animation listener
+        animSideDown.setAnimationListener(this);
         // These Methods check whether photos or a message was added
         CheckMessageExists();
-        CheckPhotoExist();
+        //CheckPhotoExist();
 
-        final Bitmap imgbit = imagev.getDrawingCache();
+       /* final Bitmap imgbit = imagev.getDrawingCache();
         if(imgbit!=null)
         {
             imagev.setImageBitmap(imgbit);
 
+        }*/
+        if(hasmessage)
+        {
+            txtview.setText(msg);
+
+            StartTextAnimation();
         }
         final String [] items			= new String [] {"Take from camera", "Select from gallery"};
         ArrayAdapter<String> adapter	= new ArrayAdapter<String> (this, android.R.layout.select_dialog_item,items);
@@ -107,15 +123,15 @@ public class Preview extends Activity {
             public void onClick(View v) {
 
                dialog.show();
-               CheckPhotoExist();
+              // CheckPhotoExist();
             }
         });
 
         findViewById(R.id.btnchangePreviewText).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                imagev.setDrawingCacheEnabled(true);
-                CheckPhotoExist();
+                /*imagev.setDrawingCacheEnabled(true);
+                CheckPhotoExist();*/
                 finish();
 
 
@@ -126,7 +142,7 @@ public class Preview extends Activity {
 
 
      }
-    void CheckMessageExists()
+    boolean CheckMessageExists()
     {
         if(getIntent().hasExtra("msg")){
             msg = getIntent().getStringExtra("msg");
@@ -136,6 +152,7 @@ public class Preview extends Activity {
         {
             String btnaddmsgtxtt=  getString(R.string.PreviewbtnAddTxt);
             btnChangePreviewMessage.setText(btnaddmsgtxtt);
+            hasmessage =false;
 
         }
         else
@@ -145,11 +162,19 @@ public class Preview extends Activity {
 
         }
 
+        return hasmessage;
+
+    }
+    void StartTextAnimation()
+    {
+        txtview.setVisibility(View.VISIBLE);
+        txtview.startAnimation(animSideDown);
+        //txtview.setVisibility(View.GONE);
 
 
     }
     // This Method checks if a photo was added and updates the UI
-    void CheckPhotoExist()
+   /* void CheckPhotoExist()
     {
         if(getIntent().hasExtra("theimage")){
             Bitmap b = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
@@ -172,7 +197,7 @@ public class Preview extends Activity {
         }
 
 
-    }
+    }*/
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != RESULT_OK) return;
@@ -205,7 +230,7 @@ public class Preview extends Activity {
                     intent.putExtra("theimage",bs.toByteArray());
 
                 }
-                CheckPhotoExist();
+               // CheckPhotoExist();
                 File f = new File(mImageCaptureUri.getPath());
 
                 if (f.exists()) f.delete();
@@ -217,7 +242,27 @@ public class Preview extends Activity {
 
         }
     }
+    @Override
+    public void onAnimationEnd(Animation animation) {
+        // Take any action after completing the animation
 
+        // check for zoom in animation
+        if (animation == animSideDown) {
+        }
+
+    }
+
+    @Override
+    public void onAnimationRepeat(Animation animation) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void onAnimationStart(Animation animation) {
+        // TODO Auto-generated method stub
+
+    }
     private void doCrop() {
         final ArrayList<CropOption> cropOptions = new ArrayList<CropOption>();
 
