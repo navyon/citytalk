@@ -55,7 +55,7 @@
     <Button
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:id="@+id/button"
+        android:id="@+id/like"
         style="@style/textCentre"
         android:background="#0069b4"
         android:fontFamily="sans-serif-light"

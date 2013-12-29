@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent" android:background="@android:color/white">
+              android:layout_height="fill_parent" android:background="@android:color/white"
+    android:orientation="vertical">
 
     <EditText
         android:layout_width="345dp"
-        android:layout_height="258dp"
+        android:layout_height="285dp"
         android:hint="Voer hier direct jouw bericht in."
         android:id="@+id/txtView_msg" android:layout_gravity="center_horizontal|top" android:background="#010101"
         android:textColor="#f5f5f5" android:textStyle="bold" android:singleLine="false" android:maxLines="4"
@@ -17,21 +18,24 @@
         android:padding="10dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:maxWidth="10dp"
+        android:gravity="center_horizontal|top" />
 
     <TextView
         style="@style/textCapsCentre"
         android:text="HOUD ER REKENING MEE DAT ER MAXIMAAL 4 REGELS OP KUNNEN."
         android:id="@+id/textView"
         android:textIsSelectable="false"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
         android:textColor="@android:color/black"
         android:layout_below="@+id/txtView_msg"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp" />
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom" />
 
 
     <TextView
@@ -42,11 +46,10 @@
         android:textAllCaps="false"
         android:fontFamily="sans-serif-light"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:textColor="@android:color/black"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp" />
+        android:layout_weight="1"
+        android:gravity="center" />
 
     <TextView
         style="@style/textCentre"
@@ -56,11 +59,10 @@
         android:textAllCaps="false"
         android:fontFamily="sans-serif-light"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:textColor="@android:color/black"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp" />
+        android:layout_weight="1"
+        android:gravity="center" />
 
     <Button
             android:layout_width="match_parent"
@@ -68,10 +70,8 @@
             android:text="Bekijk je preview!"
             android:id="@+id/btnpreview"
         style="@style/BvDH_button"
-        android:layout_gravity="bottom"
         android:gravity="center_vertical|center_horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom" />
 
-</RelativeLayout>
+</LinearLayout>
