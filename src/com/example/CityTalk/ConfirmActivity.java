@@ -47,7 +47,7 @@ public class ConfirmActivity extends Activity {
                 {
 
                     edittx_email.setTextColor(Color.RED);
-                    Toast.makeText(getApplicationContext(), "Please check your email address.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Controleer uw e-mailadres.", Toast.LENGTH_LONG).show();
 
 
                 }
