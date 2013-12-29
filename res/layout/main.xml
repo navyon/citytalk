@@ -20,7 +20,7 @@
         android:text="Wat wilt u plaatsen op de haagse toren?"
         style="@style/textCapsCentre"
         android:layout_marginBottom="18dp"
-        android:layout_weight="10"
+        android:layout_weight="1"
         android:layout_gravity="center_horizontal|bottom"
         android:gravity="center_horizontal|bottom" />
 
@@ -28,9 +28,9 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:weightSum="1">
+        android:layout_height="170dp"
+        android:weightSum="1"
+        android:layout_gravity="bottom">
 
         <Button
             android:layout_width="wrap_content"
