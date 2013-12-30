@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:background="#010101"
+<<<<<<< HEAD
               android:id="@+id/previewlayout"
         >
 
@@ -20,6 +21,10 @@
             android:layout_gravity="center"
             android:visibility="invisible"
             android:layout_alignParentRight="true" android:layout_alignParentLeft="true"/>
+=======
+
+    android:orientation="vertical">
+>>>>>>> f552f413b006b5bc2b2be5b401fc28bdbb42d198
 
     <TextView
         android:layout_width="345dp"
@@ -29,11 +34,11 @@
         android:layout_gravity="center_horizontal"
         android:background="#010101"
         android:textColor="#f5f5f5" android:textStyle="bold" android:singleLine="false" android:maxLines="4"
-        android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
         android:lineSpacingExtra="-4dp"
         android:clickable="true"
         android:textSize="50dp"
         android:padding="10dp"
+<<<<<<< HEAD
         android:layout_alignLeft="@+id/ImageViewPreview"
         android:layout_alignTop="@+id/ImageViewPreview"
         android:layout_alignRight="@+id/ImageViewPreview"
@@ -43,44 +48,49 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
+=======
+        android:layout_marginTop="20dp"
+        android:layout_weight="1" />
+>>>>>>> f552f413b006b5bc2b2be5b401fc28bdbb42d198
 
-    <Button
-            android:layout_width="161dp"
-            android:layout_height="wrap_content"
-            android:text="Wijzig foto"
-            android:id="@+id/btnChangePreviewPhoto"
-        style="@style/BvDH_button"
-        android:drawableTop="@drawable/camera_icon"
-        android:paddingTop="40dp"
-        android:paddingBottom="20dp"
-        android:textSize="18dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:background="@color/BvDH_green"
-        android:textColor="@android:color/white"
-        android:layout_alignTop="@+id/btnchangePreviewText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/btnchangePreviewText"
-        android:layout_toLeftOf="@+id/space" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
 
-    <Button
-        style="@style/BvDH_button"
-        android:layout_width="wrap_content"
-            android:layout_height="170dp"
-            android:text="Wijzig tekst"
-            android:id="@+id/btnchangePreviewText"
-        android:clickable="true"
-        android:drawableTop="@drawable/text_icon"
-        android:paddingTop="40dp"
-        android:paddingBottom="20dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:background="@color/BvDH_Rood"
-        android:textColor="@android:color/white"
-        android:layout_above="@+id/btnSubmitmsgtxt"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/space"
-        android:textSize="18dp" />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Wijzig foto"
+                android:id="@+id/btnChangePreviewPhoto"
+            style="@style/BvDH_button"
+            android:drawableTop="@drawable/camera_icon"
+            android:textSize="18dp"
+            android:background="@color/BvDH_green"
+            android:textColor="@android:color/white"
+            android:layout_weight="0.5"
+            android:clickable="true"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:paddingTop="40dp" />
+
+        <Button
+            style="@style/BvDH_button"
+            android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Wijzig tekst"
+                android:id="@+id/btnchangePreviewText"
+            android:clickable="true"
+            android:drawableTop="@drawable/text_icon"
+            android:background="@color/BvDH_Rood"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:paddingTop="40dp" />
+
+    </LinearLayout>
 
     <Button
             android:layout_width="fill_parent"
@@ -91,10 +101,9 @@
         style="@style/BvDH_button"
         android:background="@color/BvDH_paars"
         android:textColor="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_gravity="bottom"
         android:gravity="center" />
 
 
-</RelativeLayout>
+</LinearLayout>

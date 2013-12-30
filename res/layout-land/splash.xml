@@ -1,43 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
+<LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/background"
-    android:scaleType="fitCenter">
+    android:scaleType="fitCenter"
+    android:columnCount="2"
+    android:rowCount="4">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/logo"
         android:src="@drawable/bvdh_logo"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="30dp" />
 
-    <TextView
-        style="@style/textCapsCentre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="welkom bij beeld van den haag"
-        android:id="@+id/welkom_text"
-        android:layout_alignTop="@+id/logo"
-        android:layout_toRightOf="@+id/logo"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center">
 
-    <TextView
-        style="@style/textCentre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hier kunt u uw bericht naar het grote scherm op de Haagse Toren sturen. Upload een mooie foto, of stuur enkel een bericht in."
-        android:id="@+id/editText"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/welkom_text"
-        android:layout_alignEnd="@+id/welkom_text"
-        android:layout_marginRight="26dp"
-        android:layout_toRightOf="@+id/logo" />
+        <TextView
+            style="@style/textCapsCentre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="welkom bij beeld van den haag"
+            android:id="@+id/welkom_text"
+            android:layout_alignParentEnd="true"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:gravity="left" />
 
+        <TextView
+            style="@style/textCentre"
+            android:layout_width="wrap_content"
+            android:layout_height="86dp"
+            android:text="Hier kunt u uw bericht naar het grote scherm op de Haagse Toren sturen. Upload een mooie foto, of stuur enkel een bericht in."
+            android:id="@+id/editText"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:maxWidth="400dp"
+            android:gravity="left"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

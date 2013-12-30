@@ -44,11 +44,11 @@ public class MyActivity extends Activity {
 
 
 
-        final String [] items			= new String [] {"Take from camera", "Select from gallery"};
+        final String [] items			= new String [] {"Maak een foto", "Selecteer een bestaande foto"};
         ArrayAdapter<String> adapter	= new ArrayAdapter<String> (this, android.R.layout.select_dialog_item,items);
         AlertDialog.Builder builder		= new AlertDialog.Builder(this);
 
-        builder.setTitle("Select Image");
+        builder.setTitle("Selecteer afbeelding");
         builder.setAdapter( adapter, new DialogInterface.OnClickListener() {
             public void onClick( DialogInterface dialog, int item ) { //pick from camera
                 if (item == 0) {
@@ -183,7 +183,7 @@ public class MyActivity extends Activity {
                 CropOptionAdapter adapter = new CropOptionAdapter(getApplicationContext(), cropOptions);
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Choose Crop App");
+                builder.setTitle("Pas formaat aan");
                 builder.setAdapter( adapter, new DialogInterface.OnClickListener() {
                     public void onClick( DialogInterface dialog, int item ) {
                         startActivityForResult( cropOptions.get(item).appIntent, CROP_FROM_CAMERA);
