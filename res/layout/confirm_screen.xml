@@ -1,75 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent" android:background="@drawable/background"
-    android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:background="@drawable/background"
+                android:orientation="vertical">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:id="@+id/imageView"
-        android:src="@drawable/bvdh_logo"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="100dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/bvdh_logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
 
     <CheckBox
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:text="Hierbij verklaar ik dat ik alle rechten  heb voor mijn beeld"
             android:id="@+id/checkBox"
             android:textColor="@android:color/white"
-<<<<<<< HEAD
-            android:gravity="center_vertical|left"
-        android:checked="false"
-        android:fontFamily="sans-serif-light"
-        android:paddingLeft="30dp"
-        android:layout_below="@+id/editText_email"
-=======
-        android:button="@drawable/btn_check_holo_dark"
-        android:textSize="12sp"
-        android:checked="false"
-        android:fontFamily="sans-serif-light"
->>>>>>> f552f413b006b5bc2b2be5b401fc28bdbb42d198
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-<<<<<<< HEAD
-        android:button="@xml/custom_checkbox"
-        android:textSize="13dp"/>
-=======
-        android:layout_weight="1"
-        android:paddingLeft="5dp"
-        android:gravity="center" />
+            android:button="@drawable/btn_check_holo_dark"
+            android:textSize="12sp"
+            android:checked="false"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="5dp"
+            android:gravity="center"
+            android:layout_below="@+id/editText_email"
+            android:layout_alignLeft="@+id/editText_email"
+            android:layout_alignStart="@+id/editText_email"
+            android:layout_marginTop="61dp" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/editText_email"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:hint="Vul hier uw e-mailadres in"
-        android:fontFamily="sans-serif-light"
-        android:selectAllOnFocus="true"
-        android:textSize="18sp"
-        android:layout_gravity="center_horizontal"
-        android:minWidth="300dp" />
->>>>>>> f552f413b006b5bc2b2be5b401fc28bdbb42d198
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editText_email"
+            android:hint="Vul hier uw e-mailadres in"
+            android:fontFamily="sans-serif-light"
+            android:selectAllOnFocus="true"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="300dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
 
     <Button
             android:layout_width="fill_parent"
             android:layout_height="70dp"
             android:text="Plaats uw inzending"
             android:id="@+id/btnfinalsubmit"
-        android:layout_alignParentStart="true"
-        style="@style/BvDH_button"
-        android:gravity="center"
-        android:layout_gravity="bottom" />
+            style="@style/BvDH_button"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
 
-</LinearLayout>
+</RelativeLayout>

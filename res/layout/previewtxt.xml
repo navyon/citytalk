@@ -1,96 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:background="#010101"
-<<<<<<< HEAD
-              android:id="@+id/previewlayout"
-        >
-
-    <Space
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/space"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#000000"
+                android:orientation="vertical">
     <ImageView
             android:id="@+id/ImageViewPreview"
-            android:layout_width="345dp"
-            android:layout_height="258dp"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:visibility="invisible"
-            android:layout_alignParentRight="true" android:layout_alignParentLeft="true"/>
-=======
-
-    android:orientation="vertical">
->>>>>>> f552f413b006b5bc2b2be5b401fc28bdbb42d198
-
+            android:layout_alignParentTop="true" android:layout_above="@+id/btnChangePreviewPhoto"/>
     <TextView
-        android:layout_width="345dp"
-        android:layout_height="258dp"
-        android:id="@+id/TextViewPreview"
-        android:visibility="invisible"
-        android:layout_gravity="center_horizontal"
-        android:background="#010101"
-        android:textColor="#f5f5f5" android:textStyle="bold" android:singleLine="false" android:maxLines="4"
-        android:lineSpacingExtra="-4dp"
-        android:clickable="true"
-        android:textSize="50dp"
-        android:padding="10dp"
-<<<<<<< HEAD
-        android:layout_alignLeft="@+id/ImageViewPreview"
-        android:layout_alignTop="@+id/ImageViewPreview"
-        android:layout_alignRight="@+id/ImageViewPreview"
-        android:layout_alignBottom="@+id/ImageViewPreview"
-        android:layout_margin="1dp"
-        android:gravity="center"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
-=======
-        android:layout_marginTop="20dp"
-        android:layout_weight="1" />
->>>>>>> f552f413b006b5bc2b2be5b401fc28bdbb42d198
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TextViewPreview"
+            android:visibility="invisible"
+            android:layout_gravity="center_horizontal"
+            android:background="#010101"
+            android:textColor="#f5f5f5" android:textStyle="bold" android:singleLine="false" android:maxLines="4"
+            android:lineSpacingExtra="-4dp"
+            android:clickable="true"
+            android:textSize="50dp"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:maxWidth="600dp"
+            android:gravity="center_vertical|left"
+            android:minHeight="225dp"
+            android:maxHeight="450dp"
+            android:minWidth="300dp"
+            android:minLines="4"
+            android:layout_centerHorizontal="true"
+            android:layout_alignLeft="@id/ImageViewPreview"
+            android:layout_alignTop="@id/ImageViewPreview"
+            android:layout_alignRight="@id/ImageViewPreview"
+            android:layout_alignBottom="@id/ImageViewPreview"
+            />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="170dp">
+    <Space
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/space" />
 
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Wijzig foto"
-                android:id="@+id/btnChangePreviewPhoto"
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="170dp"
+            android:text="@string/PreviewbtnChangePhoto"
+            android:id="@+id/btnChangePreviewPhoto"
             style="@style/BvDH_button"
             android:drawableTop="@drawable/camera_icon"
             android:textSize="18dp"
             android:background="@color/BvDH_green"
             android:textColor="@android:color/white"
-            android:layout_weight="0.5"
             android:clickable="true"
             android:gravity="center"
             android:layout_gravity="bottom"
-            android:paddingTop="40dp" />
+            android:paddingTop="40dp"
+            android:layout_above="@+id/btnSubmitmsgtxt"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/space" />
 
-        <Button
+    <Button
             style="@style/BvDH_button"
             android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Wijzig tekst"
-                android:id="@+id/btnchangePreviewText"
+            android:layout_height="170dp"
+            android:text="@string/PreviewbtnChangeTxt"
+            android:id="@+id/btnchangePreviewText"
             android:clickable="true"
             android:drawableTop="@drawable/text_icon"
             android:background="@color/BvDH_Rood"
             android:textColor="@android:color/white"
             android:textSize="18dp"
-            android:layout_weight="0.5"
             android:gravity="center"
             android:layout_gravity="bottom"
-            android:paddingTop="40dp" />
-
-    </LinearLayout>
+            android:paddingTop="40dp"
+            android:layout_above="@+id/btnSubmitmsgtxt"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/space" />
 
     <Button
             android:layout_width="fill_parent"
@@ -98,12 +90,14 @@
             android:text="Ik ben tevreden!"
             android:id="@+id/btnSubmitmsgtxt"
 
-        style="@style/BvDH_button"
-        android:background="@color/BvDH_paars"
-        android:textColor="@android:color/white"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="bottom"
-        android:gravity="center" />
+            style="@style/BvDH_button"
+            android:background="@color/BvDH_paars"
+            android:textColor="@android:color/white"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/btnchangePreviewText"
+            android:layout_alignEnd="@+id/btnchangePreviewText" />
 
 
-</LinearLayout>
+</RelativeLayout>
