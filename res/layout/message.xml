@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent" android:background="@android:color/white"
-    android:orientation="vertical">
-
-    <EditText
-        android:layout_width="345dp"
-        android:layout_height="285dp"
-        android:hint="Voer hier direct jouw bericht in."
-        android:id="@+id/txtView_msg" android:layout_gravity="center_horizontal|top" android:background="#010101"
-        android:textColor="#f5f5f5" android:textStyle="bold" android:singleLine="false" android:maxLines="4"
-        android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
-        android:lineSpacingExtra="-4dp"
-        android:clickable="true"
-        android:textSize="50dp"
-        android:padding="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:maxWidth="10dp"
-        android:gravity="center_vertical|left" />
+              android:layout_height="fill_parent" android:background="@android:color/white">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Voer hier direct jouw bericht in."
+            android:id="@+id/txtView_msg" android:layout_gravity="center_horizontal|top" android:background="#010101"
+            android:textColor="#f5f5f5" android:textStyle="bold" android:singleLine="false" android:maxLines="4"
+            android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+            android:lineSpacingExtra="-4dp"
+            android:clickable="true"
+            android:textSize="50dp"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:maxWidth="600dp"
+            android:gravity="center_vertical|left"
+            android:minHeight="225dp"
+            android:maxHeight="450dp"
+            android:minWidth="300dp"
+            android:minLines="4"
+            android:layout_centerHorizontal="true" />
 
     <TextView
         style="@style/textCapsCentre"
@@ -30,12 +31,12 @@
         android:id="@+id/textView"
         android:textIsSelectable="false"
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:textColor="@android:color/black"
+        android:gravity="center_horizontal|bottom"
+        android:layout_marginTop="30dp"
         android:layout_below="@+id/txtView_msg"
-        android:layout_centerHorizontal="true"
-        android:layout_weight="1"
-        android:gravity="center_horizontal|bottom" />
+        android:layout_centerHorizontal="true" />
 
 
     <TextView
@@ -46,10 +47,12 @@
         android:textAllCaps="false"
         android:fontFamily="sans-serif-light"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:layout_weight="1"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="10dp" />
 
     <TextView
         style="@style/textCentre"
@@ -59,10 +62,12 @@
         android:textAllCaps="false"
         android:fontFamily="sans-serif-light"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:layout_weight="1"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_above="@+id/btnpreview"
+        android:layout_centerHorizontal="true" />
 
     <Button
             android:layout_width="match_parent"
@@ -70,8 +75,10 @@
             android:text="Bekijk je preview!"
             android:id="@+id/btnpreview"
         android:gravity="center_vertical|center_horizontal"
-        android:layout_alignParentStart="true"
         android:layout_gravity="bottom"
-        style="@style/BvDH_button" />
+        style="@style/BvDH_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-</LinearLayout>
+</RelativeLayout>

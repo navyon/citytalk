@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<RelativeLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -10,35 +10,37 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:id="@+id/logo"
         android:src="@drawable/bvdh_logo"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="100dp"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 
     <TextView
         style="@style/textCapsCentre"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text="welkom bij beeld van den haag"
         android:id="@+id/welkom_text"
         android:layout_gravity="center"
         android:gravity="center_horizontal|bottom"
-        android:layout_weight="0.5" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         style="@style/textCentre"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text="Hier kunt u uw bericht naar het grote scherm op de Haagse Toren sturen. Upload een mooie foto, of stuur enkel een bericht in."
         android:id="@+id/editText"
-        android:layout_marginTop="18dp"
         android:layout_gravity="center_horizontal|top"
-        android:layout_weight="1"
-        android:gravity="center_horizontal|top" />
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal|top"
+        android:layout_below="@+id/welkom_text"
+        android:layout_marginTop="20dp" />
 
 
-</LinearLayout>
+</RelativeLayout>
