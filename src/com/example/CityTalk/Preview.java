@@ -38,6 +38,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     String msg =null;
     Button btnChangePreviewPhoto;
     Button btnChangePreviewMessage;
+    ImageButton btnRestartAnim;
     View thislayout;
     // Animation
     Animation animSideDown, animSlideUp;
@@ -49,6 +50,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         txtview = (TextView)findViewById(R.id.TextViewPreview);
         btnChangePreviewPhoto =(Button) findViewById(R.id.btnChangePreviewPhoto);
         btnChangePreviewMessage =(Button) findViewById(R.id.btnchangePreviewText);
+        btnRestartAnim =(ImageButton) findViewById(R.id.btnRestartAnim);
 
         // load the animation
         animSideDown = AnimationUtils.loadAnimation(getApplicationContext(),
@@ -59,6 +61,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
         // set animation listener
         animSideDown.setAnimationListener(this);
+        animSlideUp.setAnimationListener(this);
         // These Methods check whether photos or a message was added
         CheckMessageExists();
         CheckPhotoExist();
@@ -76,11 +79,11 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
             StartTextAnimation();
         }
-        final String [] items			= new String [] {"Take from camera", "Select from gallery"};
+        final String [] items			= new String [] {"Maak een foto", "Selecteer een bestaande foto"};
         ArrayAdapter<String> adapter	= new ArrayAdapter<String> (this, android.R.layout.select_dialog_item,items);
         AlertDialog.Builder builder		= new AlertDialog.Builder(this);
 
-        builder.setTitle("Select Image");
+        builder.setTitle("Selecteer afbeelding");
         builder.setAdapter( adapter, new DialogInterface.OnClickListener() {
             public void onClick( DialogInterface dialog, int item ) { //pick from camera
                 if (item == 0) {
@@ -142,6 +145,16 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
             }
         });
+
+        btnRestartAnim.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                btnRestartAnim.setVisibility(View.INVISIBLE);
+                StartTextAnimation();
+            }
+        });
+
+
 
 
 
@@ -217,14 +230,12 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         switch (requestCode) {
             case PICK_FROM_CAMERA:
                 doCrop();
-
                 break;
 
             case PICK_FROM_FILE:
                 mImageCaptureUri = data.getData();
 
                 doCrop();
-
                 break;
 
             case CROP_FROM_CAMERA:
@@ -255,15 +266,21 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     public void onAnimationEnd(Animation animation) {
         // Take any action after completing the animation
 
-        StartImageAnimation();
+
+
         // check for zoom in animation
         if (animation == animSideDown) {
+            StartImageAnimation();
+        }
+        else{
+            btnRestartAnim.setVisibility(View.VISIBLE);
         }
 
     }
 
     @Override
     public void onAnimationRepeat(Animation animation) {
+        // write HIDE BUTTON CODE HERE
         // TODO Auto-generated method stub
 
     }

@@ -111,12 +111,13 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
+        android:id="@+id/btnRestartAnim"
         android:layout_marginTop="78dp"
         android:src="@drawable/restart"
         android:background="@android:color/transparent"
         android:layout_alignTop="@+id/TextViewPreview"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
 
 
 </RelativeLayout>
