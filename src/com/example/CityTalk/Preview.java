@@ -290,10 +290,10 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         } else {
             intent.setData(mImageCaptureUri);
 
-            intent.putExtra("outputX", 200);
-            intent.putExtra("outputY", 200);
-            intent.putExtra("aspectX", 1);
-            intent.putExtra("aspectY", 1);
+            intent.putExtra("outputX", 300);
+            intent.putExtra("outputY", 225);
+            intent.putExtra("aspectX", 4);
+            intent.putExtra("aspectY", 3);
             intent.putExtra("scale", true);
             intent.putExtra("return-data", true);
 
