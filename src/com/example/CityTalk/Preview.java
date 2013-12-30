@@ -38,33 +38,38 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     String msg =null;
     Button btnChangePreviewPhoto;
     Button btnChangePreviewMessage;
+    View thislayout;
     // Animation
-    Animation animSideDown;
+    Animation animSideDown, animSlideUp;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.previewtxt);
-        //imagev = (ImageView)findViewById(R.id.imageViewPreview);
-        txtview = (TextView)findViewById(R.id.imageViewPreview);
+         setContentView(R.layout.previewtxt);
+        imagev = (ImageView)findViewById(R.id.ImageViewPreview);
+        txtview = (TextView)findViewById(R.id.TextViewPreview);
         btnChangePreviewPhoto =(Button) findViewById(R.id.btnChangePreviewPhoto);
         btnChangePreviewMessage =(Button) findViewById(R.id.btnchangePreviewText);
 
         // load the animation
         animSideDown = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.slide_down);
+        animSlideUp = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.slide_up);
+
 
         // set animation listener
         animSideDown.setAnimationListener(this);
         // These Methods check whether photos or a message was added
         CheckMessageExists();
-        //CheckPhotoExist();
+        CheckPhotoExist();
 
-       /* final Bitmap imgbit = imagev.getDrawingCache();
+        final Bitmap imgbit = imagev.getDrawingCache();
         if(imgbit!=null)
         {
             imagev.setImageBitmap(imgbit);
+            hasphoto = true;
 
-        }*/
+        }
         if(hasmessage)
         {
             txtview.setText(msg);
@@ -123,15 +128,15 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             public void onClick(View v) {
 
                dialog.show();
-              // CheckPhotoExist();
+               CheckPhotoExist();
             }
         });
 
         findViewById(R.id.btnchangePreviewText).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                /*imagev.setDrawingCacheEnabled(true);
-                CheckPhotoExist();*/
+                imagev.setDrawingCacheEnabled(true);
+                CheckPhotoExist();
                 finish();
 
 
@@ -167,14 +172,21 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     }
     void StartTextAnimation()
     {
+       //
         txtview.setVisibility(View.VISIBLE);
+
         txtview.startAnimation(animSideDown);
-        //txtview.setVisibility(View.GONE);
 
 
     }
+    void StartImageAnimation()
+    {
+
+        imagev.setVisibility(View.VISIBLE);
+        imagev.startAnimation(animSlideUp);
+    }
     // This Method checks if a photo was added and updates the UI
-   /* void CheckPhotoExist()
+    void CheckPhotoExist()
     {
         if(getIntent().hasExtra("theimage")){
             Bitmap b = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
@@ -197,7 +209,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         }
 
 
-    }*/
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != RESULT_OK) return;
@@ -224,13 +236,10 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                      if(photo!=null)
                         imagev.setImageBitmap(photo);
                     // The photo is bundled and sent to the message activity
-                    Intent intent = getIntent();
-                    ByteArrayOutputStream bs = new ByteArrayOutputStream();
-                    photo.compress(Bitmap.CompressFormat.PNG, 50, bs);
-                    intent.putExtra("theimage",bs.toByteArray());
+
 
                 }
-               // CheckPhotoExist();
+               CheckPhotoExist();
                 File f = new File(mImageCaptureUri.getPath());
 
                 if (f.exists()) f.delete();
@@ -246,6 +255,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     public void onAnimationEnd(Animation animation) {
         // Take any action after completing the animation
 
+        StartImageAnimation();
         // check for zoom in animation
         if (animation == animSideDown) {
         }
