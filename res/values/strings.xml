@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BvDH</string>
+    <string name="btnAddPhoto">Foto en Tekst</string>
+    <string name="btnAddTxt">Alleen tekst</string>
     <string name="PreviewbtnChangeTxt">Wijzig Tekst</string>
     <string name="PreviewbtnChangePhoto">Wijzig Photo</string>
     <string name="PreviewbtnAddPhoto">Foto toevoegen</string>
     <string name="PreviewbtnAddTxt">Tekst toevoegen</string>
+    <string name="CropOption">Pas formaat aan</string>
+    <string name="PhotoOption">Selecteer afbeelding</string>
+    <string name="SplashTextWelcome">Welkom bij Beeld van Den Haag</string>
+    <string name="SplashTextIntro">Hier kunt u uw bericht naar het grote scherm op de Haagse Toren sturen. Upload een mooie foto, of stuur enkel een bericht in.</string>
+    <string name="StartQuestion">Wat wilt u plaatsen op de haagse toren?</string>
+    <string name="MsgHint">Voer hier direct jouw bericht in.</string>
+    <string name="MsgMaxLines">Houd er rekening mee dat er maximaal 4 regels op kunnen.</string>
+    <string name="MsgTip">De tekst komt er precies hetzelfde uit te zien op het Beeld van Den Haag.</string>
+    <string name="MsgCont">Tevreden? Bekijk dan je preview!</string>
+    <string name="MsgBtnPrev">Bekijk je preview!</string>
+    <string name="ConfirmCheckbox">Hierbij verklaar ik dat ik alle rechten  heb voor mijn beeld</string>
+    <string name="ConfirmEmailHint">Vul hier uw e-mailadres in</string>
+    <string name="ConfirmBtn">Plaats uw inzending!</string>
+    <string name="ConfirmCheckboxError">U moet akkoord gaan</string>
+    <string name="ConfirmEmailError">Controleer uw e-mailadres.</string>
+    <string name="FinalThnx">Bedankt voor uw inzending!</string>
+    <string name="FinalTip">U ontvangt een e-mail zodra je bericht is goedgekeurd! Het verschijnt vervolgens zo spoedig mogelijk op het Beeld van Den Haag</string>
 </resources>

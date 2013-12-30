@@ -33,6 +33,7 @@ public class ConfirmActivity extends Activity {
         setContentView(R.layout.confirm_screen);
         chkbox = (CheckBox)findViewById(R.id.checkBox);
 
+
         findViewById(R.id.btnfinalsubmit).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -48,7 +49,8 @@ public class ConfirmActivity extends Activity {
                     }
                     else
                     {
-                        Toast.makeText(getApplicationContext(), "Please check the check box needs to be reworded.", Toast.LENGTH_LONG).show();
+                        String chkboxerror =  getString(R.string.ConfirmCheckboxError);
+                        Toast.makeText(getApplicationContext(), chkboxerror, Toast.LENGTH_LONG).show();
 
                     }
                 }
@@ -56,7 +58,8 @@ public class ConfirmActivity extends Activity {
                 {
 
                     edittx_email.setTextColor(Color.RED);
-                    Toast.makeText(getApplicationContext(), "Controleer uw e-mailadres.", Toast.LENGTH_LONG).show();
+                    String emailerror = getString(R.string.ConfirmEmailError);
+                    Toast.makeText(getApplicationContext(), emailerror, Toast.LENGTH_LONG).show();
 
 
                 }

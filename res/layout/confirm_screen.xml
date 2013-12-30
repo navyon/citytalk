@@ -19,7 +19,8 @@
     <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hierbij verklaar ik dat ik alle rechten  heb voor mijn beeld"
+            android:text="@string/ConfirmCheckbox"
+        android:background="#4Dd4d4d4"
             android:id="@+id/checkBox"
             android:textColor="@android:color/white"
             android:button="@drawable/btn_check_holo_dark"
@@ -27,11 +28,13 @@
             android:checked="false"
             android:fontFamily="sans-serif-light"
             android:paddingLeft="5dp"
+            android:radius="5dp"
             android:gravity="center"
             android:layout_below="@+id/editText_email"
             android:layout_alignLeft="@+id/editText_email"
             android:layout_alignStart="@+id/editText_email"
-            android:layout_marginTop="61dp" />
+            android:layout_marginTop="61dp"
+        android:paddingRight="15dp" />
 
     <EditText
             android:layout_width="wrap_content"
@@ -39,7 +42,7 @@
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/editText_email"
-            android:hint="Vul hier uw e-mailadres in"
+            android:hint="@string/ConfirmEmailHint"
             android:fontFamily="sans-serif-light"
             android:selectAllOnFocus="true"
             android:textSize="18sp"
@@ -51,7 +54,7 @@
     <Button
             android:layout_width="fill_parent"
             android:layout_height="70dp"
-            android:text="Plaats uw inzending"
+            android:text="@string/ConfirmBtn"
             android:id="@+id/btnfinalsubmit"
             style="@style/BvDH_button"
             android:gravity="center"

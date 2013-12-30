@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/textView"
-        android:text="Wat wilt u plaatsen op de haagse toren?"
+        android:text="@string/StartQuestion"
         style="@style/textCapsCentre"
         android:layout_marginBottom="30dp"
         android:layout_gravity="center_horizontal|bottom"
@@ -30,7 +30,7 @@
             android:layout_height="170dp"
             android:id="@+id/btn_crop"
             android:drawableTop="@drawable/camera_icon"
-            android:text="Foto en tekst"
+            android:text="@string/btnAddPhoto"
             android:paddingTop="40dp"
             android:paddingBottom="20dp"
             style="@style/BvDH_button"
@@ -45,7 +45,7 @@
         <Button
                     android:layout_width="150dp"
                     android:layout_height="170dp"
-                    android:text="Alleen tekst"
+                    android:text="@string/btnAddTxt"
                     android:id="@+id/btn_Skip" android:textSize="18dp"
                     android:textColor="@android:color/white"
                 android:background="@color/BvDH_Rood"

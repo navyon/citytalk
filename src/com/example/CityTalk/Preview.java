@@ -284,7 +284,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         int size = list.size();
 
         if (size == 0) {
-            Toast.makeText(this, "Can not find image crop app", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Geen app beschikbaar voor formaat aanpassen", Toast.LENGTH_SHORT).show();
 
             return;
         } else {
@@ -320,7 +320,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                 CropOptionAdapter adapter = new CropOptionAdapter(getApplicationContext(), cropOptions);
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Choose Crop App");
+                builder.setTitle("Pas formaat aan");
                 builder.setAdapter( adapter, new DialogInterface.OnClickListener() {
                     public void onClick( DialogInterface dialog, int item ) {
                         startActivityForResult( cropOptions.get(item).appIntent, CROP_FROM_CAMERA);

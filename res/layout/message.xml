@@ -6,7 +6,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Voer hier direct jouw bericht in."
+            android:hint="@string/MsgHint"
             android:id="@+id/txtView_msg" android:layout_gravity="center_horizontal|top" android:background="#010101"
             android:textColor="#f5f5f5" android:textStyle="bold" android:singleLine="false" android:maxLines="4"
             android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
@@ -27,7 +27,7 @@
 
     <TextView
         style="@style/textCapsCentre"
-        android:text="HOUD ER REKENING MEE DAT ER MAXIMAAL 4 REGELS OP KUNNEN."
+        android:text="@string/MsgMaxLines"
         android:id="@+id/textView"
         android:textIsSelectable="false"
         android:layout_width="fill_parent"
@@ -41,7 +41,7 @@
 
     <TextView
         style="@style/textCentre"
-        android:text="De tekst komt er precies hetzelfde uit te zien op het Beeld van Den Haag. "
+        android:text="@string/MsgTip"
         android:id="@+id/textView2"
         android:textIsSelectable="false"
         android:textAllCaps="false"
@@ -56,7 +56,7 @@
 
     <TextView
         style="@style/textCentre"
-        android:text="Tevreden? Bekijk dan je preview!"
+        android:text=""
         android:id="@+id/textView3"
         android:textIsSelectable="false"
         android:textAllCaps="false"
@@ -72,7 +72,7 @@
     <Button
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:text="Bekijk je preview!"
+            android:text="@string/MsgBtnPrev"
             android:id="@+id/btnpreview"
         android:gravity="center_vertical|center_horizontal"
         android:layout_gravity="bottom"
