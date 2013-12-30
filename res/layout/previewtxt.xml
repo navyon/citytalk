@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#000000"
@@ -83,6 +84,81 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_toRightOf="@+id/space" />
+=======
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#000000"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewPreview"
+        android:visibility="invisible"
+        android:layout_gravity="center_horizontal"
+        android:background="#010101"
+        android:textColor="#f5f5f5" android:textStyle="bold" android:singleLine="false" android:maxLines="4"
+        android:lineSpacingExtra="-4dp"
+        android:clickable="true"
+        android:textSize="50dp"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:maxWidth="600dp"
+        android:gravity="center_vertical|left"
+        android:minHeight="225dp"
+        android:maxHeight="450dp"
+        android:minWidth="300dp"
+        android:minLines="4"
+        android:layout_centerHorizontal="true" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space" />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="170dp"
+            android:text="@string/PreviewbtnChangePhoto"
+            android:id="@+id/btnChangePreviewPhoto"
+        style="@style/BvDH_button"
+        android:drawableTop="@drawable/camera_icon"
+        android:textSize="18dp"
+        android:background="@color/BvDH_green"
+        android:textColor="@android:color/white"
+        android:clickable="true"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:paddingTop="40dp"
+        android:layout_above="@+id/btnSubmitmsgtxt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/space" />
+
+    <Button
+        style="@style/BvDH_button"
+        android:layout_width="wrap_content"
+            android:layout_height="170dp"
+            android:text="@string/PreviewbtnChangeTxt"
+            android:id="@+id/btnchangePreviewText"
+        android:clickable="true"
+        android:drawableTop="@drawable/text_icon"
+        android:background="@color/BvDH_Rood"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:paddingTop="40dp"
+        android:layout_above="@+id/btnSubmitmsgtxt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/space" />
+>>>>>>> 7093c04bc036a2cbe60f5b24da3b044d8826b3e3
 
     <Button
             android:layout_width="fill_parent"
@@ -90,6 +166,7 @@
             android:text="Ik ben tevreden!"
             android:id="@+id/btnSubmitmsgtxt"
 
+<<<<<<< HEAD
             style="@style/BvDH_button"
             android:background="@color/BvDH_paars"
             android:textColor="@android:color/white"
@@ -98,6 +175,16 @@
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/btnchangePreviewText"
             android:layout_alignEnd="@+id/btnchangePreviewText" />
+=======
+        style="@style/BvDH_button"
+        android:background="@color/BvDH_paars"
+        android:textColor="@android:color/white"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btnchangePreviewText"
+        android:layout_alignEnd="@+id/btnchangePreviewText" />
+>>>>>>> 7093c04bc036a2cbe60f5b24da3b044d8826b3e3
 
 
 </RelativeLayout>
