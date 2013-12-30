@@ -4,7 +4,7 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:background="#010101"
-
+              android:id="@+id/previewlayout"
         >
 
     <Space
@@ -13,11 +13,18 @@
             android:id="@+id/space"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+    <ImageView
+            android:id="@+id/ImageViewPreview"
+            android:layout_width="345dp"
+            android:layout_height="258dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true" android:layout_alignParentLeft="true"/>
 
     <TextView
         android:layout_width="345dp"
         android:layout_height="258dp"
-        android:id="@+id/imageViewPreview"
+        android:id="@+id/TextViewPreview"
         android:visibility="invisible"
         android:layout_gravity="center_horizontal"
         android:background="#010101"
@@ -27,6 +34,12 @@
         android:clickable="true"
         android:textSize="50dp"
         android:padding="10dp"
+        android:layout_alignLeft="@+id/ImageViewPreview"
+        android:layout_alignTop="@+id/ImageViewPreview"
+        android:layout_alignRight="@+id/ImageViewPreview"
+        android:layout_alignBottom="@+id/ImageViewPreview"
+        android:layout_margin="1dp"
+        android:gravity="center"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
