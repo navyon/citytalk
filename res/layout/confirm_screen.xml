@@ -30,11 +30,10 @@
             android:paddingLeft="5dp"
             android:radius="5dp"
             android:gravity="center"
-            android:layout_below="@+id/editText_email"
-            android:layout_alignLeft="@+id/editText_email"
-            android:layout_alignStart="@+id/editText_email"
-            android:layout_marginTop="61dp"
-        android:paddingRight="15dp" />
+        android:layout_marginTop="50dp"
+        android:paddingRight="15dp"
+        android:layout_below="@+id/editText_email"
+        android:layout_centerHorizontal="true" />
 
     <EditText
             android:layout_width="wrap_content"
