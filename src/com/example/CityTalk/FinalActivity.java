@@ -19,4 +19,14 @@ public class FinalActivity extends Activity {
 
     }
 
+
+    // call onStop() to start initial activity
+    protected void onStop(){
+        super.onStop();
+
+        Intent i = getBaseContext().getPackageManager()
+                .getLaunchIntentForPackage(getBaseContext().getPackageName());
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+    }
 }

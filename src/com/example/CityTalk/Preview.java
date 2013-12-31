@@ -140,7 +140,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
                 imagev.setDrawingCacheEnabled(true);
                 CheckPhotoExist();
-                finish();
+                finish(); // this removes image added in this activity.
 
 
             }
@@ -149,7 +149,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         btnRestartAnim.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                btnRestartAnim.setVisibility(View.INVISIBLE);
                 StartTextAnimation();
             }
         });
@@ -187,7 +186,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     {
        //
         txtview.setVisibility(View.VISIBLE);
-
+        btnRestartAnim.setVisibility(View.INVISIBLE);
         txtview.startAnimation(animSideDown);
 
 
@@ -247,14 +246,14 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                      if(photo!=null)
                         imagev.setImageBitmap(photo);
                     // The photo is bundled and sent to the message activity
-
+                    hasphoto = true; //force set photo true because CheckPhotoExist() doesn't work..
 
                 }
-               CheckPhotoExist();
+                CheckPhotoExist();
                 File f = new File(mImageCaptureUri.getPath());
 
                 if (f.exists()) f.delete();
-
+                StartTextAnimation();
                 break;
 
 
@@ -269,8 +268,11 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
 
         // check for zoom in animation
-        if (animation == animSideDown) {
+        if (animation == animSideDown && hasphoto) { //only start image animation if there is one
             StartImageAnimation();
+        }
+        else if (animation == animSideDown && !hasphoto){
+            btnRestartAnim.setVisibility(View.VISIBLE); //else show restart button
         }
         else{
             btnRestartAnim.setVisibility(View.VISIBLE);
@@ -280,7 +282,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
     @Override
     public void onAnimationRepeat(Animation animation) {
-        // write HIDE BUTTON CODE HERE
         // TODO Auto-generated method stub
 
     }
