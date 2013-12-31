@@ -247,9 +247,9 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                         imagev.setImageBitmap(photo);
                     // The photo is bundled and sent to the message activity
                     hasphoto = true; //force set photo true because CheckPhotoExist() doesn't work..
-
+                    CheckPhotoExist();
                 }
-                CheckPhotoExist();
+
                 File f = new File(mImageCaptureUri.getPath());
 
                 if (f.exists()) f.delete();

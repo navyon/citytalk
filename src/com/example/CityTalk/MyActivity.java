@@ -38,6 +38,7 @@ public class MyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         setContentView(R.layout.main);
         Button button 	= (Button) findViewById(R.id.btn_crop);
         Button btnskip 	= (Button) findViewById(R.id.btn_Skip);
@@ -153,8 +154,8 @@ public class MyActivity extends Activity {
         } else {
             intent.setData(mImageCaptureUri);
 
-            intent.putExtra("outputX", 300);
-            intent.putExtra("outputY", 235);
+            intent.putExtra("outputX", 200);
+            intent.putExtra("outputY", 150);
             intent.putExtra("aspectX", 4);
             intent.putExtra("aspectY", 3);
             intent.putExtra("scale", true);
