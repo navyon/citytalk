@@ -28,7 +28,7 @@ public class FinalActivity extends Activity {
                     startActivity(fbapp);
                 }
                 else{
-                Intent open = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/BeeldVanDenHaag"));
+                Intent open = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.facebook.com/BeeldVanDenHaag"));
                 startActivity(open);
                 }
         }
