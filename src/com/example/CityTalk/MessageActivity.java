@@ -9,6 +9,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -31,7 +33,7 @@ public class MessageActivity extends Activity {
 
            txtView_msg = (EditText) findViewById(R.id.txtView_msg);
            Button btnPrev = (Button) findViewById(R.id.btnpreview);
-           ImageButton  btnhide = (ImageButton) findViewById(R.id.btnhidekey);
+           ImageButton  btnhidekeyb = (ImageButton) findViewById(R.id.btnhidekey);
            if(getIntent().hasExtra("msg")){
                msg = getIntent().getStringExtra("msg");
                txtView_msg.setText(msg);
@@ -67,7 +69,25 @@ public class MessageActivity extends Activity {
 
                }
            });
-           btnhide.setOnClickListener(new View.OnClickListener() {
+           // some online hack that should limit the Edit box, dont think its any better than the first enter hack lets see
+           txtView_msg.addTextChangedListener(new TextWatcher() {
+               private String text;
+
+               public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
+               }
+
+               public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
+                   text = arg0.toString();
+               }
+
+               public void afterTextChanged(Editable arg0) {
+                   int lineCount = txtView_msg.getLineCount();
+                   if(lineCount > 4){
+                       txtView_msg.setText(txtView_msg.getText().delete(txtView_msg.length() - 1, txtView_msg.length()));
+                   }
+               }
+           });
+           btnhidekeyb.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
                    // hide keyboard
@@ -84,9 +104,10 @@ public class MessageActivity extends Activity {
                @Override
                public boolean onKey(View v, int keyCode, KeyEvent event) {
 
-                   if (keyCode == KeyEvent.KEYCODE_ENTER  && event.getAction() == KeyEvent.ACTION_DOWN) {
-
-                       if ( ((EditText)v).getLineCount() >= 4 )
+                   // if enter is pressed start calculating
+                   if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN){
+                       int editTextLineCount = ((EditText)v).getLineCount();
+                       if (editTextLineCount >= 4)
                            return true;
                    }
 

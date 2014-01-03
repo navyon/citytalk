@@ -23,6 +23,7 @@
             android:maxHeight="450dp"
             android:minWidth="300dp"
             android:minLines="4"
+            android:lines="4"
             android:layout_centerHorizontal="true" />
 
     <TextView
