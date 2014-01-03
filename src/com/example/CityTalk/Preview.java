@@ -28,6 +28,7 @@ import java.util.List;
 public class Preview  extends Activity implements Animation.AnimationListener {
     private Uri mImageCaptureUri;
     private TextView txtview;
+    private Uri tempURI;
     public ImageView imagev;
 
     private static final int PICK_FROM_CAMERA = 1;
@@ -63,16 +64,14 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         animSideDown.setAnimationListener(this);
         animSlideUp.setAnimationListener(this);
         // These Methods check whether photos or a message was added
-        CheckMessageExists();
+
+        //load message and image, check if image exists
+        LoadMsgImg();
+
         CheckPhotoExist();
 
-        final Bitmap imgbit = imagev.getDrawingCache();
-        if(imgbit!=null)
-        {
-            imagev.setImageBitmap(imgbit);
-            hasphoto = true;
 
-        }
+
         if(hasmessage)
         {
             txtview.setText(msg);
@@ -140,7 +139,17 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
                 imagev.setDrawingCacheEnabled(true);
                 CheckPhotoExist();
-                finish(); // this removes image added in this activity.
+
+                Intent i = new Intent(Preview.this, MessageActivity.class);
+                if(hasphoto){
+                    if(tempURI!=null){
+                        i.putExtra("imagePath", tempURI.getPath());
+                    }
+                    else i.putExtra("imagePath", getIntent().getStringExtra("imagePath"));
+                    i.putExtra("msg",msg);
+                    startActivity(i);
+                }
+                //finish(); // this removes image added in this activity.
 
 
             }
@@ -159,69 +168,62 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
 
      }
-    boolean CheckMessageExists()
+    //this can be DELETED i think
+    void LoadMsgImg()
     {
         if(getIntent().hasExtra("msg")){
             msg = getIntent().getStringExtra("msg");
             hasmessage =true;
         }
-        if(!hasmessage)
-        {
-            String btnaddmsgtxtt=  getString(R.string.PreviewbtnAddTxt);
-            btnChangePreviewMessage.setText(btnaddmsgtxtt);
-            hasmessage =false;
+        if(getIntent().hasExtra("imagePath")){
+            String image_path = getIntent().getStringExtra("imagePath");
+            Bitmap b = BitmapFactory.decodeFile(image_path);
 
+            if(b!=null){
+                imagev.setImageBitmap(b);
+            }
         }
-        else
-        {
-            String btnChangetxt=  getString(R.string.PreviewbtnChangeTxt);
-            btnChangePreviewMessage.setText(btnChangetxt);
-
-        }
-
-        return hasmessage;
-
     }
+
     void StartTextAnimation()
     {
-       //
-        txtview.setVisibility(View.VISIBLE);
         btnRestartAnim.setVisibility(View.INVISIBLE);
+        txtview.setVisibility(View.VISIBLE);
         txtview.startAnimation(animSideDown);
-
 
     }
     void StartImageAnimation()
     {
-
         imagev.setVisibility(View.VISIBLE);
         imagev.startAnimation(animSlideUp);
     }
-    // This Method checks if a photo was added and updates the UI
-    void CheckPhotoExist()
-    {
-        if(getIntent().hasExtra("theimage")){
-            Bitmap b = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
+    // This Method checks if a photo was added
 
-            if(b!=null)
-                imagev.setImageBitmap(b);
-                hasphoto =true;
+    void CheckPhotoExist(){
+        if(imagev.getDrawable()!=null){
+            hasphoto = true;
         }
+        else hasphoto = false;
+        ChangeButtons();
+    }
 
+    //this method changes the buttons text according to context
+    void ChangeButtons()
+    {
+        String btnChangetxt=  getString(R.string.PreviewbtnChangeTxt);
+        btnChangePreviewMessage.setText(btnChangetxt);
         // checks whether user added a photo, then changes button text accordingly
         if(!hasphoto)
         {
             String btnaddphototxt=  getString(R.string.PreviewbtnAddPhoto);
             btnChangePreviewPhoto.setText(btnaddphototxt);
-
         }
         else{
             String btnaddchangetxt=  getString(R.string.PreviewbtnChangePhoto);
             btnChangePreviewPhoto.setText(btnaddchangetxt);
         }
-
-
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != RESULT_OK) return;
@@ -240,14 +242,14 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             case CROP_FROM_CAMERA:
 
                 Bundle extras = data.getExtras();
-
                 if (extras != null) {
-                    Bitmap photo = extras.getParcelable("data");
-                     if(photo!=null)
+                    String imagePath = tempURI.getPath();
+                    Bitmap photo = BitmapFactory.decodeFile(imagePath);
+                     if(photo!=null){
                         imagev.setImageBitmap(photo);
-                    // The photo is bundled and sent to the message activity
-                    hasphoto = true; //force set photo true because CheckPhotoExist() doesn't work..
-                   // CheckPhotoExist();
+                        hasphoto = true; //force set photo true because CheckPhotoExist() doesn't work..
+                     }
+                    CheckPhotoExist(); //this re-adds the picture from the previous activity!
                 }
 
                 File f = new File(mImageCaptureUri.getPath());
@@ -306,14 +308,18 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
             return;
         } else {
-            intent.setData(mImageCaptureUri);
+            //cropped picture is saved at tempURI location
+            tempURI = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "bvdh/testChangedPic_" + String.valueOf(System.currentTimeMillis()) + ".png"));
 
-            intent.putExtra("outputX", 300);
-            intent.putExtra("outputY", 225);
-            intent.putExtra("aspectX", 4);
-            intent.putExtra("aspectY", 3);
+            intent.setData(mImageCaptureUri);
+            intent.putExtra("outputX", 1024);
+            intent.putExtra("outputY", 776);
+            intent.putExtra("aspectX", 1024);
+            intent.putExtra("aspectY", 776);
+            intent.putExtra("crop", true);
             intent.putExtra("scale", true);
-            intent.putExtra("return-data", true);
+            intent.putExtra("return-data", false); //don't send data back to prevent transactionTooLarge
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, tempURI); //save to file!
 
             if (size == 1) {
                 Intent i 		= new Intent(intent);
