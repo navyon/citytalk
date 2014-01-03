@@ -120,6 +120,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Preview.this, ConfirmActivity.class);
+                intent.putExtra("imagePath", getIntent().getStringExtra("imagePath"));
                 Preview.this.startActivity(intent);
 
             }});
