@@ -183,6 +183,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                 imagev.setImageBitmap(b);
             }
         }
+
     }
 
     void StartTextAnimation()
@@ -368,5 +369,4 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             }
         }
     }
-
    }
