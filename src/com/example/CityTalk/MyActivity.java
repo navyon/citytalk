@@ -23,13 +23,16 @@ import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class MyActivity extends Activity {
     private Uri mImageCaptureUri;
-    private ImageView mImageView;
+    private Uri tempURI;
 
     private static final int PICK_FROM_CAMERA = 1;
     private static final int CROP_FROM_CAMERA = 2;
@@ -56,7 +59,7 @@ public class MyActivity extends Activity {
                     Intent intent 	 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
                     mImageCaptureUri = Uri.fromFile(new File(Environment.getExternalStorageDirectory(),
-                            "tmp_avatar_" + String.valueOf(System.currentTimeMillis()) + ".jpg"));
+                            "tmp_cam" + String.valueOf(System.currentTimeMillis()) + ".jpg"));
 
                     intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, mImageCaptureUri);
 
@@ -91,11 +94,20 @@ public class MyActivity extends Activity {
                 Intent intent = new Intent(MyActivity.this, MessageActivity.class);
                 startActivity(intent);
             }});
-
+        checkDir();
 
     }
 
 
+    void checkDir(){
+        File dir = new File(Environment.getExternalStorageDirectory()+"/bvdh");
+        if(!dir.exists()){
+            boolean result = dir.mkdir();
+            if(result){
+                System.out.println("created a DIR");
+            }
+        }
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != RESULT_OK) return;
@@ -115,22 +127,18 @@ public class MyActivity extends Activity {
 
             case CROP_FROM_CAMERA:
 
-                Bundle extras = data.getExtras();
                 Intent intent = new Intent(MyActivity.this, MessageActivity.class);
-                if (extras!= null) {
-                    Bitmap photo = extras.getParcelable("data");
+                if (tempURI!= null) {
 
-                    // The photo is bundled and sent to the message activity
-                    ByteArrayOutputStream bs = new ByteArrayOutputStream();
-                    photo.compress(Bitmap.CompressFormat.PNG, 50, bs);
-                    intent.putExtra("theimage",bs.toByteArray());
+                    // The photo path is sent to the message activity
+                    intent.putExtra("imagePath", tempURI.getPath());
 
                     startActivity(intent);
                 }
 
-                File f = new File(mImageCaptureUri.getPath());
+                File temp = new File(mImageCaptureUri.getPath());
 
-                if (f.exists()) f.delete();
+                if (temp.exists()) temp.delete();
 
                 break;
 
@@ -152,14 +160,18 @@ public class MyActivity extends Activity {
 
             return;
         } else {
-            intent.setData(mImageCaptureUri);
+            //cropped picture is saved at tempURI location
+            tempURI = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "bvdh/test2_" + String.valueOf(System.currentTimeMillis()) + ".png"));
 
-            intent.putExtra("outputX", 300);
-            intent.putExtra("outputY", 225);
-            intent.putExtra("aspectX", 4);
-            intent.putExtra("aspectY", 3);
+            intent.setData(mImageCaptureUri);
+            intent.putExtra("outputX", 1024);
+            intent.putExtra("outputY", 776);
+            intent.putExtra("aspectX", 1024);
+            intent.putExtra("aspectY", 776);
+            intent.putExtra("crop", true);
             intent.putExtra("scale", true);
-            intent.putExtra("return-data", true);
+            intent.putExtra("return-data", false); //don't send data back to prevent transactionTooLarge
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, tempURI); //save to file!
 
             if (size == 1) {
                 Intent i 		= new Intent(intent);

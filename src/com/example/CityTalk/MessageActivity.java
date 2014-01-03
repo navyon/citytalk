@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
@@ -22,7 +23,7 @@ import java.io.ByteArrayOutputStream;
 public class MessageActivity extends Activity {
      Intent intent;
      private EditText  txtView_msg;
-      //String msg = null;
+     String msg = null;
        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,29 +31,32 @@ public class MessageActivity extends Activity {
 
            txtView_msg = (EditText) findViewById(R.id.txtView_msg);
            Button btnPrev = (Button) findViewById(R.id.btnpreview);
-
+           if(getIntent().hasExtra("msg")){
+               msg = getIntent().getStringExtra("msg");
+               txtView_msg.setText(msg);
+           }
            btnPrev.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
 
                    String defaultmsg = "Voer hier direct jouw bericht in.";
 
-                   String msg = (String) txtView_msg.getText().toString();
+                   String msg = txtView_msg.getText().toString();
 
                    if (!msg.isEmpty()) {
-                       // The Image from the previous Activity is decoded and stored as a bitMap, so it can be sent on to the Next
-                       intent = new Intent(MessageActivity.this, Preview.class);
-                       if(getIntent().hasExtra("theimage")){
-                           Bitmap b  = BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("theimage"),0,getIntent().getByteArrayExtra("theimage").length);
-                           if(b!=null) {
-                               ByteArrayOutputStream bs = new ByteArrayOutputStream();
-                               b.compress(Bitmap.CompressFormat.PNG,50,bs);
-                               intent.putExtra("theimage",bs.toByteArray());
 
-                           }
+                       // The ImagePath from the previous Activity sent on to the Next
+                       intent = new Intent(MessageActivity.this, Preview.class);
+
+                       //this can probably done simpler..like last line comment
+                       if(getIntent().hasExtra("imagePath")){
+                           String image_path = getIntent().getStringExtra("imagePath");
+                           //intent.putExtra("imagePath", image_path);
+                           intent.putExtra("imagePath", getIntent().getStringExtra("imagePath"));
                        }
 
                        intent.putExtra("msg", msg);
+
                        startActivity(intent);
 
                    } else {
@@ -67,8 +71,8 @@ public class MessageActivity extends Activity {
 
 
 
-
            // This on key listener gets the number of lines if larger than 4 it ignore the Enter Key Press
+           // SHOULD CHECK LINES, NOT ENTER KEY PRESSES ;)
            txtView_msg.setOnKeyListener(new View.OnKeyListener() {
 
                @Override
