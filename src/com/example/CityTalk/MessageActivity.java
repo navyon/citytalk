@@ -31,16 +31,16 @@ public class MessageActivity extends Activity {
 
            txtView_msg = (EditText) findViewById(R.id.txtView_msg);
            Button btnPrev = (Button) findViewById(R.id.btnpreview);
-
+           if(getIntent().hasExtra("msg")){
+               msg = getIntent().getStringExtra("msg");
+               txtView_msg.setText(msg);
+           }
            btnPrev.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
 
                    String defaultmsg = "Voer hier direct jouw bericht in.";
-                   if(getIntent().hasExtra("msg")){
-                       msg = getIntent().getStringExtra("msg");
-                       txtView_msg.setText(msg);
-                   }
+
                    String msg = txtView_msg.getText().toString();
 
                    if (!msg.isEmpty()) {
@@ -51,8 +51,8 @@ public class MessageActivity extends Activity {
                        //this can probably done simpler..like last line comment
                        if(getIntent().hasExtra("imagePath")){
                            String image_path = getIntent().getStringExtra("imagePath");
-                           intent.putExtra("imagePath", image_path);
-                           //intent.putExtra("imagePath", getIntent().getStringExtra("imagePath"));
+                           //intent.putExtra("imagePath", image_path);
+                           intent.putExtra("imagePath", getIntent().getStringExtra("imagePath"));
                        }
 
                        intent.putExtra("msg", msg);
