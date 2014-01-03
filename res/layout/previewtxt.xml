@@ -63,7 +63,7 @@
             android:text="@string/PreviewbtnChangePhoto"
             android:id="@+id/btnChangePreviewPhoto"
             style="@style/BvDH_button"
-            android:drawableTop="@drawable/camera_icon"
+            android:drawableTop="@drawable/camera_icon_"
             android:textSize="18dp"
             android:background="@color/BvDH_green"
             android:textColor="@android:color/white"
