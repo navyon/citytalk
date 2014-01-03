@@ -31,6 +31,7 @@ public class MessageActivity extends Activity {
 
            txtView_msg = (EditText) findViewById(R.id.txtView_msg);
            Button btnPrev = (Button) findViewById(R.id.btnpreview);
+           ImageButton  btnhide = (ImageButton) findViewById(R.id.btnhidekey);
            if(getIntent().hasExtra("msg")){
                msg = getIntent().getStringExtra("msg");
                txtView_msg.setText(msg);
@@ -66,10 +67,15 @@ public class MessageActivity extends Activity {
 
                }
            });
+           btnhide.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   // hide keyboard
+                   InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                   inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 
-
-
-
+               }
+           });
 
            // This on key listener gets the number of lines if larger than 4 it ignore the Enter Key Press
            // SHOULD CHECK LINES, NOT ENTER KEY PRESSES ;)
