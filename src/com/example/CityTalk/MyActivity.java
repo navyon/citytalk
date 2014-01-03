@@ -94,11 +94,20 @@ public class MyActivity extends Activity {
                 Intent intent = new Intent(MyActivity.this, MessageActivity.class);
                 startActivity(intent);
             }});
-
+        checkDir();
 
     }
 
 
+    void checkDir(){
+        File dir = new File(Environment.getExternalStorageDirectory()+"/bvdh");
+        if(!dir.exists()){
+            boolean result = dir.mkdir();
+            if(result){
+                System.out.println("created a DIR");
+            }
+        }
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != RESULT_OK) return;
@@ -118,9 +127,8 @@ public class MyActivity extends Activity {
 
             case CROP_FROM_CAMERA:
 
-                Bundle extras = data.getExtras();
                 Intent intent = new Intent(MyActivity.this, MessageActivity.class);
-                if (extras!= null) {
+                if (tempURI!= null) {
 
                     // The photo path is sent to the message activity
                     intent.putExtra("imagePath", tempURI.getPath());
