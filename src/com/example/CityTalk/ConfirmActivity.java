@@ -77,11 +77,7 @@ public class ConfirmActivity extends Activity {
 
         findViewById(R.id.btnfinalsubmit).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Call the ftp upload method which starts a new thread
-                StartNewThreadUpload();
 
-                // creating new message in background thread
-                new CreateNewMessage().execute();
 
                 edittx_email = (EditText) findViewById(R.id.editText_email);
                 edittx_email.setTextColor(Color.BLACK);
@@ -90,8 +86,14 @@ public class ConfirmActivity extends Activity {
                 {
                     if(chkbox.isChecked())
                     {
-                    Intent intent = new Intent(ConfirmActivity.this, FinalActivity.class);
-                    startActivity(intent);
+                        // Call the ftp upload method which starts a new thread
+                        StartNewThreadUpload();
+
+                        // creating new message in background thread
+                        new CreateNewMessage().execute();
+
+                        Intent intent = new Intent(ConfirmActivity.this, FinalActivity.class);
+                        startActivity(intent);
                     }
                     else
                     {
@@ -117,6 +119,7 @@ public class ConfirmActivity extends Activity {
 
 
     }
+
     /**
      * Background Async Task to Create new Message
      * */
@@ -128,11 +131,19 @@ public class ConfirmActivity extends Activity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-           /* pDialog = new ProgressDialog(ConfirmActivity.this);
-            pDialog.setMessage("Submitting Message..");
-            pDialog.setIndeterminate(false);
-            pDialog.setCancelable(true);
-            pDialog.show();*/
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+
+                    pDialog = new ProgressDialog(ConfirmActivity.this);
+                    pDialog.setMessage("Submitting Message..");
+                    pDialog.setIndeterminate(false);
+                    pDialog.setCancelable(true);
+                    pDialog.show();
+
+                }
+            });
+
         }
        // Create the Message
         protected String doInBackground(String... args) {
@@ -162,9 +173,14 @@ public class ConfirmActivity extends Activity {
 
                 if (success == 1) {
                     // successfully created message  can update UI here
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
 
 
 
+                        }
+                    });
                 } else {
                     // failed to create message
                 }
