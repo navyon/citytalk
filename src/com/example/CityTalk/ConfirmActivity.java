@@ -58,7 +58,11 @@ public class ConfirmActivity extends Activity {
                     "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
                     ")+"
     );
-
+    @Override
+    protected void onPause() {
+        overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+        super.onPause();
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

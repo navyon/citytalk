@@ -109,6 +109,11 @@ public class MyActivity extends Activity {
         }
     }
     @Override
+    protected void onPause() {
+        overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+        super.onPause();
+    }
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != RESULT_OK) return;
 

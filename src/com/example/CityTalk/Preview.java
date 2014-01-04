@@ -170,6 +170,11 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
 
      }
+    @Override
+    protected void onPause() {
+        overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+        super.onPause();
+    }
     //this can be DELETED i think
     void LoadMsgImg()
     {
