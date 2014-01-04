@@ -157,7 +157,7 @@ public class ConfirmActivity extends Activity {
                 int success = json.getInt(TAG_SUCCESS);
 
                 if (success == 1) {
-                    // successfully created message
+                    // successfully created message  can update UI here
 
 
 
