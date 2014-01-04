@@ -59,7 +59,7 @@ public class MyActivity extends Activity {
                     Intent intent 	 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
                     mImageCaptureUri = Uri.fromFile(new File(Environment.getExternalStorageDirectory(),
-                            "tmp_cam" + String.valueOf(System.currentTimeMillis()) + ".jpg"));
+                            String.valueOf(System.currentTimeMillis()) + "_app_upload.jpg"));
 
                     intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, mImageCaptureUri);
 
@@ -161,7 +161,7 @@ public class MyActivity extends Activity {
             return;
         } else {
             //cropped picture is saved at tempURI location
-            tempURI = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "bvdh/test2_" + String.valueOf(System.currentTimeMillis()) + ".png"));
+            tempURI = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "bvdh" + String.valueOf(System.currentTimeMillis()) + "_app_upload.jpg"));
 
             intent.setData(mImageCaptureUri);
             intent.putExtra("outputX", 1024);
