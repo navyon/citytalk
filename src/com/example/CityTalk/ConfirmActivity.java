@@ -32,7 +32,7 @@ public class ConfirmActivity extends Activity {
     // JSON Node names
     private static final String TAG_SUCCESS = "success";
     // url to call php script
-    private static String url_create_message = "http://www.daankrn.nl/bvdh/php/create_message.php";
+    private static String url_create_message = "http://beeldvandenhaag.daankrn.nl/android_api/create_message.php";
     //
     static final String FTP_HOST= "195.211.74.189";
 
@@ -218,7 +218,7 @@ public class ConfirmActivity extends Activity {
             client.connect(FTP_HOST,21);
             client.login(FTP_USER, FTP_PASS);
             client.setType(FTPClient.TYPE_BINARY);
-            client.changeDirectory("/uploads/cropped/");
+            //client.changeDirectory("/uploads/cropped/");
 
             client.upload(fileName);
 
