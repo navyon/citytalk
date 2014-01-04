@@ -84,7 +84,11 @@
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnhidekey" android:layout_alignBottom="@+id/textView"
-            android:layout_alignParentRight="true" android:layout_below="@+id/txtView_msg"/>
+            android:id="@+id/btnhidekey"
+        android:src="@android:drawable/btn_star_big_on"
+        android:background="@android:color/transparent"
+        android:layout_alignRight="@+id/txtView_msg"
+        android:layout_alignEnd="@+id/txtView_msg"
+        android:layout_alignBottom="@+id/txtView_msg" />
 
 </RelativeLayout>
