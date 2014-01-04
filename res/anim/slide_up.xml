@@ -4,14 +4,14 @@
 
     <alpha
 
-            android:duration="2000"
+            android:duration="1000"
             android:fromAlpha="0.0"
             android:interpolator="@android:anim/accelerate_interpolator"
             android:toAlpha="1.0" />
 
     <alpha
-            android:startOffset="6000"
-            android:duration="2000"
+            android:startOffset="3000"
+            android:duration="1000"
             android:fromAlpha="1.0"
             android:interpolator="@android:anim/accelerate_interpolator"
             android:toAlpha="0.0" />
