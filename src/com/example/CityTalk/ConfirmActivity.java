@@ -162,7 +162,7 @@ public class ConfirmActivity extends Activity {
 
 
                 } else {
-                    // failed to create product
+                    // failed to create message
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -176,7 +176,7 @@ public class ConfirmActivity extends Activity {
          * **/
         protected void onPostExecute(String file_url) {
             // dismiss the dialog once done
-            pDialog.dismiss();
+            //pDialog.dismiss();
         }
 
     }
