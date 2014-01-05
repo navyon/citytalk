@@ -17,7 +17,6 @@
         android:maxHeight="450dp"
         android:minWidth="300dp"
         android:maxWidth="600dp"
-        android:layout_centerHorizontal="true"
         android:layout_alignBottom="@+id/aspectFix"
         android:layout_alignRight="@+id/aspectFix"
         android:layout_alignLeft="@+id/aspectFix"
