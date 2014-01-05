@@ -136,7 +136,6 @@ public class ConfirmActivity extends Activity {
                 public void run() {
 
                     pDialog = new ProgressDialog(ConfirmActivity.this);
-                    pDialog.setMessage("Submitting Message..");
                     pDialog.setIndeterminate(false);
                     pDialog.setCancelable(true);
                     pDialog.show();
@@ -196,7 +195,7 @@ public class ConfirmActivity extends Activity {
          * **/
         protected void onPostExecute(String file_url) {
             // dismiss the dialog once done
-            //pDialog.dismiss();
+            pDialog.dismiss();
         }
 
     }

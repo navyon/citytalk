@@ -18,8 +18,6 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
-
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -270,7 +268,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     @Override
     public void onAnimationEnd(Animation animation) {
         // Take any action after completing the animation
-
 
 
         // check for zoom in animation
