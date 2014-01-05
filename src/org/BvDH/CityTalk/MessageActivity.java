@@ -5,13 +5,17 @@ import android.app.Activity;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.util.TypedValue;
+import android.view.Display;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,14 +30,28 @@ public class MessageActivity extends Activity {
      Intent intent;
      private EditText  txtView_msg;
      String msg = null;
+     float textsize;
        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.message);
+           Display display = getWindowManager().getDefaultDisplay();
+           Point size = new Point();
+           display.getSize(size);
 
+           Resources r = getResources();
+           float marginpx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, r.getDisplayMetrics());
+           float width = size.x - marginpx;
+           textsize = (float)(width * 0.1171875);
+           int margin = (int)(width * 0.061);
            txtView_msg = (EditText) findViewById(R.id.txtView_msg);
+           txtView_msg.setTextSize(TypedValue.COMPLEX_UNIT_PX, textsize);
+           txtView_msg.setPadding(margin,margin,margin,margin);
+
            Button btnPrev = (Button) findViewById(R.id.btnpreview);
            ImageButton  btnhidekeyb = (ImageButton) findViewById(R.id.btnhidekey);
+
+           System.out.println("textsize= "+textsize);
            if(getIntent().hasExtra("msg")){
                msg = getIntent().getStringExtra("msg");
                txtView_msg.setText(msg);
