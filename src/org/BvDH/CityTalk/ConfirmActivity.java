@@ -43,7 +43,7 @@ public class ConfirmActivity extends Activity {
     /************* Php script upload file ****************/
     private static String upLoadServerUri = "http://beeldvandenhaag.daankrn.nl/UploadToServer.php";
 
-
+    int uploadFinished = 0;
     String image_path;
 
     EditText edittx_email;
@@ -51,6 +51,7 @@ public class ConfirmActivity extends Activity {
     // Progress Dialog
     private ProgressDialog pDialog;
     int serverResponseCode = 0;
+    boolean hasphoto = false;
 
     public final Pattern EMAIL_ADDRESS_PATTERN = Pattern.compile(
             "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
@@ -74,6 +75,7 @@ public class ConfirmActivity extends Activity {
         chkbox = (CheckBox)findViewById(R.id.checkBox);
         if(getIntent().hasExtra("imagePath")){
              image_path = getIntent().getStringExtra("imagePath");
+             hasphoto = true;
         }
 
 
@@ -89,14 +91,17 @@ public class ConfirmActivity extends Activity {
                 {
                     if(chkbox.isChecked())
                     {
-                        // Call the ftp upload method which starts a new thread
-                        StartNewThreadUpload();
+                        // Call the php upload method which starts a new thread
+
+                        if(hasphoto)StartNewThreadUpload();
 
                         // creating new message in background thread
                         new CreateNewMessage().execute();
 
-                        Intent intent = new Intent(ConfirmActivity.this, FinalActivity.class);
-                        startActivity(intent);
+
+
+                        //Intent intent = new Intent(ConfirmActivity.this, FinalActivity.class);
+                        //startActivity(intent);
                     }
                     else
                     {
@@ -120,6 +125,15 @@ public class ConfirmActivity extends Activity {
         });
 
 
+
+    }
+
+
+    void uploadFinishedCheck(){
+        if((hasphoto && uploadFinished == 2)||(!hasphoto && uploadFinished == 1)){
+            Intent i = new Intent(ConfirmActivity.this, FinalActivity.class);
+            startActivity(i);
+        }
 
     }
 
@@ -150,14 +164,18 @@ public class ConfirmActivity extends Activity {
        // Create the Message
         protected String doInBackground(String... args) {
             String email = edittx_email.getText().toString();
-            File f = new File(image_path);
-            String foto = f.getName();
+            String foto = "";
+            if(hasphoto){
+                File f = new File(image_path);
+                foto = f.getName();
+            }
             String bericht = getIntent().getStringExtra("msg");
 
             // Building Parameters
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("email", email));
             params.add(new BasicNameValuePair("bericht", bericht));
+            //only add photo if there is one.
             params.add(new BasicNameValuePair("foto", foto));
 
 
@@ -178,8 +196,8 @@ public class ConfirmActivity extends Activity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-
-
+                    uploadFinished += 1;
+                    uploadFinishedCheck();
 
                         }
                     });
@@ -206,6 +224,7 @@ public class ConfirmActivity extends Activity {
     private boolean checkEmail(String email) {
         return EMAIL_ADDRESS_PATTERN.matcher(email).matches();
     }
+
     // Start a New thread for the network activity
     public void StartNewThreadUpload()
     {
@@ -310,7 +329,8 @@ public class ConfirmActivity extends Activity {
 
                     runOnUiThread(new Runnable() {
                         public void run() {
-
+                            uploadFinished += 1;
+                            uploadFinishedCheck();
 
                             // can update UI here showing the file is uploaded
                         }

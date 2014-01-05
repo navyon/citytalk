@@ -35,6 +35,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     private static final int PICK_FROM_FILE = 3;
     boolean hasphoto = false;
     boolean hasmessage = false;
+
     String msg =null;
     Button btnChangePreviewPhoto;
     Button btnChangePreviewMessage;
@@ -121,8 +122,9 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Preview.this, ConfirmActivity.class);
-                intent.putExtra("imagePath", getIntent().getStringExtra("imagePath"));
+                if(hasphoto)intent.putExtra("imagePath", getIntent().getStringExtra("imagePath"));
                 intent.putExtra("msg",msg);
+                intent.putExtra("hasphoto", hasphoto);
                 Preview.this.startActivity(intent);
 
             }});
