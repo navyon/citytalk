@@ -18,6 +18,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
+
+import org.BvDH.CityTalk.R;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -208,7 +211,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             hasphoto = true;
         }
         else hasphoto = false;
-        //fill aspectv here.
+        // aspectv to force aspect ratio.
         Bitmap.Config conf = Bitmap.Config.ALPHA_8;
         Bitmap bmp = Bitmap.createBitmap(1024, 776, conf);
         aspectv.setImageBitmap(bmp);
