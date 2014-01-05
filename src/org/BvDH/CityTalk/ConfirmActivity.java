@@ -1,5 +1,5 @@
 
-package com.example.CityTalk;
+package org.BvDH.CityTalk;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BvDH</string>
+    <string name="btnAddPhoto">Photo and Message</string>
+    <string name="btnAddTxt">Message</string>
+    <string name="PreviewbtnChangeTxt">Change Message</string>
+    <string name="PreviewbtnChangePhoto">Change Photo</string>
+    <string name="PreviewbtnAddPhoto">Add a Photo</string>
+    <string name="PreviewbtnAddTxt">Add a Message</string>
+    <string name="CropOption">Pas formaat aan</string>
+    <string name="PhotoOption">Select an Photo</string>
+    <string name="SplashTextWelcome">Welcome to Screen Den Haag</string>
+    <string name="SplashTextIntro">Send your message to the screen of Den Haag. Upload a photo, or just send a quick message.</string>
+    <string name="StartQuestion">What would you like to display on the Den Haag tower?</string>
+    <string name="MsgHint">type your message here.</string>
+    <string name="MsgMaxLines">The message must have a max of 4 lines.</string>
+    <string name="MsgTip">The message is displayed in the same way on the Den Haag Tower.</string>
+    <string name="MsgCont">Satisfied? Then check out the preview!</string>
+    <string name="MsgBtnPrev">Check out the preview!</string>
+    <string name="ConfirmCheckbox">I declare that I own all rights to the uploaded image.</string>
+    <string name="ConfirmEmailHint">Please fill in your email address</string>
+    <string name="ConfirmBtn">Submit</string>
+    <string name="ConfirmCheckboxError">Please tick the check box if youve agreed with the terms</string>
+    <string name="ConfirmEmailError">Please check your email address.</string>
+    <string name="FinalThnx">Thanks for sending your Message!</string>
+    <string name="FinalTip">You will receive an email when your message has been approved! Your Message will soon be displayed on the screen of Den Haag</string>
+</resources>

@@ -1,5 +1,5 @@
 
-package com.example.CityTalk;
+package org.BvDH.CityTalk;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -28,7 +28,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     private TextView txtview;
     private Uri tempURI;
     public ImageView imagev;
-    public ImageView aspectv;
 
     private static final int PICK_FROM_CAMERA = 1;
     private static final int CROP_FROM_CAMERA = 2;
@@ -48,7 +47,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
          setContentView(R.layout.previewtxt);
         imagev = (ImageView)findViewById(R.id.ImageViewPreview);
         txtview = (TextView)findViewById(R.id.TextViewPreview);
-        aspectv = (ImageView)findViewById(R.id.aspectFix);
         btnChangePreviewPhoto =(Button) findViewById(R.id.btnChangePreviewPhoto);
         btnChangePreviewMessage =(Button) findViewById(R.id.btnchangePreviewText);
         btnRestartAnim =(ImageButton) findViewById(R.id.btnRestartAnim);
@@ -208,10 +206,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             hasphoto = true;
         }
         else hasphoto = false;
-        //fill aspectv here.
-        Bitmap.Config conf = Bitmap.Config.ALPHA_8;
-        Bitmap bmp = Bitmap.createBitmap(1024, 776, conf);
-        aspectv.setImageBitmap(bmp);
         ChangeButtons();
     }
 
