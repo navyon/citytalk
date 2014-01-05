@@ -43,13 +43,7 @@ public class ConfirmActivity extends Activity {
     /************* Php script upload file ****************/
     private static String upLoadServerUri = "http://beeldvandenhaag.daankrn.nl/UploadToServer.php";
 
-    static final String FTP_HOST= "195.211.74.189";
 
-    /*********  FTP USERNAME ***********/
-    static final String FTP_USER = "bvdh@daankrn.nl";
-
-    /*********  FTP PASSWORD ***********/
-    static final String FTP_PASS  ="hci2013";  //
     String image_path;
 
     EditText edittx_email;
@@ -253,17 +247,7 @@ public class ConfirmActivity extends Activity {
 
         if (!sourceFile.isFile()) {
 
-           // dialog.dismiss();
-
-          /*  Log.e("uploadFile", "Source File not exist :"
-                    +uploadFilePath + "" + uploadFileName);*/
-
-          /*  runOnUiThread(new Runnable() {
-                public void run() {
-                    messageText.setText("Source File not exist :"
-                            +uploadFilePath + "" + uploadFileName);
-                }
-            });*/
+         // if file dont exist we can update UI here
 
             return 0;
 
@@ -328,7 +312,7 @@ public class ConfirmActivity extends Activity {
                         public void run() {
 
 
-
+                            // can update UI here showing the file is uploaded
                         }
                     });
                 }
@@ -347,8 +331,7 @@ public class ConfirmActivity extends Activity {
                 runOnUiThread(new Runnable() {
                     public void run() {
 
-                       /* Toast.makeText(UploadToServer.this, "MalformedURLException",
-                                Toast.LENGTH_SHORT).show();*/
+                      // error can update UI here
                     }
                 });
 
@@ -361,8 +344,7 @@ public class ConfirmActivity extends Activity {
                 runOnUiThread(new Runnable() {
                     public void run() {
 
-                        /*Toast.makeText(UploadToServer.this, "Got Exception : see logcat ",
-                                Toast.LENGTH_SHORT).show();*/
+                       // error can update UI or log here
                     }
                 });
                 Log.e("Upload file to server Exception", "Exception : "
@@ -371,7 +353,7 @@ public class ConfirmActivity extends Activity {
             //dialog.dismiss();
             return serverResponseCode;
 
-        } // End else block
+        }
     }
 
 
