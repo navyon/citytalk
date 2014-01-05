@@ -5,29 +5,31 @@
                 android:layout_height="fill_parent"
                 android:background="#000000"
                 android:orientation="vertical">
+
     <ImageView
             android:id="@+id/ImageViewPreview"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_alignParentTop="false"
             android:visibility="invisible"
         android:scaleType="fitCenter"
         android:minHeight="225dp"
         android:maxHeight="450dp"
         android:minWidth="300dp"
         android:maxWidth="600dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/aspectFix"
+        android:layout_alignRight="@+id/aspectFix"
+        android:layout_alignLeft="@+id/aspectFix"
+        android:layout_alignTop="@+id/aspectFix" />
 
     <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/TextViewPreview"
             android:visibility="invisible"
             android:layout_gravity="center_horizontal"
-            android:background="#1f1f1f"
+            android:background="#000000"
             android:textColor="#f5f5f5"
             android:textStyle="bold"
             android:singleLine="false"
@@ -35,8 +37,7 @@
             android:lineSpacingExtra="-4dp"
             android:clickable="true"
             android:textSize="45dp"
-            android:layout_marginTop="5dp"
-            android:maxWidth="600dp"
+        android:maxWidth="600dp"
             android:gravity="center_vertical|left"
             android:minHeight="225dp"
             android:maxHeight="450dp"
@@ -44,11 +45,24 @@
             android:minLines="4"
         android:padding="10dp"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/ImageViewPreview"
         android:layout_alignEnd="@+id/ImageViewPreview"
-        android:layout_alignLeft="@+id/ImageViewPreview"
         android:layout_alignStart="@+id/ImageViewPreview"
-        android:layout_alignBottom="@+id/ImageViewPreview" />
+        android:layout_alignBottom="@+id/aspectFix"
+        android:layout_alignLeft="@+id/aspectFix"
+        android:layout_alignRight="@+id/aspectFix"
+        android:layout_alignTop="@+id/aspectFix" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/aspectFix"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitStart"
+        android:background="@drawable/back"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
 
     <Space
             android:layout_width="0dp"
