@@ -5,7 +5,11 @@
     <string name="btnAddTxt">Message</string>
     <string name="PreviewbtnChangeTxt">Change Message</string>
     <string name="PreviewbtnChangePhoto">Change Photo</string>
+    <string name="deletephoto">Delete photo</string>
+    <string name="ChooseaTask">Choose a task</string>
     <string name="PreviewbtnAddPhoto">Add a Photo</string>
+    <string name="CapturePhoto">Capture a Photo from Camera"</string>
+    <string name="ChoosefromGallery">Choose a Photo from Gallery</string>
     <string name="PreviewbtnAddTxt">Add a Message</string>
     <string name="CropOption">Pas formaat aan</string>
     <string name="PhotoOption">Select an Photo</string>

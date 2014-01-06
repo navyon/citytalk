@@ -5,6 +5,10 @@
     <string name="btnAddTxt">Alleen tekst</string>
     <string name="PreviewbtnChangeTxt">Wijzig Tekst</string>
     <string name="PreviewbtnChangePhoto">Wijzig Photo</string>
+    <string name="deletephoto">Werwijderen foto</string>
+    <string name="ChooseaTask">Selecteer afbeelding</string>
+    <string name="ChoosefromGallery">Selecteer een bestaande foto</string>
+    <string name="CapturePhoto">Maak een foto"</string>
     <string name="PreviewbtnAddPhoto">Foto toevoegen</string>
     <string name="PreviewbtnAddTxt">Tekst toevoegen</string>
     <string name="CropOption">Pas formaat aan</string>

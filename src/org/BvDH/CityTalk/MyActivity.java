@@ -35,11 +35,11 @@ public class MyActivity extends Activity {
 
 
 
-        final String [] items			= new String [] {"Maak een foto", "Selecteer een bestaande foto"};
+        final String [] items			= new String [] {getString(R.string.CapturePhoto), getString(R.string.ChoosefromGallery)};
         ArrayAdapter<String> adapter	= new ArrayAdapter<String> (this, android.R.layout.select_dialog_item,items);
         AlertDialog.Builder builder		= new AlertDialog.Builder(this);
 
-        builder.setTitle("Selecteer afbeelding");
+        builder.setTitle(getString(R.string.ChooseaTask));
         builder.setAdapter( adapter, new DialogInterface.OnClickListener() {
             public void onClick( DialogInterface dialog, int item ) { //pick from camera
                 if (item == 0) {

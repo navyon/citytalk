@@ -21,6 +21,7 @@ import android.widget.*;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import org.BvDH.CityTalk.R;
 
 
 public class Preview  extends Activity implements Animation.AnimationListener {
@@ -40,7 +41,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     Button btnChangePreviewPhoto;
     Button btnChangePreviewMessage;
     ImageButton btnRestartAnim;
-
+    String image_path;
     View thislayout;
     // Animation
     Animation animSideDown, animSlideUp;
@@ -80,13 +81,14 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
             StartTextAnimation();
         }
-        final String [] items			= new String [] {"Maak een foto", "Selecteer een bestaande foto"};
+        final String [] items			= new String [] {getString(R.string.CapturePhoto), getString(R.string.ChoosefromGallery),getString(R.string.deletephoto)};
         ArrayAdapter<String> adapter	= new ArrayAdapter<String> (this, android.R.layout.select_dialog_item,items);
         AlertDialog.Builder builder		= new AlertDialog.Builder(this);
 
-        builder.setTitle("Selecteer afbeelding");
+        builder.setTitle(R.string.ChooseaTask);
         builder.setAdapter( adapter, new DialogInterface.OnClickListener() {
             public void onClick( DialogInterface dialog, int item ) { //pick from camera
+
                 if (item == 0) {
                     Intent intent 	 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
@@ -101,16 +103,61 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                     } catch (ActivityNotFoundException e) {
                         e.printStackTrace();
                     }
-                } else { //pick from file
+                }
+                else if(item == 2)
+                {
+                    try
+                    {
+                    // Deletes the stored file from the sd
+
+                            File file = new File(image_path);
+                            if(file.exists())
+                                file.delete();
+
+                        imagev.setImageBitmap(null);
+                        imagev.destroyDrawingCache();
+                        hasphoto = false;
+                        tempURI = null;
+                        // aspectv to force aspect ratio.
+                        Bitmap.Config conf = Bitmap.Config.ALPHA_8;
+                        Bitmap bmp = Bitmap.createBitmap(1024, 776, conf);//create transparent bitmap
+                        aspectv.setImageBitmap(bmp);
+                        ChangeButtons();
+
+
+                      }
+                      catch (Exception e)
+                      {
+                        Toast.makeText(getBaseContext(),e.toString(),
+                                        Toast.LENGTH_SHORT).show();
+
+                       }
+
+                }
+                else { //pick from file
                     Intent intent = new Intent();
                     intent.setType("image/*");
                     intent.setAction(Intent.ACTION_GET_CONTENT);
                     startActivityForResult(Intent.createChooser(intent, "Complete action using"), PICK_FROM_FILE);
                 }
+
             }
+
         } );
 
+        // Cancels the Image Capture
+        builder.setOnCancelListener( new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel( DialogInterface dialog ) {
 
+                if (mImageCaptureUri != null ) {
+                    getContentResolver().delete(mImageCaptureUri, null, null );
+                    mImageCaptureUri = null;
+                    hasphoto =false;
+                    ChangeButtons();
+                }
+            }
+        } );
 
         final AlertDialog dialog = builder.create();
 
@@ -142,7 +189,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         findViewById(R.id.btnchangePreviewText).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                imagev.setDrawingCacheEnabled(true);
+               // imagev.setDrawingCacheEnabled(true);
                 CheckPhotoExist();
 
                 Intent i = new Intent(Preview.this, MessageActivity.class);
@@ -182,7 +229,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             hasmessage =true;
         }
         if(getIntent().hasExtra("imagePath")){
-            String image_path = getIntent().getStringExtra("imagePath");
+             image_path = getIntent().getStringExtra("imagePath");
             Bitmap b = BitmapFactory.decodeFile(image_path);
 
             if(b!=null){
@@ -260,7 +307,11 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                         imagev.setImageBitmap(photo);
                         hasphoto = true; //force set photo true because CheckPhotoExist() doesn't work..
                      }
-                    CheckPhotoExist(); //this re-adds the picture from the previous activity!
+                    else
+                     {
+                         hasphoto = false;
+                     }
+                   // CheckPhotoExist(); //this re-adds the picture from the previous activity!
                 }
 
                 File f = new File(mImageCaptureUri.getPath());
