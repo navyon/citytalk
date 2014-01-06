@@ -7,6 +7,7 @@
                 android:orientation="vertical">
 
     <ImageView
+<<<<<<< HEAD
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/aspectFix"
@@ -17,6 +18,18 @@
             android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp" />
+=======
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/aspectFix"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitStart"
+        android:background="@drawable/back"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+>>>>>>> 6a63d974c64f91a7bed6af42501eedc81186fbac
 
     <ImageView
             android:id="@+id/ImageViewPreview"
@@ -69,6 +82,25 @@
                 android:visibility="invisible"
                 android:layout_alignParentStart="false"
                 android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/aspectFix"
+        android:layout_alignLeft="@+id/aspectFix"
+        android:layout_alignBottom="@+id/aspectFix"
+        android:layout_alignRight="@+id/aspectFix">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRestartAnim"
+            android:src="@drawable/restart"
+            android:background="@android:color/transparent"
+            android:visibility="invisible"
+            android:layout_alignParentStart="false"
+            android:layout_centerInParent="true" />
     </RelativeLayout>
 
     <Space

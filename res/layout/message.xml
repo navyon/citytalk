@@ -86,10 +86,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnhidekey"
-        android:src="@android:drawable/btn_star_big_on"
+        android:src="@drawable/checkmark"
         android:background="@android:color/transparent"
-        android:layout_alignRight="@+id/txtView_msg"
+        android:layout_alignRight="@+id/aspectv"
         android:layout_alignEnd="@+id/txtView_msg"
-        android:layout_alignBottom="@+id/txtView_msg" />
+        android:layout_alignBottom="@+id/aspectv"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="5dp" />
 
 </RelativeLayout>

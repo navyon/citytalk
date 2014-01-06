@@ -100,6 +100,7 @@ public class MessageActivity extends Activity {
                    }
                }
            });
+
            btnhidekeyb.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
