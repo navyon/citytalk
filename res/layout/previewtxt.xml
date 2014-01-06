@@ -18,25 +18,6 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp" />
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignTop="@+id/aspectFix"
-        android:layout_alignLeft="@+id/aspectFix"
-        android:layout_alignBottom="@+id/aspectFix"
-        android:layout_alignRight="@+id/aspectFix">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnRestartAnim"
-            android:src="@drawable/restart"
-            android:background="@android:color/transparent"
-            android:visibility="invisible"
-            android:layout_alignParentStart="false"
-            android:layout_centerInParent="true" />
-    </RelativeLayout>
-
     <ImageView
             android:id="@+id/ImageViewPreview"
             android:layout_width="fill_parent"
@@ -70,6 +51,25 @@
         android:layout_alignLeft="@+id/aspectFix"
         android:layout_alignRight="@+id/aspectFix"
         android:layout_alignTop="@+id/aspectFix" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/aspectFix"
+        android:layout_alignLeft="@+id/aspectFix"
+        android:layout_alignBottom="@+id/aspectFix"
+        android:layout_alignRight="@+id/aspectFix">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRestartAnim"
+            android:src="@drawable/restart"
+            android:background="@android:color/transparent"
+            android:visibility="invisible"
+            android:layout_alignParentStart="false"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
 
     <Space
             android:layout_width="0dp"

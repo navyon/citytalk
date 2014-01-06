@@ -47,7 +47,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     ImageButton btnRestartAnim;
     float textsize;
 
-    View thislayout;
+
     // Animation
     Animation animSideDown, animSlideUp;
     @Override
@@ -55,6 +55,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         super.onCreate(savedInstanceState);
          setContentView(R.layout.previewtxt);
         imagev = (ImageView)findViewById(R.id.ImageViewPreview);
+        //imagev.setImageDrawable(null);//force null
         txtview = (TextView)findViewById(R.id.TextViewPreview);
         aspectv = (ImageView)findViewById(R.id.aspectFix);
         btnChangePreviewPhoto =(Button) findViewById(R.id.btnChangePreviewPhoto);
@@ -170,6 +171,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             public void onClick(View v) {
 
                 StartTextAnimation();
+                System.out.println("THIS WORKS HAAHASHAS");
             }
         });
 
