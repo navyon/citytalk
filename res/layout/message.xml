@@ -3,7 +3,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent" android:background="@android:color/white">
-        <EditText
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/aspectv"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitStart"
+        android:background="@drawable/back"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/MsgHint"
@@ -23,7 +36,11 @@
             android:minWidth="300dp"
             android:minLines="4"
             android:lines="4"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/aspectv"
+            android:layout_alignLeft="@+id/aspectv"
+            android:layout_alignBottom="@+id/aspectv"
+            android:layout_alignRight="@+id/aspectv" />
 
     <TextView
         style="@style/textCapsCentre"
@@ -53,21 +70,6 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/textView"
         android:layout_marginTop="10dp" />
-
-    <TextView
-        style="@style/textCentre"
-        android:text=""
-        android:id="@+id/textView3"
-        android:textIsSelectable="false"
-        android:textAllCaps="false"
-        android:fontFamily="sans-serif-light"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:gravity="center"
-        android:layout_marginBottom="50dp"
-        android:layout_above="@+id/btnpreview"
-        android:layout_centerHorizontal="true" />
 
     <Button
             android:layout_width="match_parent"
