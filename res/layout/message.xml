@@ -2,7 +2,10 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent" android:background="@android:color/white">
+              android:layout_height="fill_parent" android:background="@android:color/white"
+            android:id="@+id/mainLayout"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
 
     <ImageView
         android:layout_width="fill_parent"

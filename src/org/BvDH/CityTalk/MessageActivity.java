@@ -42,7 +42,7 @@ public class MessageActivity extends Activity {
 
 
            Button btnPrev = (Button) findViewById(R.id.btnpreview);
-           ImageButton  btnhidekeyb = (ImageButton) findViewById(R.id.btnhidekey);
+           final ImageButton  btnhidekeyb = (ImageButton) findViewById(R.id.btnhidekey);
 
            System.out.println("textsize= "+textsize);
            if(getIntent().hasExtra("msg")){
@@ -52,9 +52,6 @@ public class MessageActivity extends Activity {
            btnPrev.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-
-                   String defaultmsg = "Voer hier direct jouw bericht in.";
-
                    String msg = txtView_msg.getText().toString();
 
                    if (!msg.isEmpty()) {
@@ -107,6 +104,7 @@ public class MessageActivity extends Activity {
                    // hide keyboard
                    InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                    inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                   txtView_msg.clearFocus();
 
                }
            });
@@ -126,6 +124,16 @@ public class MessageActivity extends Activity {
                    }
 
                    return false;
+               }
+           });
+
+           txtView_msg.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+               @Override
+               public void onFocusChange(View v, boolean hasFocus) {
+                   if(hasFocus){
+                       btnhidekeyb.setVisibility(View.VISIBLE);
+                   }
+                   else btnhidekeyb.setVisibility(View.INVISIBLE);
                }
            });
 
