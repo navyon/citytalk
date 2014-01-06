@@ -49,6 +49,8 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
     String image_path;
 
+    ArrayAdapter<String> adapter;
+
     float textsize;
 
 
@@ -78,12 +80,18 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         animSlideUp.setAnimationListener(this);
         // These Methods check whether photos or a message was added
 
+
         //load message and image, check if image exists
         LoadMsgImg();
-
         CheckPhotoExist();
 
+        //final String [] items			= new String [] {getString(R.string.CapturePhoto), getString(R.string.ChoosefromGallery),getString(R.string.deletephoto)};
+        adapter = new ArrayAdapter<String> (this, android.R.layout.select_dialog_item);
+        adapter.add(getString(R.string.CapturePhoto));
+        adapter.add(getString(R.string.ChoosefromGallery));
 
+
+        if(hasphoto)adapter.add(getString(R.string.deletephoto));
 
         if(hasmessage)
         {
@@ -91,8 +99,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
             StartTextAnimation();
         }
-        final String [] items			= new String [] {getString(R.string.CapturePhoto), getString(R.string.ChoosefromGallery),getString(R.string.deletephoto)};
-        ArrayAdapter<String> adapter	= new ArrayAdapter<String> (this, android.R.layout.select_dialog_item,items);
+
         AlertDialog.Builder builder		= new AlertDialog.Builder(this);
 
         builder.setTitle(R.string.ChooseaTask);
@@ -106,8 +113,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                             String.valueOf(System.currentTimeMillis()) + "_app_upload.jpg"));
 
                     intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, mImageCaptureUri);
-
-                    ChangeButtons();
                     try {
                         intent.putExtra("return-data", true);
                         startActivityForResult(intent, PICK_FROM_CAMERA);
@@ -166,16 +171,12 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                     imagev.setImageDrawable(null);
 
                    }
-                hasphoto =false;
-                ChangeButtons();
+                CheckPhotoExist();
+                CheckDelete();
             }
         } );
 
         final AlertDialog dialog = builder.create();
-
-
-
-
 
         findViewById(R.id.btnSubmitmsgtxt).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -192,7 +193,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
        // final AlertDialog dialog = builder.create();
         findViewById(R.id.btnChangePreviewPhoto).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+               CheckDelete();
                dialog.show();
                ChangeButtons();
             }
@@ -288,12 +289,17 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     }
     // This Method checks if a photo was added
 
+    void CheckDelete(){
+        System.out.println(adapter.getCount());
+        if(adapter.getCount() == 2 && hasphoto) adapter.add(getString(R.string.deletephoto));
+        else if(adapter.getCount() == 3 && !hasphoto)   adapter.remove(getString(R.string.deletephoto));
+    }
+
     void CheckPhotoExist(){
         if(imagev.getDrawable()!=null){
             hasphoto = true;
         }
         else hasphoto = false;
-
         ChangeButtons();
     }
 
@@ -320,13 +326,13 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
         switch (requestCode) {
             case PICK_FROM_CAMERA:
-                ChangeButtons();
+                //CheckPhotoExist();
                 doCrop();
                 break;
 
             case PICK_FROM_FILE:
                 mImageCaptureUri = data.getData();
-                ChangeButtons();
+                //CheckPhotoExist();
                 doCrop();
                 break;
 
@@ -338,16 +344,16 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                     Bitmap photo = BitmapFactory.decodeFile(imagePath);
                      if(photo!=null){
                         imagev.setImageBitmap(photo);
-                        hasphoto = true; //force set photo true because CheckPhotoExist() doesn't work..
                      }
                     else
                      {
-                         hasphoto = false;
+                     //    hasphoto = false;
                      }
 
-                   // CheckPhotoExist(); //this re-adds the picture from the previous activity!
+
                 }
-                ChangeButtons();
+                CheckPhotoExist();
+                CheckDelete();
                 File f = new File(mImageCaptureUri.getPath());
 
                 if (f.exists()) f.delete();
@@ -415,7 +421,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             intent.putExtra("scale", true);
             intent.putExtra("return-data", false); //don't send data back to prevent transactionTooLarge
             intent.putExtra(MediaStore.EXTRA_OUTPUT, tempURI); //save to file!
-            hasphoto =true;
+            //hasphoto =true;
             if (size == 1) {
                 Intent i 		= new Intent(intent);
                 ResolveInfo res	= list.get(0);
