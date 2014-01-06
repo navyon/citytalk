@@ -29,9 +29,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b39b4eb-31ad-458f-a734-2061124ab45a" name="Default" comment="revert .iml change&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/ftp4j_1_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/ftp4j_1_6.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/previewtxt.xml" afterPath="$PROJECT_DIR$/res/layout/previewtxt.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CityTalk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -263,10 +261,10 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="17" selection-start="5481" selection-end="5481" vertical-scroll-proportion="1.3313069" vertical-offset="1840" max-vertical-offset="2380">
+            <state line="9" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.051671732" vertical-offset="136" max-vertical-offset="2924">
               <folding>
-                <element signature="e#3370#3401#0" expanded="true" />
-                <element signature="e#4222#4251#0" expanded="true" />
+                <element signature="e#4589#4620#0" expanded="true" />
+                <element signature="e#5441#5470#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -292,10 +290,9 @@
       <file leaf-file-name="MessageActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/MessageActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="0" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="2295">
+            <state line="81" column="0" selection-start="2859" selection-end="2859" vertical-scroll-proportion="0.0" vertical-offset="827" max-vertical-offset="2312">
               <folding>
                 <element signature="e#1674#2871#0" expanded="true" />
-                <element signature="e#2857#2858#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -687,7 +684,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287827" sideWeight="0.49871135" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32496077" sideWeight="0.49853587" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33124018" sideWeight="0.8081991" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33124018" sideWeight="0.8081991" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1123,10 +1120,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/MessageActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.0" vertical-offset="411" max-vertical-offset="2295">
+        <state line="81" column="0" selection-start="2859" selection-end="2859" vertical-scroll-proportion="0.0" vertical-offset="827" max-vertical-offset="2312">
           <folding>
             <element signature="e#1674#2871#0" expanded="true" />
-            <element signature="e#2857#2858#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1170,10 +1166,10 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="17" selection-start="5481" selection-end="5481" vertical-scroll-proportion="1.3313069" vertical-offset="1840" max-vertical-offset="2380">
+        <state line="9" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.051671732" vertical-offset="136" max-vertical-offset="2924">
           <folding>
-            <element signature="e#3370#3401#0" expanded="true" />
-            <element signature="e#4222#4251#0" expanded="true" />
+            <element signature="e#4589#4620#0" expanded="true" />
+            <element signature="e#5441#5470#0" expanded="true" />
           </folding>
         </state>
       </provider>
