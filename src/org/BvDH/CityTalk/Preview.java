@@ -106,7 +106,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                             String.valueOf(System.currentTimeMillis()) + "_app_upload.jpg"));
 
                     intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, mImageCaptureUri);
-                     hasphoto =true;
+
                     ChangeButtons();
                     try {
                         intent.putExtra("return-data", true);
@@ -146,7 +146,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                     intent.setType("image/*");
                     intent.setAction(Intent.ACTION_GET_CONTENT);
                     startActivityForResult(Intent.createChooser(intent, "Complete action using"), PICK_FROM_FILE);
-                    hasphoto=true;
+
                     ChangeButtons();
                 }
 
@@ -161,11 +161,12 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
                    if(imagev.getDrawable()!=null)
                    {
-                    hasphoto =false;
+
                     imagev.destroyDrawingCache();
                     imagev.setImageDrawable(null);
 
                    }
+                hasphoto =false;
                 ChangeButtons();
             }
         } );
@@ -193,9 +194,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             public void onClick(View v) {
 
                dialog.show();
-
-              CheckPhotoExist();
-                ChangeButtons();
+               ChangeButtons();
             }
         });
 
@@ -321,12 +320,13 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
         switch (requestCode) {
             case PICK_FROM_CAMERA:
+                ChangeButtons();
                 doCrop();
                 break;
 
             case PICK_FROM_FILE:
                 mImageCaptureUri = data.getData();
-
+                ChangeButtons();
                 doCrop();
                 break;
 
@@ -344,9 +344,10 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                      {
                          hasphoto = false;
                      }
+
                    // CheckPhotoExist(); //this re-adds the picture from the previous activity!
                 }
-
+                ChangeButtons();
                 File f = new File(mImageCaptureUri.getPath());
 
                 if (f.exists()) f.delete();
@@ -414,7 +415,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             intent.putExtra("scale", true);
             intent.putExtra("return-data", false); //don't send data back to prevent transactionTooLarge
             intent.putExtra(MediaStore.EXTRA_OUTPUT, tempURI); //save to file!
-
+            hasphoto =true;
             if (size == 1) {
                 Intent i 		= new Intent(intent);
                 ResolveInfo res	= list.get(0);
@@ -444,17 +445,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                         startActivityForResult( cropOptions.get(item).appIntent, CROP_FROM_CAMERA);
                     }
                 });
-                // Cancels the Image Capture
-                builder.setOnCancelListener( new DialogInterface.OnCancelListener() {
-                    @Override
-                    public void onCancel( DialogInterface dialog ) {
 
-                        if (mImageCaptureUri != null ) {
-                            getContentResolver().delete(mImageCaptureUri, null, null );
-                            mImageCaptureUri = null;
-                        }
-                    }
-                } );
 
                 AlertDialog alert = builder.create();
 

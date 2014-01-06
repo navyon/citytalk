@@ -161,7 +161,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="191" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
+      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="192" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -176,7 +176,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="256" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
+      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="255" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -206,7 +206,37 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="306" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
+      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="305" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="326" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="321" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -253,7 +283,7 @@
       <file leaf-file-name="Preview.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="313" column="96" selection-start="10341" selection-end="10341" vertical-scroll-proportion="0.6996904" vertical-offset="5095" max-vertical-offset="8007">
+            <state line="328" column="32" selection-start="10660" selection-end="10660" vertical-scroll-proportion="-0.5" vertical-offset="5763" max-vertical-offset="7854">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2881#2913#0" expanded="true" />
@@ -261,26 +291,24 @@
                 <element signature="e#2953#2984#0" expanded="true" />
                 <element signature="e#3042#3050#0" expanded="true" />
                 <element signature="e#3198#3218#0" expanded="true" />
-                <element signature="e#3258#5434#0" expanded="true" />
-                <element signature="e#5422#5423#0" expanded="true" />
-                <element signature="e#5513#5925#0" expanded="true" />
-                <element signature="e#5914#5915#0" expanded="true" />
-                <element signature="e#6050#6468#0" expanded="true" />
-                <element signature="e#6466#6467#0" expanded="true" />
-                <element signature="e#6596#6788#0" expanded="true" />
-                <element signature="e#6777#6778#0" expanded="true" />
-                <element signature="e#6859#7546#0" expanded="true" />
-                <element signature="e#7535#7536#0" expanded="true" />
-                <element signature="e#7592#7725#0" expanded="true" />
-                <element signature="e#7714#7715#0" expanded="true" />
-                <element signature="e#9832#9871#0" expanded="true" />
-                <element signature="e#10079#10117#0" expanded="true" />
-                <element signature="e#10239#10280#0" expanded="true" />
-                <element signature="e#12528#12540#0" expanded="true" />
-                <element signature="e#14818#15075#0" expanded="true" />
-                <element signature="e#15056#15057#0" expanded="true" />
-                <element signature="e#15168#15572#0" expanded="true" />
-                <element signature="e#15553#15554#0" expanded="true" />
+                <element signature="e#3258#5364#0" expanded="true" />
+                <element signature="e#5352#5353#0" expanded="true" />
+                <element signature="e#5443#5852#0" expanded="true" />
+                <element signature="e#5841#5842#0" expanded="true" />
+                <element signature="e#5977#6395#0" expanded="true" />
+                <element signature="e#6393#6394#0" expanded="true" />
+                <element signature="e#6523#6680#0" expanded="true" />
+                <element signature="e#6669#6670#0" expanded="true" />
+                <element signature="e#6751#7438#0" expanded="true" />
+                <element signature="e#7427#7428#0" expanded="true" />
+                <element signature="e#7484#7617#0" expanded="true" />
+                <element signature="e#7606#7607#0" expanded="true" />
+                <element signature="e#9724#9763#0" expanded="true" />
+                <element signature="e#9971#10009#0" expanded="true" />
+                <element signature="e#10131#10172#0" expanded="true" />
+                <element signature="e#12518#12530#0" expanded="true" />
+                <element signature="e#14835#15092#0" expanded="true" />
+                <element signature="e#15073#15074#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -321,7 +349,7 @@
       <file leaf-file-name="MessageActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/MessageActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="0" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="2312">
+            <state line="82" column="85" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="2312">
               <folding>
                 <element signature="e#1674#2871#0" expanded="true" />
                 <element signature="e#2857#2858#0" expanded="true" />
@@ -711,13 +739,13 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41130298" sideWeight="0.76061493" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41130298" sideWeight="0.76061493" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3124019" sideWeight="0.23938507" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287827" sideWeight="0.49871135" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32496077" sideWeight="0.49853587" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33124018" sideWeight="0.8081991" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33124018" sideWeight="0.8081991" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1167,7 +1195,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/MessageActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="2312">
+        <state line="82" column="85" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="2312">
           <folding>
             <element signature="e#1674#2871#0" expanded="true" />
             <element signature="e#2857#2858#0" expanded="true" />
@@ -1177,7 +1205,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="313" column="96" selection-start="10341" selection-end="10341" vertical-scroll-proportion="0.6996904" vertical-offset="5095" max-vertical-offset="8007">
+        <state line="328" column="32" selection-start="10660" selection-end="10660" vertical-scroll-proportion="-0.5" vertical-offset="5763" max-vertical-offset="7854">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2881#2913#0" expanded="true" />
@@ -1185,26 +1213,24 @@
             <element signature="e#2953#2984#0" expanded="true" />
             <element signature="e#3042#3050#0" expanded="true" />
             <element signature="e#3198#3218#0" expanded="true" />
-            <element signature="e#3258#5434#0" expanded="true" />
-            <element signature="e#5422#5423#0" expanded="true" />
-            <element signature="e#5513#5925#0" expanded="true" />
-            <element signature="e#5914#5915#0" expanded="true" />
-            <element signature="e#6050#6468#0" expanded="true" />
-            <element signature="e#6466#6467#0" expanded="true" />
-            <element signature="e#6596#6788#0" expanded="true" />
-            <element signature="e#6777#6778#0" expanded="true" />
-            <element signature="e#6859#7546#0" expanded="true" />
-            <element signature="e#7535#7536#0" expanded="true" />
-            <element signature="e#7592#7725#0" expanded="true" />
-            <element signature="e#7714#7715#0" expanded="true" />
-            <element signature="e#9832#9871#0" expanded="true" />
-            <element signature="e#10079#10117#0" expanded="true" />
-            <element signature="e#10239#10280#0" expanded="true" />
-            <element signature="e#12528#12540#0" expanded="true" />
-            <element signature="e#14818#15075#0" expanded="true" />
-            <element signature="e#15056#15057#0" expanded="true" />
-            <element signature="e#15168#15572#0" expanded="true" />
-            <element signature="e#15553#15554#0" expanded="true" />
+            <element signature="e#3258#5364#0" expanded="true" />
+            <element signature="e#5352#5353#0" expanded="true" />
+            <element signature="e#5443#5852#0" expanded="true" />
+            <element signature="e#5841#5842#0" expanded="true" />
+            <element signature="e#5977#6395#0" expanded="true" />
+            <element signature="e#6393#6394#0" expanded="true" />
+            <element signature="e#6523#6680#0" expanded="true" />
+            <element signature="e#6669#6670#0" expanded="true" />
+            <element signature="e#6751#7438#0" expanded="true" />
+            <element signature="e#7427#7428#0" expanded="true" />
+            <element signature="e#7484#7617#0" expanded="true" />
+            <element signature="e#7606#7607#0" expanded="true" />
+            <element signature="e#9724#9763#0" expanded="true" />
+            <element signature="e#9971#10009#0" expanded="true" />
+            <element signature="e#10131#10172#0" expanded="true" />
+            <element signature="e#12518#12530#0" expanded="true" />
+            <element signature="e#14835#15092#0" expanded="true" />
+            <element signature="e#15073#15074#0" expanded="true" />
           </folding>
         </state>
       </provider>
