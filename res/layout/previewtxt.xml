@@ -7,50 +7,31 @@
                 android:orientation="vertical">
 
     <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/aspectFix"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:scaleType="fitStart"
-        android:background="@drawable/back"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp" />
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignTop="@+id/aspectFix"
-        android:layout_alignLeft="@+id/aspectFix"
-        android:layout_alignBottom="@+id/aspectFix"
-        android:layout_alignRight="@+id/aspectFix">
-
-        <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnRestartAnim"
-            android:src="@drawable/restart"
-            android:background="@android:color/transparent"
-            android:visibility="invisible"
-            android:layout_alignParentStart="false"
-            android:layout_centerInParent="true" />
-    </RelativeLayout>
+            android:id="@+id/aspectFix"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitStart"
+            android:background="@drawable/back"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
 
     <ImageView
             android:id="@+id/ImageViewPreview"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-        android:scaleType="fitCenter"
-        android:minHeight="225dp"
-        android:maxHeight="450dp"
-        android:minWidth="300dp"
-        android:maxWidth="600dp"
-        android:layout_alignBottom="@+id/aspectFix"
-        android:layout_alignRight="@+id/aspectFix"
-        android:layout_alignLeft="@+id/aspectFix"
-        android:layout_alignTop="@+id/aspectFix" />
+            android:scaleType="fitCenter"
+            android:minHeight="225dp"
+            android:maxHeight="450dp"
+            android:minWidth="300dp"
+            android:maxWidth="600dp"
+            android:layout_alignBottom="@+id/aspectFix"
+            android:layout_alignRight="@+id/aspectFix"
+            android:layout_alignLeft="@+id/aspectFix"
+            android:layout_alignTop="@+id/aspectFix" />
 
     <TextView
             android:layout_width="fill_parent"
@@ -66,10 +47,29 @@
             android:lineSpacingExtra="-4dp"
             android:clickable="true"
             android:gravity="center_vertical|left"
-        android:layout_alignBottom="@+id/aspectFix"
-        android:layout_alignLeft="@+id/aspectFix"
-        android:layout_alignRight="@+id/aspectFix"
-        android:layout_alignTop="@+id/aspectFix" />
+            android:layout_alignBottom="@+id/aspectFix"
+            android:layout_alignLeft="@+id/aspectFix"
+            android:layout_alignRight="@+id/aspectFix"
+            android:layout_alignTop="@+id/aspectFix" />
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignTop="@+id/aspectFix"
+            android:layout_alignLeft="@+id/aspectFix"
+            android:layout_alignBottom="@+id/aspectFix"
+            android:layout_alignRight="@+id/aspectFix">
+
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnRestartAnim"
+                android:src="@drawable/restart"
+                android:background="@android:color/transparent"
+                android:visibility="invisible"
+                android:layout_alignParentStart="false"
+                android:layout_centerInParent="true" />
+    </RelativeLayout>
 
     <Space
             android:layout_width="0dp"
@@ -119,7 +119,7 @@
     <Button
             android:layout_width="fill_parent"
             android:layout_height="70dp"
-            android:text="@string/Continue"
+            android:text="Ik ben tevreden!"
             android:id="@+id/btnSubmitmsgtxt"
 
             style="@style/BvDH_button"
@@ -130,14 +130,6 @@
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/btnchangePreviewText"
             android:layout_alignEnd="@+id/btnchangePreviewText" />
-    <Button style="@style/BvDH_button" android:layout_width="wrap_content" android:layout_height="170dp"
-            android:text="@string/PreviewbtnChangeTxt" android:id="@+id/button" android:clickable="true"
-            android:drawableTop="@drawable/text_icon" android:background="@color/BvDH_Rood"
-            android:textColor="@android:color/white" android:textSize="18dp" android:gravity="center"
-            android:layout_gravity="bottom" android:paddingTop="40dp"
-            android:layout_alignParentEnd="true"
-            android:layout_above="@+id/btnSubmitmsgtxt" android:layout_alignParentLeft="true"
-            android:layout_marginLeft="881dp" android:layout_marginBottom="110dp"/>
 
 
 </RelativeLayout>

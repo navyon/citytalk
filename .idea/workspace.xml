@@ -29,13 +29,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b39b4eb-31ad-458f-a734-2061124ab45a" name="Default" comment="revert .iml change&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CityTalk.apk" afterPath="$PROJECT_DIR$/CityTalk.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/BvDH/CityTalk/MyActivity.java" afterPath="$PROJECT_DIR$/src/org/BvDH/CityTalk/MyActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" afterPath="$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-en/strings.xml" afterPath="$PROJECT_DIR$/res/values-en/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/ftp4j_1_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/ftp4j_1_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/previewtxt.xml" afterPath="$PROJECT_DIR$/res/layout/previewtxt.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CityTalk.iws" />
@@ -107,7 +102,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="288" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
+      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="144" class="org.BvDH.CityTalk.Preview$1" package="org.BvDH.CityTalk">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -122,7 +117,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="302" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
+      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="126" class="org.BvDH.CityTalk.Preview$1" package="org.BvDH.CityTalk">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -137,7 +132,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="161" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
+      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="135" class="org.BvDH.CityTalk.Preview$1" package="org.BvDH.CityTalk">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -152,7 +147,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="128" class="org.BvDH.CityTalk.Preview$1" package="org.BvDH.CityTalk">
+      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="55" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -167,7 +162,22 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="137" class="org.BvDH.CityTalk.Preview$1" package="org.BvDH.CityTalk">
+      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="190" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="253" class="org.BvDH.CityTalk.Preview" package="org.BvDH.CityTalk">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -184,7 +194,7 @@
       </breakpoint>
     </line_breakpoints>
     <method_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" line="89" class="org.BvDH.CityTalk.Preview$1" package="org.BvDH.CityTalk">
+      <breakpoint url="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/view/View.java" line="17500" class="android.view.View.OnClickListener" package="android.view">
         <option name="WATCH_ENTRY" value="true" />
         <option name="WATCH_EXIT" value="true" />
         <option name="ENABLED" value="true" />
@@ -211,32 +221,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Preview.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Preview.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="40" selection-start="2679" selection-end="2767" vertical-scroll-proportion="-14.063292" vertical-offset="6966" max-vertical-offset="7361">
+            <state line="254" column="56" selection-start="8800" selection-end="8800" vertical-scroll-proportion="-107.38461" vertical-offset="1526" max-vertical-offset="7956">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2696#2728#0" expanded="true" />
-                <element signature="e#2730#2767#0" expanded="true" />
-                <element signature="e#2768#2799#0" expanded="true" />
-                <element signature="e#2857#2865#0" expanded="true" />
-                <element signature="e#3013#3033#0" expanded="true" />
-                <element signature="e#3073#5385#0" expanded="true" />
-                <element signature="e#5373#5374#0" expanded="true" />
-                <element signature="e#5464#5878#0" expanded="true" />
-                <element signature="e#5867#5868#0" expanded="true" />
-                <element signature="e#6003#6421#0" expanded="true" />
-                <element signature="e#6419#6420#0" expanded="true" />
-                <element signature="e#6549#6708#0" expanded="true" />
-                <element signature="e#6697#6698#0" expanded="true" />
-                <element signature="e#6779#7466#0" expanded="true" />
-                <element signature="e#7455#7456#0" expanded="true" />
-                <element signature="e#7512#7645#0" expanded="true" />
-                <element signature="e#7634#7635#0" expanded="true" />
-                <element signature="e#9012#9051#0" expanded="true" />
-                <element signature="e#9259#9297#0" expanded="true" />
-                <element signature="e#9419#9460#0" expanded="true" />
+                <element signature="e#2881#2913#0" expanded="true" />
+                <element signature="e#2915#2952#0" expanded="true" />
+                <element signature="e#2953#2984#0" expanded="true" />
+                <element signature="e#3042#3050#0" expanded="true" />
+                <element signature="e#3198#3218#0" expanded="true" />
+                <element signature="e#3258#5570#0" expanded="true" />
+                <element signature="e#5558#5559#0" expanded="true" />
+                <element signature="e#5649#6063#0" expanded="true" />
+                <element signature="e#6052#6053#0" expanded="true" />
+                <element signature="e#6188#6606#0" expanded="true" />
+                <element signature="e#6604#6605#0" expanded="true" />
+                <element signature="e#6734#6893#0" expanded="true" />
+                <element signature="e#6882#6883#0" expanded="true" />
+                <element signature="e#6964#7651#0" expanded="true" />
+                <element signature="e#7640#7641#0" expanded="true" />
+                <element signature="e#7697#7830#0" expanded="true" />
+                <element signature="e#7819#7820#0" expanded="true" />
+                <element signature="e#9937#9976#0" expanded="true" />
+                <element signature="e#10184#10222#0" expanded="true" />
+                <element signature="e#10344#10385#0" expanded="true" />
+                <element signature="e#12633#12645#0" expanded="true" />
+                <element signature="e#14923#15180#0" expanded="true" />
+                <element signature="e#15161#15162#0" expanded="true" />
+                <element signature="e#15273#15677#0" expanded="true" />
+                <element signature="e#15658#15659#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="previewtxt.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="134" column="17" selection-start="5481" selection-end="5481" vertical-scroll-proportion="1.3313069" vertical-offset="1840" max-vertical-offset="2380">
+              <folding>
+                <element signature="e#3370#3401#0" expanded="true" />
+                <element signature="e#4222#4251#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -259,11 +289,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MessageActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/MessageActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="0" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="2295">
+              <folding>
+                <element signature="e#1674#2871#0" expanded="true" />
+                <element signature="e#2857#2858#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="25" selection-start="7353" selection-end="7356" vertical-scroll-proportion="-113.11539" vertical-offset="0" max-vertical-offset="3366">
+            <state line="82" column="0" selection-start="3163" selection-end="3163" vertical-scroll-proportion="-6.423077" vertical-offset="870" max-vertical-offset="3400">
               <folding>
+                <element signature="e#2947#3177#0" expanded="true" />
+                <element signature="e#3175#3176#0" expanded="true" />
+                <element signature="e#7290#7694#0" expanded="true" />
                 <element signature="e#7675#7676#0" expanded="true" />
               </folding>
             </state>
@@ -273,7 +318,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="4" selection-start="444" selection-end="514" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="629">
+            <state line="7" column="4" selection-start="326" selection-end="375" vertical-scroll-proportion="-4.76" vertical-offset="0" max-vertical-offset="646">
               <folding />
             </state>
           </provider>
@@ -282,7 +327,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values-en/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="59" selection-start="548" selection-end="548" vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="629">
+            <state line="9" column="36" selection-start="466" selection-end="466" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="646">
               <folding />
             </state>
           </provider>
@@ -340,12 +385,12 @@
         <option value="$PROJECT_DIR$/src/org/BvDH/CityTalk/JSONParser.java" />
         <option value="$PROJECT_DIR$/src/com/example/CityTalk/Preview.java" />
         <option value="$PROJECT_DIR$/src/org/BvDH/CityTalk/ConfirmActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/previewtxt.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" />
-        <option value="$PROJECT_DIR$/res/values-en/strings.xml" />
         <option value="$PROJECT_DIR$/src/org/BvDH/CityTalk/MyActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-en/strings.xml" />
+        <option value="$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java" />
+        <option value="$PROJECT_DIR$/res/layout/previewtxt.xml" />
       </list>
     </option>
   </component>
@@ -631,17 +676,18 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.4996938" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3396779" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3124019" sideWeight="0.76061493" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29827315" sideWeight="0.19180088" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41130298" sideWeight="0.76061493" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3124019" sideWeight="0.23938507" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287827" sideWeight="0.49871135" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32496077" sideWeight="0.49853587" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29827315" sideWeight="0.8081991" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33124018" sideWeight="0.8081991" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -651,7 +697,6 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.4978038" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34007353" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -681,20 +726,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/FinalActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="26" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="52" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/anim/slide_up.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="34" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="345" />
@@ -916,13 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/MessageActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/CropOption.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="18" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
@@ -947,16 +971,6 @@
     <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/FinalActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="26" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="13" column="33" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="2431">
           <folding />
         </state>
       </provider>
@@ -1053,20 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="444" selection-end="514" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-en/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="59" selection-start="548" selection-end="548" vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/ConfirmActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="27" selection-start="3778" selection-end="3778" vertical-scroll-proportion="-18.73077" vertical-offset="1026" max-vertical-offset="5916">
@@ -1076,40 +1076,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-en/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="36" selection-start="466" selection-end="466" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="326" selection-end="375" vertical-scroll-proportion="-4.76" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1793" column="0" selection-start="80270" selection-end="80270" vertical-scroll-proportion="0.33252427" vertical-offset="28627" max-vertical-offset="88213">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-17/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17503" column="13" selection-start="677635" selection-end="677635" vertical-scroll-proportion="0.33333334" vertical-offset="293900" max-vertical-offset="309026">
+          <folding>
+            <element signature="e#485372#485412#0" expanded="false" />
+            <element signature="e#545163#545195#0" expanded="false" />
+            <element signature="e#623628#623667#0" expanded="false" />
+            <element signature="e#638535#638574#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="25" selection-start="7353" selection-end="7356" vertical-scroll-proportion="-113.11539" vertical-offset="0" max-vertical-offset="3366">
+        <state line="82" column="0" selection-start="3163" selection-end="3163" vertical-scroll-proportion="-6.423077" vertical-offset="870" max-vertical-offset="3400">
           <folding>
+            <element signature="e#2947#3177#0" expanded="true" />
+            <element signature="e#3175#3176#0" expanded="true" />
+            <element signature="e#7290#7694#0" expanded="true" />
             <element signature="e#7675#7676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/MessageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="0" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.0" vertical-offset="411" max-vertical-offset="2295">
+          <folding>
+            <element signature="e#1674#2871#0" expanded="true" />
+            <element signature="e#2857#2858#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/BvDH/CityTalk/Preview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="40" selection-start="2679" selection-end="2767" vertical-scroll-proportion="-14.063292" vertical-offset="6966" max-vertical-offset="7361">
+        <state line="254" column="56" selection-start="8800" selection-end="8800" vertical-scroll-proportion="-107.38461" vertical-offset="1526" max-vertical-offset="7956">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2696#2728#0" expanded="true" />
-            <element signature="e#2730#2767#0" expanded="true" />
-            <element signature="e#2768#2799#0" expanded="true" />
-            <element signature="e#2857#2865#0" expanded="true" />
-            <element signature="e#3013#3033#0" expanded="true" />
-            <element signature="e#3073#5385#0" expanded="true" />
-            <element signature="e#5373#5374#0" expanded="true" />
-            <element signature="e#5464#5878#0" expanded="true" />
-            <element signature="e#5867#5868#0" expanded="true" />
-            <element signature="e#6003#6421#0" expanded="true" />
-            <element signature="e#6419#6420#0" expanded="true" />
-            <element signature="e#6549#6708#0" expanded="true" />
-            <element signature="e#6697#6698#0" expanded="true" />
-            <element signature="e#6779#7466#0" expanded="true" />
-            <element signature="e#7455#7456#0" expanded="true" />
-            <element signature="e#7512#7645#0" expanded="true" />
-            <element signature="e#7634#7635#0" expanded="true" />
-            <element signature="e#9012#9051#0" expanded="true" />
-            <element signature="e#9259#9297#0" expanded="true" />
-            <element signature="e#9419#9460#0" expanded="true" />
+            <element signature="e#2881#2913#0" expanded="true" />
+            <element signature="e#2915#2952#0" expanded="true" />
+            <element signature="e#2953#2984#0" expanded="true" />
+            <element signature="e#3042#3050#0" expanded="true" />
+            <element signature="e#3198#3218#0" expanded="true" />
+            <element signature="e#3258#5570#0" expanded="true" />
+            <element signature="e#5558#5559#0" expanded="true" />
+            <element signature="e#5649#6063#0" expanded="true" />
+            <element signature="e#6052#6053#0" expanded="true" />
+            <element signature="e#6188#6606#0" expanded="true" />
+            <element signature="e#6604#6605#0" expanded="true" />
+            <element signature="e#6734#6893#0" expanded="true" />
+            <element signature="e#6882#6883#0" expanded="true" />
+            <element signature="e#6964#7651#0" expanded="true" />
+            <element signature="e#7640#7641#0" expanded="true" />
+            <element signature="e#7697#7830#0" expanded="true" />
+            <element signature="e#7819#7820#0" expanded="true" />
+            <element signature="e#9937#9976#0" expanded="true" />
+            <element signature="e#10184#10222#0" expanded="true" />
+            <element signature="e#10344#10385#0" expanded="true" />
+            <element signature="e#12633#12645#0" expanded="true" />
+            <element signature="e#14923#15180#0" expanded="true" />
+            <element signature="e#15161#15162#0" expanded="true" />
+            <element signature="e#15273#15677#0" expanded="true" />
+            <element signature="e#15658#15659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/previewtxt.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="17" selection-start="5481" selection-end="5481" vertical-scroll-proportion="1.3313069" vertical-offset="1840" max-vertical-offset="2380">
+          <folding>
+            <element signature="e#3370#3401#0" expanded="true" />
+            <element signature="e#4222#4251#0" expanded="true" />
           </folding>
         </state>
       </provider>
