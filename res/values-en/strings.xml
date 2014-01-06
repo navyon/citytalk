@@ -7,6 +7,7 @@
     <string name="PreviewbtnChangePhoto">Change Photo</string>
     <string name="deletephoto">Delete photo</string>
     <string name="ChooseaTask">Choose a task</string>
+    <string name="Continue">Continue</string>
     <string name="PreviewbtnAddPhoto">Add a Photo</string>
     <string name="CapturePhoto">Capture a Photo from Camera"</string>
     <string name="ChoosefromGallery">Choose a Photo from Gallery</string>
@@ -23,7 +24,7 @@
     <string name="MsgBtnPrev">Check out the preview!</string>
     <string name="ConfirmCheckbox">I declare that I own all rights to the uploaded image.</string>
     <string name="ConfirmEmailHint">Please fill in your email address</string>
-    <string name="ConfirmBtn">Submit</string>
+    <string name="ConfirmBtn">Send it</string>
     <string name="ConfirmCheckboxError">Please tick the check box if youve agreed with the terms</string>
     <string name="ConfirmEmailError">Please check your email address.</string>
     <string name="FinalThnx">Thanks for sending your Message!</string>

@@ -46,12 +46,12 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     Button btnChangePreviewPhoto;
     Button btnChangePreviewMessage;
     ImageButton btnRestartAnim;
-<<<<<<< HEAD
+
     String image_path;
-=======
+
     float textsize;
 
->>>>>>> 0eecf2fe1f3e450e5001268cc31cf86aef705ff9
+
     View thislayout;
     // Animation
     Animation animSideDown, animSlideUp;
