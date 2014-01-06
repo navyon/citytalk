@@ -106,7 +106,8 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                             String.valueOf(System.currentTimeMillis()) + "_app_upload.jpg"));
 
                     intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, mImageCaptureUri);
-
+                     hasphoto =true;
+                    ChangeButtons();
                     try {
                         intent.putExtra("return-data", true);
                         startActivityForResult(intent, PICK_FROM_CAMERA);
@@ -128,10 +129,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                         imagev.destroyDrawingCache();
                         hasphoto = false;
                         tempURI = null;
-                        // aspectv to force aspect ratio.
-                        Bitmap.Config conf = Bitmap.Config.ALPHA_8;
-                        Bitmap bmp = Bitmap.createBitmap(1024, 776, conf);//create transparent bitmap
-                        aspectv.setImageBitmap(bmp);
                         ChangeButtons();
 
 
@@ -149,6 +146,8 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                     intent.setType("image/*");
                     intent.setAction(Intent.ACTION_GET_CONTENT);
                     startActivityForResult(Intent.createChooser(intent, "Complete action using"), PICK_FROM_FILE);
+                    hasphoto=true;
+                    ChangeButtons();
                 }
 
             }
@@ -160,12 +159,14 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             @Override
             public void onCancel( DialogInterface dialog ) {
 
-                if (mImageCaptureUri != null ) {
-                    getContentResolver().delete(mImageCaptureUri, null, null );
-                    mImageCaptureUri = null;
+                   if(imagev.getDrawable()!=null)
+                   {
                     hasphoto =false;
-                    ChangeButtons();
-                }
+                    imagev.destroyDrawingCache();
+                    imagev.setImageDrawable(null);
+
+                   }
+                ChangeButtons();
             }
         } );
 
@@ -192,7 +193,9 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             public void onClick(View v) {
 
                dialog.show();
-               CheckPhotoExist();
+
+              CheckPhotoExist();
+                ChangeButtons();
             }
         });
 
