@@ -8,13 +8,18 @@ import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.TypedValue;
+import android.view.Display;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
@@ -40,6 +45,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     Button btnChangePreviewPhoto;
     Button btnChangePreviewMessage;
     ImageButton btnRestartAnim;
+    float textsize;
 
     View thislayout;
     // Animation
@@ -174,12 +180,35 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
      }
 
-    //this can be DELETED i think
+
+    void setTextSizes(TextView txt){
+        //force aspect ratio for txtView
+        Bitmap.Config conf = Bitmap.Config.ALPHA_8;
+        Bitmap bmp = Bitmap.createBitmap(1024, 776, conf);//create transparent bitmap
+        aspectv.setImageBitmap(bmp);
+        //get display size
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+
+        Resources r = getResources();
+        float marginpx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, r.getDisplayMetrics());
+        float width = size.x - marginpx; // substract the margins (2x 5dp) from the width in px
+
+        // convert width to textsize (120 at 1024 -> = 1024*0.117
+        textsize = (float)(width * 0.1171875);
+        int margin = (int)(width * 0.062);
+        //set sizes
+        txt.setTextSize(TypedValue.COMPLEX_UNIT_PX, textsize);
+        txt.setPadding(margin,margin,margin,margin);
+    }
+
     void LoadMsgImg()
     {
         if(getIntent().hasExtra("msg")){
             msg = getIntent().getStringExtra("msg");
             hasmessage =true;
+            setTextSizes(txtview);
         }
         if(getIntent().hasExtra("imagePath")){
             String image_path = getIntent().getStringExtra("imagePath");
@@ -211,10 +240,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             hasphoto = true;
         }
         else hasphoto = false;
-        // aspectv to force aspect ratio.
-        Bitmap.Config conf = Bitmap.Config.ALPHA_8;
-        Bitmap bmp = Bitmap.createBitmap(1024, 776, conf);//create transparent bitmap
-        aspectv.setImageBitmap(bmp);
+
         ChangeButtons();
     }
 

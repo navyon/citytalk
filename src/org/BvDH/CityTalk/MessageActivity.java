@@ -29,24 +29,17 @@ import java.io.ByteArrayOutputStream;
 public class MessageActivity extends Activity {
      Intent intent;
      private EditText  txtView_msg;
+     private ImageView aspectv;
      String msg = null;
      float textsize;
        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.message);
-           Display display = getWindowManager().getDefaultDisplay();
-           Point size = new Point();
-           display.getSize(size);
-
-           Resources r = getResources();
-           float marginpx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, r.getDisplayMetrics());
-           float width = size.x - marginpx;
-           textsize = (float)(width * 0.1171875);
-           int margin = (int)(width * 0.061);
            txtView_msg = (EditText) findViewById(R.id.txtView_msg);
-           txtView_msg.setTextSize(TypedValue.COMPLEX_UNIT_PX, textsize);
-           txtView_msg.setPadding(margin,margin,margin,margin);
+           aspectv = (ImageView) findViewById(R.id.aspectv);
+           setTextSizes(txtView_msg);
+
 
            Button btnPrev = (Button) findViewById(R.id.btnpreview);
            ImageButton  btnhidekeyb = (ImageButton) findViewById(R.id.btnhidekey);
@@ -87,6 +80,8 @@ public class MessageActivity extends Activity {
 
                }
            });
+
+
            // some online hack that should limit the Edit box, dont think its any better than the first enter hack lets see
            txtView_msg.addTextChangedListener(new TextWatcher() {
                private String text;
@@ -135,6 +130,28 @@ public class MessageActivity extends Activity {
 
     }
 
+// function to mimic text size in relation with the Haagse Toren
+void setTextSizes(EditText txt){
+    //force aspect ratio for txtView
+    Bitmap.Config conf = Bitmap.Config.ALPHA_8;
+    Bitmap bmp = Bitmap.createBitmap(1024, 776, conf);//create transparent bitmap
+    aspectv.setImageBitmap(bmp);
+    //get display size
+    Display display = getWindowManager().getDefaultDisplay();
+    Point size = new Point();
+    display.getSize(size);
+
+    Resources r = getResources();
+    float marginpx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, r.getDisplayMetrics());
+    float width = size.x - marginpx; // substract the margins (2x 5dp) from the width in px
+
+    // convert width to textsize (120 at 1024 -> = 1024*0.117
+    textsize = (float)(width * 0.1171875);
+    int margin = (int)(width * 0.062);
+    //set sizes
+    txt.setTextSize(TypedValue.COMPLEX_UNIT_PX, textsize);
+    txt.setPadding(margin,margin,margin,margin);
+}
 
 
 
