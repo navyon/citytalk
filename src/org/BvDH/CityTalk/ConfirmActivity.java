@@ -40,10 +40,12 @@ public class ConfirmActivity extends Activity {
     private static final String TAG_SUCCESS = "success";
     // url to call php script
     private static String url_create_message = "http://beeldvandenhaag.daankrn.nl/android_api/create_message.php";
-    //
+    //private static String url_create_message = "http://beeldvandenhaag.nu/android/create_message.php";
 
     /************* Php script upload file ****************/
     private static String upLoadServerUri = "http://beeldvandenhaag.daankrn.nl/android_api/UploadToServer.php";
+    //private static String upLoadServerUri = "http://beeldvandenhaag.nu/android/upload_pictures.php";
+
 
     int uploadFinished = 0;
     String image_path;
