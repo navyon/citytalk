@@ -12,18 +12,20 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.io.DataOutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,11 +43,11 @@ public class ConfirmActivity extends Activity {
     //
 
     /************* Php script upload file ****************/
-    private static String upLoadServerUri = "http://beeldvandenhaag.daankrn.nl/UploadToServer.php";
+    private static String upLoadServerUri = "http://beeldvandenhaag.daankrn.nl/android_api/UploadToServer.php";
 
     int uploadFinished = 0;
     String image_path;
-
+    String ip_address = "";
     EditText edittx_email;
     CheckBox chkbox;
     // Progress Dialog
@@ -79,7 +81,6 @@ public class ConfirmActivity extends Activity {
         }
 
 
-
         findViewById(R.id.btnfinalsubmit).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -94,9 +95,9 @@ public class ConfirmActivity extends Activity {
                         // Call the php upload method which starts a new thread
 
                         if(hasphoto)StartNewThreadUpload();
-
                         // creating new message in background thread
                         new CreateNewMessage().execute();
+
 
 
 
@@ -163,6 +164,7 @@ public class ConfirmActivity extends Activity {
         }
        // Create the Message
         protected String doInBackground(String... args) {
+            ip_address = getPublicIP();
             String email = edittx_email.getText().toString();
             String foto = "";
             if(hasphoto){
@@ -177,6 +179,7 @@ public class ConfirmActivity extends Activity {
             params.add(new BasicNameValuePair("bericht", bericht));
             //only add photo if there is one.
             params.add(new BasicNameValuePair("foto", foto));
+            params.add(new BasicNameValuePair("ip", ip_address));
 
 
             // getting JSON Object
@@ -376,10 +379,14 @@ public class ConfirmActivity extends Activity {
         }
     }
 
-
-
-
-
-
-
+    public static String getPublicIP()
+    {
+        try{
+            Document doc = Jsoup.connect("http://api.externalip.net/ip").get();
+            return doc.body().text();
+        }
+        catch (IOException e){
+            return "0.0.0.0";
+        }
+    }
 }

@@ -19,14 +19,12 @@ import android.provider.MediaStore;
 import android.util.TypedValue;
 import android.view.Display;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import org.BvDH.CityTalk.R;
 
 
 public class Preview  extends Activity implements Animation.AnimationListener {
@@ -166,7 +164,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
                    if(imagev.getDrawable()!=null)
                    {
-
                     imagev.destroyDrawingCache();
                     imagev.setImageDrawable(null);
 
