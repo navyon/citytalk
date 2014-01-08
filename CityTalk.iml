@@ -28,6 +28,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="ftp4j-1.6" level="project" />
+    <orderEntry type="library" name="jsoup-1.7.3" level="project" />
   </component>
 </module>
 
