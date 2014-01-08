@@ -162,12 +162,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             @Override
             public void onCancel( DialogInterface dialog ) {
 
-                   if(imagev.getDrawable()!=null)
-                   {
-                    imagev.destroyDrawingCache();
-                    imagev.setImageDrawable(null);
 
-                   }
                 CheckPhotoExist();
                 CheckDelete();
             }
