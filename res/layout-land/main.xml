@@ -59,7 +59,7 @@
         android:paddingBottom="20dp"
         style="@style/BvDH_button"
         android:textSize="18dp"
-        android:background="@color/green"
+        android:background="@color/BvDH_green"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -70,7 +70,7 @@
                 android:text="Alleen tekst"
                 android:id="@+id/btn_Skip" android:textSize="18dp"
                 android:textColor="@android:color/white"
-            android:background="@color/red"
+            android:background="@color/BvDH_Rood"
             android:drawableTop="@drawable/text_icon"
             android:layout_gravity="bottom|right"
             android:gravity="center_horizontal|bottom"

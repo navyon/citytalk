@@ -3,15 +3,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:background="#000000"
+                android:background="#FFFFFF"
                 android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/imageView"
-        android:adjustViewBounds="true"
-        android:background="#99342A3C" />
 
     <ImageView
             android:layout_width="fill_parent"
@@ -48,7 +41,8 @@
             android:id="@+id/TextViewPreview"
             android:visibility="invisible"
             android:layout_gravity="center_horizontal"
-        android:textColor="#f5f5f5"
+            android:background="#000000"
+            android:textColor="#f5f5f5"
             android:textStyle="bold"
             android:singleLine="false"
             android:maxLines="4"
@@ -94,7 +88,7 @@
             style="@style/BvDH_button"
             android:drawableTop="@drawable/camera_icon_"
             android:textSize="18dp"
-            android:background="@color/green"
+            android:background="@color/BvDH_green"
             android:textColor="@android:color/white"
             android:clickable="true"
             android:gravity="center"
@@ -113,7 +107,7 @@
             android:id="@+id/btnchangePreviewText"
             android:clickable="true"
             android:drawableTop="@drawable/text_icon"
-            android:background="@color/red"
+            android:background="@color/BvDH_Rood"
             android:textColor="@android:color/white"
             android:textSize="18dp"
             android:gravity="center"
@@ -131,7 +125,7 @@
             android:id="@+id/btnSubmitmsgtxt"
 
             style="@style/BvDH_button"
-            android:background="@color/purple"
+            android:background="@color/BvDH_paars"
             android:textColor="@android:color/white"
             android:layout_gravity="bottom"
             android:gravity="center"

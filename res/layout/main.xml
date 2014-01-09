@@ -2,15 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent">
-
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/imageView2"
-        android:src="@drawable/background_test"
-        android:scaleType="centerCrop"
-        android:adjustViewBounds="true" />
+              android:layout_height="fill_parent"
+              android:background="@drawable/background">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -23,20 +16,14 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:layout_width="fill_parent"
+        android:id="@+id/textView"
         android:text="@string/StartQuestion"
         style="@style/textCapsCentre"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:gravity="center_horizontal|bottom"
         android:layout_above="@+id/btn_crop"
-        android:layout_centerHorizontal="true"
-        android:background="@color/purple_trans"
-        android:padding="10dp
-"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp" />
-
+        android:layout_centerHorizontal="true" />
 
     <Button
             android:layout_width="100dp"
@@ -48,7 +35,7 @@
             android:paddingBottom="20dp"
             style="@style/BvDH_button"
             android:textSize="18dp"
-            android:background="@color/green"
+            android:background="@color/BvDH_green"
             android:layout_gravity="center_horizontal|bottom|left"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -61,7 +48,7 @@
                     android:text="@string/btnAddTxt"
                     android:id="@+id/btn_Skip" android:textSize="18dp"
                     android:textColor="@android:color/white"
-                android:background="@color/red"
+                android:background="@color/BvDH_Rood"
                 android:drawableTop="@drawable/text_icon"
             android:gravity="center_horizontal|bottom"
                 android:paddingTop="40dp"

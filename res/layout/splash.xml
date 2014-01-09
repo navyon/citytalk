@@ -4,16 +4,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background_light"
 
     android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/imageView"
-        android:src="@drawable/background_test"
-        android:scaleType="centerCrop"
-        android:adjustViewBounds="true" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -34,11 +27,8 @@
         android:id="@+id/welkom_text"
         android:layout_gravity="center"
         android:gravity="center_horizontal|bottom"
-        android:layout_marginBottom="15dp"
-        android:layout_above="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:background="@color/green_trans"
-        android:padding="10dp" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         style="@style/textCentre"
@@ -47,14 +37,10 @@
         android:text="@string/SplashTextIntro"
         android:id="@+id/editText"
         android:layout_gravity="center_horizontal|top"
-        android:gravity="center_horizontal|top"
-        android:layout_marginBottom="30dp"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/purple_trans"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:padding="10dp" />
+        android:gravity="center_horizontal|top"
+        android:layout_below="@+id/welkom_text"
+        android:layout_marginTop="20dp" />
 
 
 </RelativeLayout>
