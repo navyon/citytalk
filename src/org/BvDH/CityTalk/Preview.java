@@ -1,4 +1,3 @@
-
 package org.BvDH.CityTalk;
 
 import android.app.Activity;
@@ -45,7 +44,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     Button btnChangePreviewMessage;
     ImageButton btnRestartAnim;
 
-    String image_path;
+    String image_path=null;
 
     ArrayAdapter<String> adapter;
 
@@ -123,11 +122,12 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                     try
                     {
                     // Deletes the stored file from the sd
-
+                         if(image_path!=null)
+                         {
                             File file = new File(image_path);
                             if(file.exists())
                                 file.delete();
-
+                         }
                         imagev.setImageBitmap(null);
                         imagev.destroyDrawingCache();
                         hasphoto = false;
