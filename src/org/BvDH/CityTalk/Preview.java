@@ -175,10 +175,9 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Preview.this, ConfirmActivity.class);
-                if(tempURI!=null){
-                if(hasphoto)intent.putExtra("imagePath", tempURI.getPath());
-                //Log.d("Path", tempURI.getPath());
-                }
+
+                if(hasphoto)intent.putExtra("imagePath", image_path);
+                Log.d("Testing: ",getIntent().getStringExtra("imagePath"));
                 intent.putExtra("msg",msg);
                 intent.putExtra("hasphoto", hasphoto);
                 Preview.this.startActivity(intent);
@@ -338,11 +337,12 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
                 if (extras != null) {
                     String imagePath = tempURI.getPath();
-                    Log.d("Path", imagePath);
+                    Log.d("Testing: ",imagePath);
                     Bitmap photo = BitmapFactory.decodeFile(imagePath);
                      if(photo!=null){
                         imagev.setImageBitmap(photo);
-
+                        image_path = imagePath;
+                        getIntent().putExtra("imagePath", image_path);
                      }
                     else
                      {
