@@ -8,6 +8,14 @@
     android:orientation="vertical">
 
     <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView2"
+        android:src="@drawable/background_test"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true" />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
@@ -28,7 +36,9 @@
         android:layout_weight="1"
         android:gravity="center_horizontal|bottom"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@color/red_trans"
+        android:padding="10dp" />
 
 
     <TextView
@@ -43,7 +53,9 @@
         android:maxWidth="300dp"
         android:layout_below="@+id/thanks"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"
+        android:background="@color/green_trans"
+        android:padding="10dp" />
 
     <Button
         android:layout_width="250dp"
