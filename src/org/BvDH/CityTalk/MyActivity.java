@@ -118,7 +118,7 @@ public class MyActivity extends Activity {
                 break;
 
             case CROP_FROM_CAMERA:
-
+                Bundle extras = data.getExtras();
                 Intent intent = new Intent(MyActivity.this, MessageActivity.class);
                 if (tempURI!= null) {
 

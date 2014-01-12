@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Display;
 import android.view.View;
@@ -174,7 +175,10 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Preview.this, ConfirmActivity.class);
-                if(hasphoto)intent.putExtra("imagePath", getIntent().getStringExtra("imagePath"));
+                if(tempURI!=null){
+                if(hasphoto)intent.putExtra("imagePath", tempURI.getPath());
+                //Log.d("Path", tempURI.getPath());
+                }
                 intent.putExtra("msg",msg);
                 intent.putExtra("hasphoto", hasphoto);
                 Preview.this.startActivity(intent);
@@ -331,11 +335,14 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             case CROP_FROM_CAMERA:
 
                 Bundle extras = data.getExtras();
+
                 if (extras != null) {
                     String imagePath = tempURI.getPath();
+                    Log.d("Path", imagePath);
                     Bitmap photo = BitmapFactory.decodeFile(imagePath);
                      if(photo!=null){
                         imagev.setImageBitmap(photo);
+
                      }
                     else
                      {
@@ -413,6 +420,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             intent.putExtra("scale", true);
             intent.putExtra("return-data", false); //don't send data back to prevent transactionTooLarge
             intent.putExtra(MediaStore.EXTRA_OUTPUT, tempURI); //save to file!
+            Log.d("Path", tempURI.getPath());
             //hasphoto =true;
             if (size == 1) {
                 Intent i 		= new Intent(intent);
