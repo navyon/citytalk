@@ -1,4 +1,4 @@
-package com.example.CityTalk;
+package org.BvDH.CityTalk;
 
 import android.content.Context;
 import android.text.Editable;
@@ -92,13 +92,13 @@ public class LimitedEditText extends EditText {
             /* handling lines limit exceed */
                 if (LimitedEditText.this.getLineCount() > maxLines) {
                     LimitedEditText.this.setText(text);
-                    LimitedEditText.this.setSelection(beforeCursorPosition);
+                    LimitedEditText.this.setSelection(s.toString().length());//beforeCursorPosition);
                 }
 
             /* handling character limit exceed */
                 if (s.toString().length() > maxCharacters) {
                     LimitedEditText.this.setText(text);
-                    LimitedEditText.this.setSelection(beforeCursorPosition);
+                    LimitedEditText.this.setSelection(s.toString().length());//beforeCursorPosition);
                     Toast.makeText(context, "text too long", Toast.LENGTH_SHORT)
                             .show();
                 }

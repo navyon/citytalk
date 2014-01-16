@@ -7,14 +7,21 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class FinalActivity extends Activity {
+
+    TextView thankyou;
+    TextView finalTip;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landingpage);
+
+        thankyou = (TextView) findViewById(R.id.thanks);
+        finalTip = (TextView) findViewById(R.id.FinalTip);
 
         findViewById(R.id.btnlike).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

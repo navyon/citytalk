@@ -35,7 +35,7 @@
         android:layout_gravity="center"
         android:gravity="center_horizontal|bottom"
         android:layout_marginBottom="15dp"
-        android:layout_above="@+id/editText"
+        android:layout_above="@+id/introText"
         android:layout_centerHorizontal="true"
         android:background="@color/green_trans"
         android:padding="10dp" />
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/SplashTextIntro"
-        android:id="@+id/editText"
+        android:id="@+id/introText"
         android:layout_gravity="center_horizontal|top"
         android:gravity="center_horizontal|top"
         android:layout_marginBottom="30dp"

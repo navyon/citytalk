@@ -5,12 +5,15 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -77,44 +80,48 @@ public class ConfirmActivity extends Activity {
 
         setContentView(R.layout.confirm_screen);
         chkbox = (CheckBox)findViewById(R.id.checkBox);
+        Button submitbox = (Button) findViewById(R.id.btnfinalsubmit);
+        edittx_email = (EditText) findViewById(R.id.editText_email);
+        edittx_email.setTextColor(Color.BLACK);
+
+        Typeface fontRegular = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
+        Typeface fontLight = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
+
+        chkbox.setTypeface(fontRegular);
+        edittx_email.setTypeface(fontLight);
+        submitbox.setTypeface(fontLight);
+
+
         if(getIntent().hasExtra("imagePath")){
              image_path = getIntent().getStringExtra("imagePath");
              hasphoto = true;
         }
 
 
-        findViewById(R.id.btnfinalsubmit).setOnClickListener(new View.OnClickListener() {
+        submitbox.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
 
-                edittx_email = (EditText) findViewById(R.id.editText_email);
-                edittx_email.setTextColor(Color.BLACK);
+
+
                 String email = edittx_email.getText().toString();
-                if(checkEmail(email))
-                {
-                    if(chkbox.isChecked())
-                    {
+                if (checkEmail(email)) {
+                    if (chkbox.isChecked()) {
                         // Call the php upload method which starts a new thread
 
-                        if(hasphoto)StartNewThreadUpload();
+                        if (hasphoto) StartNewThreadUpload();
                         // creating new message in background thread
                         new CreateNewMessage().execute();
 
 
-
-
                         //Intent intent = new Intent(ConfirmActivity.this, FinalActivity.class);
                         //startActivity(intent);
-                    }
-                    else
-                    {
-                        String chkboxerror =  getString(R.string.ConfirmCheckboxError);
+                    } else {
+                        String chkboxerror = getString(R.string.ConfirmCheckboxError);
                         Toast.makeText(getApplicationContext(), chkboxerror, Toast.LENGTH_LONG).show();
 
                     }
-                }
-                else
-                {
+                } else {
 
                     edittx_email.setTextColor(Color.RED);
                     String emailerror = getString(R.string.ConfirmEmailError);

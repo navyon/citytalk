@@ -3,23 +3,32 @@ package org.BvDH.CityTalk;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.widget.TextView;
 
 
 public class SplashActivity extends Activity
 {
     // Set the display time, in milliseconds (or extract it out as a configurable parameter)
     private final int SPLASH_DISPLAY_LENGTH = 4000;
+    private TextView Welcome;
+    private TextView IntroText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
+        Typeface fontRegular = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
+        Typeface fontLight = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
+        Welcome = (TextView) findViewById(R.id.welkom_text);
+        IntroText = (TextView) findViewById(R.id.introText);
+        Welcome.setTypeface(fontRegular);
+        IntroText.setTypeface(fontLight);
 
-       // Thread mythread = new Thread();
     }
 
     @Override

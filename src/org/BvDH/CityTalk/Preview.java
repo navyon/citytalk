@@ -11,6 +11,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -59,12 +60,24 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
          setContentView(R.layout.previewtxt);
+
+        //load fonts
+        Typeface fontRegular = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
+        Typeface fontLight = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
+        Typeface fontHelv = Typeface.createFromAsset(getAssets(),"fonts/HelveticaBold.ttf");
+
+
         imagev = (ImageView)findViewById(R.id.ImageViewPreview);
         txtview = (TextView)findViewById(R.id.TextViewPreview);
         aspectv = (ImageView)findViewById(R.id.aspectFix);
         btnChangePreviewPhoto =(Button) findViewById(R.id.btnChangePreviewPhoto);
         btnChangePreviewMessage =(Button) findViewById(R.id.btnchangePreviewText);
         btnRestartAnim =(ImageButton) findViewById(R.id.btnRestartAnim);
+
+        //set fonts
+        txtview.setTypeface(fontHelv);
+        btnChangePreviewPhoto.setTypeface(fontLight);
+        btnChangePreviewMessage.setTypeface(fontLight);
 
         // load the animation
         animSideDown = AnimationUtils.loadAnimation(getApplicationContext(),

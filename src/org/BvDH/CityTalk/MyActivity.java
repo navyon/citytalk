@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.*;
 import android.content.pm.ResolveInfo;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -11,6 +12,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.io.File;
 import java.util.ArrayList;
@@ -20,6 +22,7 @@ import java.util.List;
 public class MyActivity extends Activity {
     private Uri mImageCaptureUri;
     private Uri tempURI;
+    private TextView MainQuestion;
 
     private static final int PICK_FROM_CAMERA = 1;
     private static final int CROP_FROM_CAMERA = 2;
@@ -30,8 +33,18 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         setContentView(R.layout.main);
+
+        // load fonts
+        Typeface fontRegular = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
+        Typeface fontLight = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
+
         Button button 	= (Button) findViewById(R.id.btn_crop);
         Button btnskip 	= (Button) findViewById(R.id.btn_Skip);
+        MainQuestion = (TextView) findViewById(R.id.mainQuestion);
+
+        MainQuestion.setTypeface(fontRegular);
+        button.setTypeface(fontLight);
+        btnskip.setTypeface(fontLight);
 
 
 

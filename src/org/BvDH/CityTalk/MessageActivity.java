@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
@@ -29,6 +30,8 @@ import java.io.ByteArrayOutputStream;
 public class MessageActivity extends Activity {
      Intent intent;
      private EditText  txtView_msg;
+     private TextView txtView_maxLines;
+     private TextView txtView_msgTip;
      private ImageView aspectv;
      String msg = null;
      float textsize;
@@ -37,14 +40,24 @@ public class MessageActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.message);
            txtView_msg = (EditText) findViewById(R.id.txtView_msg);
+           txtView_maxLines = (TextView) findViewById(R.id.txtView_maxLine);
+           txtView_msgTip = (TextView) findViewById(R.id.txtView_msgTip);
            aspectv = (ImageView) findViewById(R.id.aspectv);
            setTextSizes(txtView_msg);
 
 
+           Typeface fontRegular = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
+           Typeface fontLight = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
+           Typeface fontHelv = Typeface.createFromAsset(getAssets(),"fonts/HelveticaBold.ttf");
+           txtView_msg.setTypeface(fontHelv);
+           txtView_maxLines.setTypeface(fontRegular);
+           txtView_msgTip.setTypeface(fontLight);
+
            Button btnPrev = (Button) findViewById(R.id.btnpreview);
+           btnPrev.setTypeface(fontLight);
            final ImageButton  btnhidekeyb = (ImageButton) findViewById(R.id.btnhidekey);
 
-           System.out.println("textsize= "+textsize);
+
            if(getIntent().hasExtra("msg")){
                msg = getIntent().getStringExtra("msg");
                txtView_msg.setText(msg);
@@ -94,6 +107,9 @@ public class MessageActivity extends Activity {
                    int lineCount = txtView_msg.getLineCount();
                    if(lineCount > 4){
                        txtView_msg.setText(txtView_msg.getText().delete(txtView_msg.length() - 1, txtView_msg.length()));
+                       txtView_msg.setSelection(txtView_msg.length());
+                       Toast.makeText(getApplicationContext(), "u mag maximaal 4 regels tekst toevoegen", Toast.LENGTH_LONG)
+                               .show();
                    }
                }
            });
@@ -109,23 +125,7 @@ public class MessageActivity extends Activity {
                }
            });
 
-           // This on key listener gets the number of lines if larger than 4 it ignore the Enter Key Press
-           // SHOULD CHECK LINES, NOT ENTER KEY PRESSES ;)
-           txtView_msg.setOnKeyListener(new View.OnKeyListener() {
 
-               @Override
-               public boolean onKey(View v, int keyCode, KeyEvent event) {
-
-                   // if enter is pressed start calculating
-                   if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN){
-                       int editTextLineCount = ((EditText)v).getLineCount();
-                       if (editTextLineCount >= 4)
-                           return true;
-                   }
-
-                   return false;
-               }
-           });
 
            txtView_msg.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                @Override

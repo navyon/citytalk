@@ -57,7 +57,7 @@
     <TextView
         style="@style/textCapsCentre"
         android:text="@string/MsgMaxLines"
-        android:id="@+id/textView"
+        android:id="@+id/txtView_maxLine"
         android:textIsSelectable="false"
         android:layout_width="fill_parent"
         android:textColor="@android:color/white"
@@ -76,7 +76,7 @@
     <TextView
         style="@style/textCentre"
         android:text="@string/MsgTip"
-        android:id="@+id/textView2"
+        android:id="@+id/txtView_msgTip"
         android:textIsSelectable="false"
         android:textAllCaps="false"
         android:fontFamily="sans-serif-light"
@@ -86,7 +86,7 @@
         android:textColor="@android:color/white"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/txtView_maxLine"
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:maxWidth="300dp" />

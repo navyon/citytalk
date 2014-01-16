@@ -129,7 +129,6 @@
             android:layout_height="70dp"
             android:text="Ik ben tevreden!"
             android:id="@+id/btnSubmitmsgtxt"
-
             style="@style/BvDH_button"
             android:background="@color/purple"
             android:textColor="@android:color/white"
