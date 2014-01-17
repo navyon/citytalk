@@ -7,6 +7,8 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -16,6 +18,7 @@ public class SplashActivity extends Activity
     private final int SPLASH_DISPLAY_LENGTH = 4000;
     private TextView Welcome;
     private TextView IntroText;
+    private Button SplBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -28,6 +31,8 @@ public class SplashActivity extends Activity
         IntroText = (TextView) findViewById(R.id.introText);
         Welcome.setTypeface(fontRegular);
         IntroText.setTypeface(fontLight);
+        SplBtn = (Button) findViewById(R.id.SplBtn);
+        SplBtn.setTypeface(fontLight);
 
     }
 
@@ -41,7 +46,15 @@ public class SplashActivity extends Activity
 
         if (isSplashEnabled)
         {
-            new Handler().postDelayed(new Runnable()
+            SplBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                    Intent mainIntent = new Intent(SplashActivity.this, MyActivity.class);
+                    startActivity(mainIntent);
+                }
+            });
+            /*new Handler().postDelayed(new Runnable()
             {
                 @Override
                 public void run()
@@ -53,13 +66,14 @@ public class SplashActivity extends Activity
                     SplashActivity.this.startActivity(mainIntent);
                 }
             }, SPLASH_DISPLAY_LENGTH);
+            */
         }
         else
         {
             // if the splash is not enabled, then finish the activity immediately and go to main.
             finish();
             Intent mainIntent = new Intent(SplashActivity.this, MyActivity.class);
-            SplashActivity.this.startActivity(mainIntent);
+            startActivity(mainIntent);
         }
     }
 }

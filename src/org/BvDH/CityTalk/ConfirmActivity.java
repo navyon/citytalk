@@ -78,8 +78,11 @@ public class ConfirmActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
+
         setContentView(R.layout.confirm_screen);
-        chkbox = (CheckBox)findViewById(R.id.checkBox);
+
         Button submitbox = (Button) findViewById(R.id.btnfinalsubmit);
         edittx_email = (EditText) findViewById(R.id.editText_email);
         edittx_email.setTextColor(Color.BLACK);
@@ -87,7 +90,7 @@ public class ConfirmActivity extends Activity {
         Typeface fontRegular = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         Typeface fontLight = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 
-        chkbox.setTypeface(fontRegular);
+
         edittx_email.setTypeface(fontLight);
         submitbox.setTypeface(fontLight);
 
@@ -96,6 +99,10 @@ public class ConfirmActivity extends Activity {
              image_path = getIntent().getStringExtra("imagePath");
              hasphoto = true;
         }
+
+        chkbox = (CheckBox)findViewById(R.id.checkBox);
+        chkbox.setTypeface(fontRegular);
+        if(!hasphoto) chkbox.setVisibility(View.INVISIBLE);
 
 
         submitbox.setOnClickListener(new View.OnClickListener() {
@@ -106,36 +113,29 @@ public class ConfirmActivity extends Activity {
 
                 String email = edittx_email.getText().toString();
                 if (checkEmail(email)) {
-                    if (chkbox.isChecked()) {
-                        // Call the php upload method which starts a new thread
+                    if(hasphoto){
+                        if (chkbox.isChecked()) {
+                            // Call the php upload method which starts a new thread
 
-                        if (hasphoto) StartNewThreadUpload();
-                        // creating new message in background thread
-                        new CreateNewMessage().execute();
+                            StartNewThreadUpload();
+                            // creating new message in background thread
 
-
-                        //Intent intent = new Intent(ConfirmActivity.this, FinalActivity.class);
-                        //startActivity(intent);
-                    } else {
-                        String chkboxerror = getString(R.string.ConfirmCheckboxError);
-                        Toast.makeText(getApplicationContext(), chkboxerror, Toast.LENGTH_LONG).show();
-
-                    }
-                } else {
-
+                        }
+                        else {
+                            String chkboxerror = getString(R.string.ConfirmCheckboxError);
+                            Toast.makeText(getApplicationContext(), chkboxerror, Toast.LENGTH_LONG).show();
+                     }
+                }
+                    new CreateNewMessage().execute();
+                }
+                else {
                     edittx_email.setTextColor(Color.RED);
                     String emailerror = getString(R.string.ConfirmEmailError);
                     Toast.makeText(getApplicationContext(), emailerror, Toast.LENGTH_LONG).show();
-
-
-                }
-
+                    }
 
             }
         });
-
-
-
     }
 
 

@@ -4,14 +4,13 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/background"
     android:orientation="vertical">
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/imageView2"
-        android:src="@drawable/background_test"
+        android:src="@drawable/background_new"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true" />
 
@@ -37,7 +36,7 @@
         android:gravity="center_horizontal|bottom"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/red_trans"
+        android:background="@color/dark_trans"
         android:padding="10dp" />
 
 
@@ -54,7 +53,7 @@
         android:layout_below="@+id/thanks"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:background="@color/green_trans"
+        android:background="@color/dark_trans"
         android:padding="10dp" />
 
     <Button

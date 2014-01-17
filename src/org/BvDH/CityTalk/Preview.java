@@ -190,7 +190,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                 Intent intent = new Intent(Preview.this, ConfirmActivity.class);
 
                 if(hasphoto)intent.putExtra("imagePath", image_path);
-                Log.d("Testing: ",getIntent().getStringExtra("imagePath"));
                 intent.putExtra("msg",msg);
                 intent.putExtra("hasphoto", hasphoto);
                 Preview.this.startActivity(intent);

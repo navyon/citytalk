@@ -8,7 +8,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/imageView2"
-        android:src="@drawable/background_test"
+        android:src="@drawable/background_new"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true" />
 
@@ -30,9 +30,8 @@
         android:id="@+id/mainQuestion"
         android:layout_above="@+id/btn_crop"
         android:layout_centerHorizontal="true"
-        android:background="@color/purple_trans"
-        android:padding="10dp
-"
+        android:background="#99000000"
+        android:padding="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp" />
