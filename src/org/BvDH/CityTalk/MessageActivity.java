@@ -2,8 +2,10 @@ package org.BvDH.CityTalk;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Service;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -39,12 +41,23 @@ public class MessageActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.message);
+
+           //build alert dialog for max line check
+           AlertDialog.Builder builder		= new AlertDialog.Builder(this);
+           builder.setMessage("Er passen maar 4 regels tekst op het scherm");
+
            txtView_msg = (EditText) findViewById(R.id.txtView_msg);
            txtView_maxLines = (TextView) findViewById(R.id.txtView_maxLine);
            txtView_msgTip = (TextView) findViewById(R.id.txtView_msgTip);
            aspectv = (ImageView) findViewById(R.id.aspectv);
            setTextSizes(txtView_msg);
-
+           builder.setMessage("Er passen maximaal 4 regels op het scherm!")
+                   .setCancelable(false)
+                   .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                       public void onClick(DialogInterface dialog, int id) {
+                       }
+                   });
+           final AlertDialog alert = builder.create();
 
            Typeface fontRegular = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
            Typeface fontLight = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
@@ -74,8 +87,6 @@ public class MessageActivity extends Activity {
 
                        //this can probably done simpler..like last line comment
                        if(getIntent().hasExtra("imagePath")){
-                           String image_path = getIntent().getStringExtra("imagePath");
-                           //intent.putExtra("imagePath", image_path);
                            intent.putExtra("imagePath", getIntent().getStringExtra("imagePath"));
                        }
 
@@ -94,13 +105,11 @@ public class MessageActivity extends Activity {
 
            // some online hack that should limit the Edit box, dont think its any better than the first enter hack lets see
            txtView_msg.addTextChangedListener(new TextWatcher() {
-               private String text;
 
                public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
                }
 
                public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
-                   text = arg0.toString();
                }
 
                public void afterTextChanged(Editable arg0) {
@@ -108,8 +117,7 @@ public class MessageActivity extends Activity {
                    if(lineCount > 4){
                        txtView_msg.setText(txtView_msg.getText().delete(txtView_msg.length() - 1, txtView_msg.length()));
                        txtView_msg.setSelection(txtView_msg.length());
-                       Toast.makeText(getApplicationContext(), "u mag maximaal 4 regels tekst toevoegen", Toast.LENGTH_LONG)
-                               .show();
+                        alert.show();
                    }
                }
            });

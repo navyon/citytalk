@@ -5,6 +5,8 @@ import android.app.AlertDialog;
 import android.content.*;
 import android.content.pm.ResolveInfo;
 import android.graphics.Typeface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -46,6 +48,34 @@ public class MyActivity extends Activity {
         button.setTypeface(fontLight);
         btnskip.setTypeface(fontLight);
 
+        //internet check
+        boolean needCheck = true;
+        if(getIntent().hasExtra("check")){
+            needCheck = getIntent().getExtras().getBoolean("check");
+        }
+
+        if(needCheck){
+
+            ConnectivityManager cm =
+                    (ConnectivityManager)getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+
+            NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+            boolean isConnected = activeNetwork != null &&
+                    activeNetwork.isConnectedOrConnecting();
+
+            if (!isConnected){
+                AlertDialog.Builder builder		= new AlertDialog.Builder(this);
+                builder.setMessage("Er is geen internet verbinding gevonden, het versturen van een bericht is niet mogelijk")
+                        .setCancelable(false)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                finish();
+                            }
+                        });
+                final AlertDialog alert = builder.create();
+                alert.show();
+            }
+        }
 
 
         final String [] items			= new String [] {getString(R.string.CapturePhoto), getString(R.string.ChoosefromGallery)};
