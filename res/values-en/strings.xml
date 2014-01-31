@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BvDH</string>
-    <string name="btnAddPhoto">Photo and Message</string>
+    <string name="btnAddPhoto">Photo and message</string>
     <string name="btnAddTxt">Message</string>
-    <string name="PreviewbtnChangeTxt">Change Message</string>
-    <string name="PreviewbtnChangePhoto">Change Photo</string>
+    <string name="PreviewbtnChangeTxt">Change message</string>
+    <string name="PreviewbtnChangePhoto">Change photo</string>
     <string name="deletephoto">Delete photo</string>
-    <string name="ChooseaTask">Choose a task</string>
+    <string name="ChooseaTask">Choose an app</string>
     <string name="Continue">Continue</string>
-    <string name="PreviewbtnAddPhoto">Add a Photo</string>
-    <string name="CapturePhoto">Capture a Photo from Camera"</string>
-    <string name="ChoosefromGallery">Choose a Photo from Gallery</string>
-    <string name="PreviewbtnAddTxt">Add a Message</string>
-    <string name="CropOption">Pas formaat aan</string>
-    <string name="PhotoOption">Select an Photo</string>
-    <string name="SplashTextWelcome">Welcome to Screen Den Haag</string>
+    <string name="PreviewbtnAddPhoto">Add a photo</string>
+    <string name="CapturePhoto">Take a photo with the Camera"</string>
+    <string name="ChoosefromGallery">Choose a photo from Gallery</string>
+    <string name="PreviewbtnAddTxt">Add a message</string>
+    <string name="CropOption">Change cropping</string>
+    <string name="PhotoOption">Select a photo</string>
+    <string name="SplashTextWelcome">Welcome to Beeld van Den Haag</string>
     <string name="SplashTextIntro">Send your message to the screen of Den Haag. Upload a photo, or just send a quick message.</string>
+    <string name="SplashTextCheck">Don\'t show next time</string>
+    <string name="SplashTextInfoBtn">What is Beeld van Den Haag?</string>
+    <string name="SplashTextInfo">Welkom bij de app van Beeld van Den Haag.\n\nIn deze app kunt u altijd en overal gemakkelijk een bericht met of zonder foto naar het mega scherm op de Haagse Toren sturen. Hier zijn geen kosten aan verbonden (excl. de eventuele kosten voor het gebruik van mobiel internet). Na uw inzending krijgt u email als uw bericht is goedgekeurd. Hierna verschijnt het uw inzending in het blok “Beeld van Den Haag” op de Haagse Toren.\n
+Beeld van Den Haag is een initiatief van Ngage Media. Alle inzendingen moeten worden goedgekeurd door een van onze moderators. Ngage Media behoudt het recht om inzendingen zonder melding af te keuren. Voor commerciële doeleinden kunt u contact opnemen met (email van sales/ info@bvdh).</string>
     <string name="StartQuestion">What would you like to display on the Den Haag tower?</string>
     <string name="MsgHint">type your message here.</string>
     <string name="MsgMaxLines">The message must have a max of 4 lines.</string>
@@ -29,4 +33,5 @@
     <string name="ConfirmEmailError">Please check your email address.</string>
     <string name="FinalThnx">Thanks for sending your Message!</string>
     <string name="FinalTip">You will receive an email when your message has been approved! Your Message will soon be displayed on the screen of Den Haag</string>
+    <string name="InternetCheck">No internet connection was found. Please check your internet connection and try again.</string>
 </resources>
