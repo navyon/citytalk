@@ -10,6 +10,7 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Path;
 import android.graphics.Point;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -34,6 +35,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     private Uri tempURI;
     public ImageView imagev;
     public ImageView aspectv;
+    public ImageView maskview;
 
     private static final int PICK_FROM_CAMERA = 1;
     private static final int CROP_FROM_CAMERA = 2;
@@ -52,10 +54,9 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
     float textsize;
 
-
-    View thislayout;
     // Animation
-    Animation animSideDown, animSlideUp;
+    Animation animText, animImage;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +71,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         imagev = (ImageView)findViewById(R.id.ImageViewPreview);
         txtview = (TextView)findViewById(R.id.TextViewPreview);
         aspectv = (ImageView)findViewById(R.id.aspectFix);
+        maskview = (ImageView)findViewById(R.id.animFixView1);
         btnChangePreviewPhoto =(Button) findViewById(R.id.btnChangePreviewPhoto);
         btnChangePreviewMessage =(Button) findViewById(R.id.btnchangePreviewText);
         btnRestartAnim =(ImageButton) findViewById(R.id.btnRestartAnim);
@@ -80,15 +82,14 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         btnChangePreviewMessage.setTypeface(fontLight);
 
         // load the animation
-        animSideDown = AnimationUtils.loadAnimation(getApplicationContext(),
+        animText = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.slide_down);
-        animSlideUp = AnimationUtils.loadAnimation(getApplicationContext(),
-                R.anim.slide_up);
-
+        animImage = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.slide_down);
 
         // set animation listener
-        animSideDown.setAnimationListener(this);
-        animSlideUp.setAnimationListener(this);
+        animText.setAnimationListener(this);
+        animImage.setAnimationListener(this);
         // These Methods check whether photos or a message was added
 
 
@@ -243,6 +244,12 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
 
     void setTextSizes(TextView txt){
+
+        //animation mask?
+        Path path = new Path();
+        //path.addRect();
+
+
         //force aspect ratio for txtView
         Bitmap.Config conf = Bitmap.Config.ALPHA_8;
         Bitmap bmp = Bitmap.createBitmap(1024, 776, conf);//create transparent bitmap
@@ -286,13 +293,13 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     {
         btnRestartAnim.setVisibility(View.INVISIBLE);
         txtview.setVisibility(View.VISIBLE);
-        txtview.startAnimation(animSideDown);
+        txtview.startAnimation(animImage);
 
     }
     void StartImageAnimation()
     {
         imagev.setVisibility(View.VISIBLE);
-        imagev.startAnimation(animSlideUp);
+        imagev.startAnimation(animText);
     }
     // This Method checks if a photo was added
 
@@ -382,13 +389,16 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
 
         // check for zoom in animation
-        if (animation == animSideDown && hasphoto) { //only start image animation if there is one
+        if (animation == animImage && hasphoto) { //only start image animation if there is one
+            txtview.setVisibility(View.INVISIBLE);
             StartImageAnimation();
         }
-        else if (animation == animSideDown && !hasphoto){
+        else if (animation == animImage && !hasphoto){
             btnRestartAnim.setVisibility(View.VISIBLE); //else show restart button
+            txtview.setVisibility(View.INVISIBLE);
         }
         else{
+            imagev.setVisibility(View.INVISIBLE);
             btnRestartAnim.setVisibility(View.VISIBLE);
         }
 
@@ -421,7 +431,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             return;
         } else {
             //cropped picture is saved at tempURI location
-            tempURI = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "bvdh" + String.valueOf(System.currentTimeMillis()) + "_app_upload.jpg"));
+            tempURI = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "bvdh/" + String.valueOf(System.currentTimeMillis()) + "_app_upload.jpg"));
 
             intent.setData(mImageCaptureUri);
             intent.putExtra("outputX", 1024);

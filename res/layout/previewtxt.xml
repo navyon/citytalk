@@ -3,15 +3,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:background="#000000"
-                android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/imageView"
-        android:adjustViewBounds="true"
-        android:background="#99342A3C" />
+                android:background="@android:color/darker_gray"
+                android:orientation="vertical"
+    android:clickable="true">
 
     <ImageView
             android:layout_width="fill_parent"
@@ -59,6 +53,14 @@
             android:layout_alignLeft="@+id/aspectFix"
             android:layout_alignRight="@+id/aspectFix"
             android:layout_alignTop="@+id/aspectFix" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/animFixView1"
+        android:layout_below="@+id/aspectFix"
+        android:background="@android:color/darker_gray"
+        android:layout_above="@+id/btnChangePreviewPhoto" />
 
     <RelativeLayout
             android:layout_width="fill_parent"

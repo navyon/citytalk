@@ -1,3 +1,5 @@
+//is it possible to make a class from the crop activity? so we can reuse @preview activity?
+
 package org.BvDH.CityTalk;
 
 import android.app.Activity;
@@ -54,12 +56,11 @@ public class MyActivity extends Activity {
         btnskip.setTypeface(fontLight);
 
         //internet check
-        boolean needCheck = true;
-        if(getIntent().hasExtra("check")){
-            needCheck = getIntent().getExtras().getBoolean("check");
-        }
 
-        if(needCheck){
+        final SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean needCheck = sp.getBoolean("isSplashEnabled", false);
+
+        if(!needCheck){
 
             ConnectivityManager cm =
                     (ConnectivityManager)getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -70,11 +71,11 @@ public class MyActivity extends Activity {
 
             if (!isConnected){
                 AlertDialog.Builder builder		= new AlertDialog.Builder(this);
-                builder.setMessage("Er is geen internet verbinding gevonden, het versturen van een bericht is niet mogelijk")
+                builder.setMessage(R.string.InternetCheck)
                         .setCancelable(false)
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                finish();
+                             //   finish();
                             }
                         });
                 final AlertDialog alert = builder.create();
@@ -94,7 +95,7 @@ public class MyActivity extends Activity {
                     Intent intent 	 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
                     mImageCaptureUri = Uri.fromFile(new File(Environment.getExternalStorageDirectory(),
-                            String.valueOf(System.currentTimeMillis()) + "_app_upload.jpg"));
+                            "/bvdh/"+String.valueOf(System.currentTimeMillis()) + "_app_upload.jpg"));
 
                     intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, mImageCaptureUri);
 
@@ -133,7 +134,7 @@ public class MyActivity extends Activity {
 
     }
 
-
+    // check if directory exists. if not, create.
     void checkDir(){
         File dir = new File(Environment.getExternalStorageDirectory()+"/bvdh");
         if(!dir.exists()){
@@ -143,6 +144,7 @@ public class MyActivity extends Activity {
             }
         }
     }
+
     @Override
     protected void onPause() {
         overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
@@ -178,7 +180,7 @@ public class MyActivity extends Activity {
 
                 File temp = new File(mImageCaptureUri.getPath());
 
-                if (temp.exists()) temp.delete();
+                if (temp.exists()) temp.delete();                           //*//*//*// How does this work?
 
                 break;
         }
@@ -200,7 +202,7 @@ public class MyActivity extends Activity {
             return;
         } else {
             //cropped picture is saved at tempURI location
-            tempURI = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "bvdh" + String.valueOf(System.currentTimeMillis()) + "_app_upload.jpg"));
+            tempURI = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "bvdh/" + String.valueOf(System.currentTimeMillis()) + "_app_upload.jpg"));
 
             intent.setData(mImageCaptureUri);
             intent.putExtra("outputX", 1024);

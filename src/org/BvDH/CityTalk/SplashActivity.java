@@ -99,7 +99,7 @@ public class SplashActivity extends Activity
                         .setCancelable(false)
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                finish();
+                             //   finish();
                             }
                         });
                 final AlertDialog alert = builder.create();
@@ -119,7 +119,13 @@ public class SplashActivity extends Activity
                     LangSelectBtn = (RadioButton) findViewById(checkedId);
                     int index = LangSelectGroup.indexOfChild(LangSelectBtn);
                     String languageToLoad = "en";
-                    if(index == 0){
+                    if(LangSelectBtn == findViewById(R.id.nl)){
+                        changeLang("nl");
+                    }
+                    else if(LangSelectBtn == findViewById(R.id.en)){
+                        changeLang("en");
+                    }
+                    /*if(index == 0){
                         languageToLoad = "nl";
                         System.out.println(languageToLoad);
                     }
@@ -127,7 +133,7 @@ public class SplashActivity extends Activity
                         languageToLoad = "en";
                         System.out.println(languageToLoad);
                     }
-                    changeLang(languageToLoad);
+                    changeLang(languageToLoad);*/
                 }
             });
 
@@ -143,7 +149,6 @@ public class SplashActivity extends Activity
                     finish();
                     editor.commit();
                     Intent mainIntent = new Intent(SplashActivity.this, MyActivity.class);
-                    mainIntent.putExtra("check", false);
                     startActivity(mainIntent);
                 }
             });
