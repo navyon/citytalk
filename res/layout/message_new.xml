@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+    android:id="@+id/mainLayout"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+    android:background="@android:color/black">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView"
+        android:adjustViewBounds="true"
+        android:background="#99342A3C" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/aspectv"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:background="@drawable/back"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:adjustViewBounds="true" />
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/MsgHint"
+            android:id="@+id/txtView_msg" android:layout_gravity="center_horizontal|top" android:background="#010101"
+            android:textColor="#f5f5f5" android:textStyle="bold" android:singleLine="false" android:maxLines="4"
+            android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+            android:lineSpacingExtra="-4dp"
+            android:clickable="true"
+            android:textSize="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:maxWidth="600dp"
+            android:gravity="center_vertical|left"
+            android:minHeight="225dp"
+            android:maxHeight="450dp"
+            android:minWidth="300dp"
+            android:minLines="4"
+            android:lines="4"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/aspectv"
+            android:layout_alignLeft="@+id/aspectv"
+            android:layout_alignBottom="@+id/aspectv"
+            android:layout_alignRight="@+id/aspectv" />
+
+    <TextView
+        style="@style/textCapsCentre"
+        android:text="@string/MsgMaxLines"
+        android:id="@+id/txtView_maxLine"
+        android:textIsSelectable="false"
+        android:layout_width="fill_parent"
+        android:textColor="@android:color/white"
+        android:gravity="center_horizontal|bottom"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/txtView_msg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:padding="10dp"
+        android:autoText="false" />
+
+
+    <TextView
+        style="@style/textCentre"
+        android:text="@string/MsgTip"
+        android:id="@+id/txtView_msgTip"
+        android:textIsSelectable="false"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtView_maxLine"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:maxWidth="300dp" />
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/MsgBtnPrev"
+            android:id="@+id/btnpreview"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_gravity="bottom"
+        style="@style/BvDH_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnhidekey"
+        android:src="@drawable/checkmark"
+        android:background="@android:color/transparent"
+        android:layout_alignRight="@+id/aspectv"
+        android:layout_alignEnd="@+id/txtView_msg"
+        android:layout_alignBottom="@+id/aspectv"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="5dp" />
+
+</RelativeLayout>

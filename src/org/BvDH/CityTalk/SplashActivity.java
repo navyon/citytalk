@@ -35,10 +35,13 @@ public class SplashActivity extends Activity
     private RadioGroup LangSelectGroup;
     private RadioButton LangSelectBtn;
 
+    private AlertDialog.Builder infobuilder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.splash);
         Typeface fontRegular = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         Typeface fontLight = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
@@ -52,6 +55,7 @@ public class SplashActivity extends Activity
         SplInfBtn.setTypeface(fontLight);
         SplChk = (CheckBox) findViewById(R.id.splashCheck);
         LangSelectGroup = (RadioGroup) findViewById(R.id.LangSelect);
+        infobuilder = new AlertDialog.Builder(this);
         loadLocale();
     }
 
@@ -82,7 +86,7 @@ public class SplashActivity extends Activity
                     activeNetwork.isConnectedOrConnecting();
 
             //info alert builder
-            AlertDialog.Builder infobuilder		= new AlertDialog.Builder(this);
+
 
             infobuilder.setMessage(R.string.SplashTextInfo)
                     .setTitle(R.string.SplashTextInfoBtn)
@@ -91,7 +95,7 @@ public class SplashActivity extends Activity
                         public void onClick(DialogInterface dialog, int id) {
                         }
                     });
-            final AlertDialog info = infobuilder.create();
+
 
             if (!isConnected){
                 AlertDialog.Builder builder		= new AlertDialog.Builder(this);
@@ -109,6 +113,7 @@ public class SplashActivity extends Activity
             SplInfBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    AlertDialog info = infobuilder.create();
                     info.show();
                 }
             });
@@ -184,6 +189,9 @@ public class SplashActivity extends Activity
         Welcome.setText(R.string.SplashTextWelcome);
         SplChk.setText(R.string.SplashTextCheck);
         SplInfBtn.setText(R.string.SplashTextInfoBtn);
+        IntroText.setText(R.string.SplashTextIntro);
+        infobuilder.setMessage(R.string.SplashTextInfo)
+                .setTitle(R.string.SplashTextInfoBtn);
     }
     public void loadLocale()
     {

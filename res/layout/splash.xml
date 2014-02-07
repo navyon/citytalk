@@ -5,13 +5,14 @@
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
     <ImageView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="300dp"
         android:id="@+id/imageView"
-        android:src="@drawable/background_new"
+        android:src="@drawable/header"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true" />
 
@@ -19,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/logo"
-        android:src="@drawable/bvdh_logo"
+        android:src="@drawable/logo"
         android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal"
         android:layout_alignParentTop="true"
@@ -30,10 +31,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/LangSelect"
-        android:layout_above="@+id/SplBtn"
-        android:layout_alignLeft="@+id/welkom_text"
+        android:layout_alignLeft="@+id/splashCheck"
         android:layout_alignStart="@+id/welkom_text"
-        android:layout_marginBottom="23dp">
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/SplInfoBtn"
+        android:layout_marginTop="10dp">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -41,15 +44,18 @@
             android:text="Nederlands"
             android:id="@+id/nl"
             android:textSize="18sp"
-            android:textColor="@android:color/white"
-            android:layout_alignEnd="@+id/introText" />
+            android:textColor="#000000"
+            android:layout_alignEnd="@+id/introText"
+            style="@android:style/Widget.Holo.Light.CompoundButton.RadioButton" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="English"
             android:id="@+id/en"
-            android:layout_alignStart="@+id/logo" />
+            android:layout_alignStart="@+id/logo"
+            android:textColor="#000000"
+            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.RadioButton" />
     </RadioGroup>
 
     <TextView
@@ -60,44 +66,50 @@
         android:id="@+id/welkom_text"
         android:layout_gravity="center"
         android:gravity="center_horizontal|bottom"
-        android:layout_marginBottom="15dp"
-        android:layout_above="@+id/introText"
+        android:layout_marginBottom="0dp"
         android:layout_centerHorizontal="true"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000" />
 
     <TextView
         style="@style/textCentre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:text="@string/SplashTextIntro"
         android:id="@+id/introText"
         android:layout_gravity="center_horizontal|top"
         android:gravity="center_horizontal|top"
         android:padding="10dp"
-        android:background="#99000000"
-        android:layout_above="@+id/LangSelect"
+        android:textColor="#000000"
+        android:layout_below="@+id/welkom_text"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Begin"
         android:id="@+id/SplBtn"
-        android:background="@color/green"
+        android:background="@drawable/button"
         android:padding="10dp"
         style="@style/BvDH_button"
-        android:textSize="12sp"
+        android:textSize="18sp"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/welkom_text"
-        android:layout_alignEnd="@+id/welkom_text"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:paddingRight="30dp"
+        android:textColor="#000000" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/SplashTextCheck"
-        android:background="#99FFFFFF"
         android:id="@+id/splashCheck"
         android:textColor="@android:color/black"
         android:button="@drawable/btn_check_holo_dark"
@@ -107,22 +119,33 @@
         android:radius="5dp"
         android:gravity="center"
         android:paddingRight="15dp"
-        android:layout_alignLeft="@+id/introText"
-        android:layout_alignStart="@+id/introText"
+        android:layout_alignTop="@+id/SplBtn"
+        android:layout_alignLeft="@+id/SplBtn"
+        android:layout_alignStart="@+id/SplBtn"
         android:layout_alignBottom="@+id/SplBtn" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/SplashTextInfoBtn"
         android:id="@+id/SplInfoBtn"
-        style="@style/BvDH_button"
         android:textSize="18sp"
-        android:layout_alignBottom="@+id/LangSelect"
-        android:layout_toRightOf="@+id/LangSelect"
-        android:layout_marginBottom="30dp"
-        android:layout_alignRight="@+id/introText"
-        android:layout_alignEnd="@+id/introText" />
+        android:background="@drawable/button"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/introText"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/arrow"
+        android:layout_alignTop="@+id/SplBtn"
+        android:layout_alignRight="@+id/SplBtn"
+        android:layout_alignEnd="@+id/SplBtn"
+        android:layout_alignBottom="@+id/SplBtn" />
 
 
 </RelativeLayout>

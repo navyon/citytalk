@@ -163,6 +163,7 @@ public class ConfirmActivity extends Activity {
                 public void run() {
 
                     pDialog = new ProgressDialog(ConfirmActivity.this);
+                    pDialog.setMessage("We zijn aan het testen");
                     pDialog.setIndeterminate(false);
                     pDialog.setCancelable(true);
                     pDialog.show();

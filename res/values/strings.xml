@@ -6,8 +6,9 @@
     <string name="PreviewbtnChangeTxt">Wijzig Tekst</string>
     <string name="PreviewbtnChangePhoto">Wijzig Photo</string>
     <string name="Continue">ik ben tevreden!</string>
-    <string name="deletephoto">Werwijderen foto</string>
-    <string name="ChooseaTask">Selecteer afbeelding</string>
+    <string name="deletephoto">Verwijder foto</string>
+    <string name="ChooseaTask">Selecteer een bron</string>
+    <string name="ChooseApp">Kies een applicatie</string>
     <string name="ChoosefromGallery">Selecteer een bestaande foto</string>
     <string name="CapturePhoto">Maak een foto"</string>
     <string name="PreviewbtnAddPhoto">Foto toevoegen</string>
@@ -34,4 +35,5 @@ Beeld van Den Haag is een initiatief van Ngage Media. Alle inzendingen moeten wo
     <string name="FinalThnx">Bedankt voor uw inzending!</string>
     <string name="FinalTip">U ontvangt een e-mail zodra je bericht is goedgekeurd! Het verschijnt vervolgens zo spoedig mogelijk op het Beeld van Den Haag</string>
     <string name="InternetCheck">Er is geen internet verbinding gevonden, controleer uw internetverbinding en probeer het opnieuw.</string>
+    <string name="UploadDialog">Uw inzending wordt verstuurd</string>
 </resources>

@@ -10,7 +10,6 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Path;
 import android.graphics.Point;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -35,7 +34,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     private Uri tempURI;
     public ImageView imagev;
     public ImageView aspectv;
-    public ImageView maskview;
+    public ImageView animView;
 
     private static final int PICK_FROM_CAMERA = 1;
     private static final int CROP_FROM_CAMERA = 2;
@@ -55,7 +54,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     float textsize;
 
     // Animation
-    Animation animText, animImage;
+    Animation wipeIn, wipeOut, slideIn, slideOut, fadeIn, fadeOut;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -71,7 +70,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         imagev = (ImageView)findViewById(R.id.ImageViewPreview);
         txtview = (TextView)findViewById(R.id.TextViewPreview);
         aspectv = (ImageView)findViewById(R.id.aspectFix);
-        maskview = (ImageView)findViewById(R.id.animFixView1);
+        animView = (ImageView)findViewById(R.id.animView);
         btnChangePreviewPhoto =(Button) findViewById(R.id.btnChangePreviewPhoto);
         btnChangePreviewMessage =(Button) findViewById(R.id.btnchangePreviewText);
         btnRestartAnim =(ImageButton) findViewById(R.id.btnRestartAnim);
@@ -82,14 +81,26 @@ public class Preview  extends Activity implements Animation.AnimationListener {
         btnChangePreviewMessage.setTypeface(fontLight);
 
         // load the animation
-        animText = AnimationUtils.loadAnimation(getApplicationContext(),
-                R.anim.slide_down);
-        animImage = AnimationUtils.loadAnimation(getApplicationContext(),
-                R.anim.slide_down);
+        wipeIn = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.wipe_in);
+        wipeOut = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.wipe_out);
+        slideIn = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.slide_in);
+        slideOut = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.slide_out);
+        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.fade_in);
+        fadeOut = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.fade_out);
 
         // set animation listener
-        animText.setAnimationListener(this);
-        animImage.setAnimationListener(this);
+        wipeIn.setAnimationListener(this);
+        wipeOut.setAnimationListener(this);
+        slideIn.setAnimationListener(this);
+        slideOut.setAnimationListener(this);
+        fadeIn.setAnimationListener(this);
+        fadeOut.setAnimationListener(this);
         // These Methods check whether photos or a message was added
 
 
@@ -163,7 +174,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                     Intent intent = new Intent();
                     intent.setType("image/*");
                     intent.setAction(Intent.ACTION_GET_CONTENT);
-                    startActivityForResult(Intent.createChooser(intent, "Complete action using"), PICK_FROM_FILE);
+                    startActivityForResult(Intent.createChooser(intent, getString(R.string.ChooseApp)), PICK_FROM_FILE);
 
                     ChangeButtons();
                 }
@@ -222,7 +233,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                     i.putExtra("msg",msg);
                     startActivity(i);
                 }
-                //finish(); // this removes image added in this activity.
+                finish();
 
 
             }
@@ -230,7 +241,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
         btnRestartAnim.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 StartTextAnimation();
             }
         });
@@ -244,12 +254,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
 
     void setTextSizes(TextView txt){
-
-        //animation mask?
-        Path path = new Path();
-        //path.addRect();
-
-
         //force aspect ratio for txtView
         Bitmap.Config conf = Bitmap.Config.ALPHA_8;
         Bitmap bmp = Bitmap.createBitmap(1024, 776, conf);//create transparent bitmap
@@ -292,19 +296,21 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     void StartTextAnimation()
     {
         btnRestartAnim.setVisibility(View.INVISIBLE);
+        //animView.setVisibility(View.VISIBLE);
         txtview.setVisibility(View.VISIBLE);
-        txtview.startAnimation(animImage);
+        txtview.startAnimation(fadeIn);
+        //animView.startAnimation(wipeIn);
 
     }
     void StartImageAnimation()
     {
         imagev.setVisibility(View.VISIBLE);
-        imagev.startAnimation(animText);
+        txtview.startAnimation(slideOut);
+        imagev.startAnimation(slideIn);
     }
     // This Method checks if a photo was added
 
     void CheckDelete(){
-        System.out.println(adapter.getCount());
         if(adapter.getCount() == 2 && hasphoto) adapter.add(getString(R.string.deletephoto));
         else if(adapter.getCount() == 3 && !hasphoto)   adapter.remove(getString(R.string.deletephoto));
     }
@@ -389,13 +395,18 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
 
         // check for zoom in animation
-        if (animation == animImage && hasphoto) { //only start image animation if there is one
-            txtview.setVisibility(View.INVISIBLE);
+        if (animation == wipeIn && hasphoto) { //only start image animation if there is one
+            animView.setVisibility(View.INVISIBLE);
             StartImageAnimation();
         }
-        else if (animation == animImage && !hasphoto){
+        else if (animation == wipeIn && !hasphoto){
             btnRestartAnim.setVisibility(View.VISIBLE); //else show restart button
             txtview.setVisibility(View.INVISIBLE);
+        }
+
+        else if (animation == slideIn){
+            animView.setVisibility(View.VISIBLE);
+            animView.startAnimation(wipeOut);
         }
         else{
             imagev.setVisibility(View.INVISIBLE);

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView2"
+        android:src="@drawable/background_new"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/bvdh_logo"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_weight="1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        style="@style/textCapsCentre"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/FinalThnx"
+        android:id="@+id/thanks"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/dark_trans"
+        android:padding="10dp" />
+
+
+    <TextView
+        style="@style/textCentre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/FinalTip"
+        android:id="@+id/FinalTip"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|top"
+        android:maxWidth="300dp"
+        android:layout_below="@+id/thanks"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@color/dark_trans"
+        android:padding="10dp" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/btnlike"
+        style="@style/textCentre"
+        android:background="#0069b4"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Like ons op Facebook!"
+        android:textSize="15dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp" />
+
+</RelativeLayout>
