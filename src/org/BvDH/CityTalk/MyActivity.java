@@ -39,8 +39,8 @@ public class MyActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-        setContentView(R.layout.main);
-
+        //setContentView(R.layout.main);
+        setContentView(R.layout.main_new);
         loadLocale();
 
         // load fonts

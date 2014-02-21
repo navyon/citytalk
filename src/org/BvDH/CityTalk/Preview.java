@@ -54,12 +54,13 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     float textsize;
 
     // Animation
-    Animation wipeIn, wipeOut, slideIn, slideOut, fadeIn, fadeOut;
+    Animation wipeIn, wipeOut, slideIn, slideOut, fadeIn, fadeOut, fadeInImg, fadeOutImg;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         setContentView(R.layout.previewtxt);
+         //setContentView(R.layout.previewtxt);
+        setContentView(R.layout.previewtxt_new);
 
         //load fonts
         Typeface fontRegular = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
@@ -93,14 +94,21 @@ public class Preview  extends Activity implements Animation.AnimationListener {
                 R.anim.fade_in);
         fadeOut = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.fade_out);
+        fadeInImg = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.fade_in);
+        fadeOutImg = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.fade_out);
 
         // set animation listener
         wipeIn.setAnimationListener(this);
         wipeOut.setAnimationListener(this);
         slideIn.setAnimationListener(this);
         slideOut.setAnimationListener(this);
-        fadeIn.setAnimationListener(this);
         fadeOut.setAnimationListener(this);
+        fadeIn.setAnimationListener(this);
+
+        fadeOutImg.setAnimationListener(this);
+        fadeInImg.setAnimationListener(this);
         // These Methods check whether photos or a message was added
 
 
@@ -245,11 +253,6 @@ public class Preview  extends Activity implements Animation.AnimationListener {
             }
         });
 
-
-
-
-
-
      }
 
 
@@ -305,8 +308,7 @@ public class Preview  extends Activity implements Animation.AnimationListener {
     void StartImageAnimation()
     {
         imagev.setVisibility(View.VISIBLE);
-        txtview.startAnimation(slideOut);
-        imagev.startAnimation(slideIn);
+        imagev.startAnimation(fadeInImg);
     }
     // This Method checks if a photo was added
 
@@ -395,18 +397,27 @@ public class Preview  extends Activity implements Animation.AnimationListener {
 
 
         // check for zoom in animation
-        if (animation == wipeIn && hasphoto) { //only start image animation if there is one
-            animView.setVisibility(View.INVISIBLE);
+        if (animation == fadeIn && hasphoto) { //only start image animation if there is one
+            //animView.setVisibility(View.INVISIBLE);
+            txtview.setVisibility(View.INVISIBLE);
             StartImageAnimation();
         }
-        else if (animation == wipeIn && !hasphoto){
-            btnRestartAnim.setVisibility(View.VISIBLE); //else show restart button
+
+        //else if (animation == fadeIn && !hasphoto){
+
+        //}
+        else if (animation == fadeIn && !hasphoto){
+
             txtview.setVisibility(View.INVISIBLE);
+            btnRestartAnim.setVisibility(View.VISIBLE); //else show restart button
+
         }
 
-        else if (animation == slideIn){
-            animView.setVisibility(View.VISIBLE);
-            animView.startAnimation(wipeOut);
+        else if (animation == fadeInImg){
+            imagev.setVisibility(View.INVISIBLE);
+            btnRestartAnim.setVisibility(View.VISIBLE);
+            //animView.setVisibility(View.VISIBLE);
+            //animView.startAnimation(wipeOut);
         }
         else{
             imagev.setVisibility(View.INVISIBLE);

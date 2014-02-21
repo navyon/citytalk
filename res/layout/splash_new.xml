@@ -4,22 +4,23 @@
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:background="@android:color/white">
+    android:weightSum="6">
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="2">
+        android:layout_weight="4">
 
         <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:id="@+id/imageView"
                 android:src="@drawable/header"
-                android:scaleType="fitStart"
-                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="false"
             android:layout_alignParentEnd="false"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true" />
 
         <ImageView
                 android:layout_width="wrap_content"
@@ -32,103 +33,97 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/SplashTextInfoBtn"
-            android:id="@+id/SplInfoBtn"
-            android:textSize="18sp"
-            android:background="@drawable/button"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp" />
+        android:layout_weight="2">
 
         <TextView
             style="@style/textCapsCentre"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:text="@string/SplashTextWelcome"
             android:id="@+id/welkom_text"
             android:layout_gravity="center"
-            android:gravity="center_horizontal|bottom"
-            android:layout_marginBottom="0dp"
             android:padding="10dp"
-            android:layout_marginTop="10dp"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:gravity="center" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/SplBtn"
-            android:background="@drawable/button"
-            android:padding="10dp"
-            style="@style/BvDH_button"
-            android:textSize="18sp"
-            android:layout_marginBottom="20dp"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/welkom_text"
+            android:layout_above="@+id/linearLayout"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:gravity="right"
-            android:paddingRight="30dp"
-            android:textColor="#000000"/>
+            android:layout_marginRight="20dp">
 
-        <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/SplashTextCheck"
-                android:id="@+id/splashCheck"
-                android:textColor="@android:color/black"
-                android:button="@drawable/btn_check_holo_dark"
-                android:textSize="12sp"
-                android:checked="false"
-                android:paddingLeft="5dp"
-                android:radius="5dp"
-                android:gravity="center"
-                android:paddingRight="15dp"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="@string/SplashTextInfoBtn"
+                android:id="@+id/SplInfoBtn"
+                android:textSize="18sp"
+                android:background="@drawable/button"
+                android:drawableLeft="@drawable/question_mark"
+                android:paddingTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                android:layout_weight="2"
+                android:paddingRight="20dp" />
 
-        <TextView
-                style="@style/textCentre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/SplashTextIntro"
-                android:id="@+id/introText"
-                android:layout_gravity="center_horizontal|top"
-                android:gravity="center_horizontal|top"
-                android:padding="10dp"
-                android:textColor="#000000"/>
+        </LinearLayout>
 
-        <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/LangSelect"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:id="@+id/linearLayout"
+            android:layout_weight="1"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nederlands"
-                    android:id="@+id/nl"
+            <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="@string/SplashTextCheck"
+                    android:id="@+id/splashCheck"
+                    android:textColor="@android:color/black"
+                    android:button="@drawable/btn_check_holo_dark"
                     android:textSize="18sp"
-                    android:textColor="#000000"
-                    android:layout_alignEnd="@+id/introText"
-                    style="@android:style/Widget.Holo.Light.CompoundButton.RadioButton" />
+                    android:checked="false"
+                    android:paddingLeft="20dp"
+                    android:radius="5dp"
+                    android:gravity="center"
+                    android:paddingRight="15dp"
+                android:background="@drawable/button"
+                android:layout_marginRight="10dp"
+                android:layout_weight="2" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="English"
-                    android:id="@+id/en"
-                    android:layout_alignStart="@+id/logo"
-                    android:textColor="#000000"
-                    style="@android:style/Widget.DeviceDefault.Light.CompoundButton.RadioButton" />
-            </RadioGroup>
-    </RelativeLayout>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/SplBtn"
+                android:background="@drawable/button"
+                android:drawableRight="@drawable/arrow"
+                android:drawablePadding="20dp"
+                android:padding="15dp"
+                style="@style/BvDH_button"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:textColor="#000000"
+                android:text="Start!"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

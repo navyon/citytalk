@@ -28,7 +28,7 @@ public class SplashActivity extends Activity
 {
     // Set the display time, in milliseconds (or extract it out as a configurable parameter)
     private TextView Welcome;
-    private TextView IntroText;
+    //private TextView IntroText;
     private Button SplBtn;
     private Button SplInfBtn;
     private CheckBox SplChk;
@@ -42,19 +42,19 @@ public class SplashActivity extends Activity
     {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.splash);
+        setContentView(R.layout.splash_new);
         Typeface fontRegular = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         Typeface fontLight = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
         Welcome = (TextView) findViewById(R.id.welkom_text);
-        IntroText = (TextView) findViewById(R.id.introText);
+        //IntroText = (TextView) findViewById(R.id.introText);
         Welcome.setTypeface(fontRegular);
-        IntroText.setTypeface(fontLight);
+        //IntroText.setTypeface(fontLight);
         SplBtn = (Button) findViewById(R.id.SplBtn);
         SplBtn.setTypeface(fontLight);
         SplInfBtn = (Button) findViewById(R.id.SplInfoBtn);
         SplInfBtn.setTypeface(fontLight);
         SplChk = (CheckBox) findViewById(R.id.splashCheck);
-        LangSelectGroup = (RadioGroup) findViewById(R.id.LangSelect);
+        //LangSelectGroup = (RadioGroup) findViewById(R.id.LangSelect);
         infobuilder = new AlertDialog.Builder(this);
         loadLocale();
     }
@@ -118,7 +118,7 @@ public class SplashActivity extends Activity
                 }
             });
 
-            LangSelectGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+/*            LangSelectGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
                     LangSelectBtn = (RadioButton) findViewById(checkedId);
@@ -138,9 +138,9 @@ public class SplashActivity extends Activity
                         languageToLoad = "en";
                         System.out.println(languageToLoad);
                     }
-                    changeLang(languageToLoad);*/
+                    changeLang(languageToLoad);
                 }
-            });
+            });*/
 
 
             SplBtn.setOnClickListener(new View.OnClickListener() {
@@ -189,7 +189,7 @@ public class SplashActivity extends Activity
         Welcome.setText(R.string.SplashTextWelcome);
         SplChk.setText(R.string.SplashTextCheck);
         SplInfBtn.setText(R.string.SplashTextInfoBtn);
-        IntroText.setText(R.string.SplashTextIntro);
+        //IntroText.setText(R.string.SplashTextIntro);
         infobuilder.setMessage(R.string.SplashTextInfo)
                 .setTitle(R.string.SplashTextInfoBtn);
     }

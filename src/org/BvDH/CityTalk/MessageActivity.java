@@ -40,7 +40,8 @@ public class MessageActivity extends Activity {
        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.message);
+        //setContentView(R.layout.message);
+           setContentView(R.layout.message_new);
 
            //build alert dialog for max line check
            AlertDialog.Builder builder		= new AlertDialog.Builder(this);

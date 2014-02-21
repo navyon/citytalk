@@ -35,9 +35,9 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 
-public class ConfirmActivity extends Activity {
+public class ConfirmActivityTest extends Activity {
 
-    JSONParser jsonParser = new JSONParser();
+    JSONParser_test jsonParser = new JSONParser_test();
 
     // JSON Node names
     private static final String TAG_SUCCESS = "success";
@@ -57,7 +57,7 @@ public class ConfirmActivity extends Activity {
     CheckBox chkbox;
     // Progress Dialog
     private ProgressDialog pDialog;
-    int serverResponseCode = 0;
+    //int serverResponseCode = 0;
     boolean hasphoto = false;
 
     public final Pattern EMAIL_ADDRESS_PATTERN = Pattern.compile(
@@ -81,6 +81,7 @@ public class ConfirmActivity extends Activity {
 
 
 
+        //setContentView(R.layout.confirm_screen);
         setContentView(R.layout.confirm_screen_new);
 
         Button submitbox = (Button) findViewById(R.id.btnfinalsubmit);
@@ -96,8 +97,8 @@ public class ConfirmActivity extends Activity {
 
 
         if(getIntent().hasExtra("imagePath")){
-             image_path = getIntent().getStringExtra("imagePath");
-             hasphoto = true;
+            image_path = getIntent().getStringExtra("imagePath");
+            hasphoto = true;
         }
 
         chkbox = (CheckBox)findViewById(R.id.checkBox);
@@ -117,22 +118,23 @@ public class ConfirmActivity extends Activity {
                         if (chkbox.isChecked()) {
                             // Call the php upload method which starts a new thread
 
-                            StartNewThreadUpload();
+                            //StartNewThreadUpload();
                             // creating new message in background thread
+                            new CreateNewMessage().execute(); //TEMP
 
                         }
                         else {
                             String chkboxerror = getString(R.string.ConfirmCheckboxError);
                             Toast.makeText(getApplicationContext(), chkboxerror, Toast.LENGTH_LONG).show();
-                     }
-                }
-                    new CreateNewMessage().execute();
+                        }
+                    }
+                    if(!hasphoto)   new CreateNewMessage().execute();
                 }
                 else {
                     edittx_email.setTextColor(Color.RED);
                     String emailerror = getString(R.string.ConfirmEmailError);
                     Toast.makeText(getApplicationContext(), emailerror, Toast.LENGTH_LONG).show();
-                    }
+                }
 
             }
         });
@@ -141,7 +143,7 @@ public class ConfirmActivity extends Activity {
 
     void uploadFinishedCheck(){
         if((hasphoto && uploadFinished == 2)||(!hasphoto && uploadFinished == 1)){
-            Intent i = new Intent(ConfirmActivity.this, FinalActivity.class);
+            Intent i = new Intent(ConfirmActivityTest.this, FinalActivity.class);
             startActivity(i);
         }
 
@@ -162,7 +164,7 @@ public class ConfirmActivity extends Activity {
                 @Override
                 public void run() {
 
-                    pDialog = new ProgressDialog(ConfirmActivity.this);
+                    pDialog = new ProgressDialog(ConfirmActivityTest.this);
                     pDialog.setMessage("We zijn aan het testen");
                     pDialog.setIndeterminate(false);
                     pDialog.setCancelable(true);
@@ -172,15 +174,20 @@ public class ConfirmActivity extends Activity {
             });
 
         }
-       // Create the Message
+        // Create the Message
         protected String doInBackground(String... args) {
             ip_address = getPublicIP();
             String email = edittx_email.getText().toString();
             String foto = "";
+            String tempURL;
+
+            //new hack for upload
             if(hasphoto){
                 File f = new File(image_path);
                 foto = f.getName();
+                tempURL = f.getPath();
             }
+            else tempURL = null;
             String bericht = getIntent().getStringExtra("msg");
 
             // Building Parameters
@@ -194,8 +201,10 @@ public class ConfirmActivity extends Activity {
 
             // getting JSON Object
 
-            JSONObject json = jsonParser.makeHttpRequest(url_create_message,
-                    "POST", params);
+            // Upload sdcard file
+
+            JSONObject json = jsonParser.makeHttpRequest(url_create_message, upLoadServerUri,
+                    "POST", tempURL, params);
 
             // check log cat fro response
             Log.d("Create Response", json.toString());
@@ -209,8 +218,10 @@ public class ConfirmActivity extends Activity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                    uploadFinished += 1;
-                    uploadFinishedCheck();
+                            Intent i = new Intent(ConfirmActivityTest.this, FinalActivity.class);
+                            startActivity(i);
+                            //uploadFinished += 1;
+                            //uploadFinishedCheck();
 
                         }
                     });
@@ -238,7 +249,7 @@ public class ConfirmActivity extends Activity {
         return EMAIL_ADDRESS_PATTERN.matcher(email).matches();
     }
 
-    // Start a New thread for the network activity
+    /* Start a New thread for the network activity
     public void StartNewThreadUpload()
     {
 
@@ -247,7 +258,6 @@ public class ConfirmActivity extends Activity {
             public void run() {
                 try {
 
-                    /********** Pick file from sdcard *******/
                 // we can add a check for null here maybe
                     File f = new File(image_path);
 
@@ -262,7 +272,7 @@ public class ConfirmActivity extends Activity {
         thread.start();
     }
 
-    // Creates a http connection
+    / Creates a http connection
     public int uploadFile(String sourceFileUri){
 
         String fileName = sourceFileUri;
@@ -385,9 +395,8 @@ public class ConfirmActivity extends Activity {
             }
             //dialog.dismiss();
             return serverResponseCode;
-
         }
-    }
+    }*/
 
     public static String getPublicIP()
     {
